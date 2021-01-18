@@ -3,37 +3,38 @@ import Link from 'next/link';
 
 export default function Home() {
   const currentYear = `© ${new Date().getFullYear()}`;
-  const headerStyle = {
-    height: '100%',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    flexDirection: 'column',
-    padding: '0 5vw',
-  };
   return (
     <div className='container'>
       <Head>
         <title>timmybytes</title>
         <link rel='icon' href='/favicon.ico' />
+        <link
+          rel='preload'
+          href='/fonts/HK-Grotesk/HKGrotesk-Regular.otf'
+          as='font'
+          crossOrigin=''
+        />
+        <link
+          rel='preload'
+          href='/fonts/HK-Grotesk/HKGrotesk-Italic.ttf'
+          as='font'
+          crossOrigin=''
+        />
       </Head>
 
       <main>
-        <header style={headerStyle}>
-          <img src='/Logo.svg' style={{ width: '100%', maxWidth: '800px' }} />
+        <header className='header'>
+          <img
+            className='header__img'
+            src='/Logo.svg'
+            style={{ width: '100%', maxWidth: '800px' }}
+          />
           <h1 className='title' style={{ display: 'none' }} ariaRole='title'>
             timmybytes
           </h1>
-          <h2
-            className='subtitle'
-            style={{
-              fontFamily: 'monospace',
-              textAlign: 'center',
-            }}>
-            a byte-sized blog
-          </h2>
+          <h2 className='header__subheading'>a byte-sized blog</h2>
         </header>
-        <h3 className='description'>Latest posts</h3>
+        <h3 className='header__description'>Latest posts</h3>
 
         <div className='grid'>
           <a href='https://nextjs.org/docs' className='card'>
@@ -202,9 +203,6 @@ export default function Home() {
         body {
           padding: 0;
           margin: 0;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-            sans-serif;
         }
 
         * {

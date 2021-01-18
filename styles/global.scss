@@ -1,0 +1,31 @@
+@import './_fonts.scss';
+@import './_variables.scss';
+@import './_header.scss';
+
+//------------------------------------------------
+html,
+body {
+  // background: #2a2426;
+  // color: #e6d6ac;
+  // font-family: HK Grotesk, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+  // Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+
+  font-family: 'HK Grotesk';
+  font-weight: 400;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+a {
+  color: #0070f3;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}

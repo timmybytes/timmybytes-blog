@@ -1,0 +1,22 @@
+.header {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 5vw;
+  &__img {
+    width: 100%;
+    max-width: 800px;
+  }
+  &__heading {
+    display: none;
+  }
+  &__subheading {
+    font-family: monospace;
+    text-align: center;
+  }
+  &__description {
+    font-size: 1.5rem;
+  }
+}
