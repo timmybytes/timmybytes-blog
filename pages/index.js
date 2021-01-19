@@ -64,9 +64,7 @@ export default function Home() {
           </a>
         </div>
       </main>
-
       <footer>Made by Timothy Merritt, {currentYear}</footer>
-
       <style jsx>{`
         .container {
           min-height: 100vh;
@@ -197,7 +195,6 @@ export default function Home() {
           }
         }
       `}</style>
-
       <style jsx global>{`
         html,
         body {
