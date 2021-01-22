@@ -1,31 +1,52 @@
 @import './_fonts.scss';
 @import './_variables.scss';
 @import './_header.scss';
+@import './_layout.scss';
+@import './_footer.scss';
+@import './_post.scss';
+@import './_code.scss';
 
 //------------------------------------------------
 html,
 body {
-  // background: #2a2426;
-  // color: #e6d6ac;
-  // font-family: HK Grotesk, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-  // Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  background: #2a2426;
+  background: $color-lighter;
+  color: $color-dark;
+  font-family: HK Grotesk, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-family: 'HK Grotesk';
-  font-weight: 400;
-  line-height: 1.6;
+  font-weight: 100;
+  line-height: 1.5;
   font-size: 16px;
+}
+
+main {
+  padding: 5rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 a {
   color: #0070f3;
   text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
+  &:hover {
+    color: $color-secondary-more;
+    border-bottom: 1px solid $color-secondary-more;
+  }
 }
 
 img {
   max-width: 100%;
   display: block;
+}
+
+.description {
+  line-height: 1.5;
+  font-size: 1.5rem;
+}
+
+strong {
+  font-weight: bold;
 }

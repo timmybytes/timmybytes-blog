@@ -1,0 +1,27 @@
+.post {
+  &__header {
+    font-size: $size-5;
+    line-height: 1.2;
+    @media screen and (max-width: 500px) {
+      font-size: 8vw;
+    }
+  }
+  &__subheader {
+    font-size: $size-2;
+    @media screen and (max-width: 500px) {
+      font-size: 6vw;
+    }
+  }
+  &__article {
+    .info {
+      background: $color-tertiary-less;
+      border: 1px solid $color-dark;
+      border-radius: 4px;
+      font-family: 'HK Grotesk';
+      font-style: italic;
+      margin: 0;
+      overflow: auto;
+      padding: $size-1;
+    }
+  }
+}

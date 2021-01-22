@@ -1,0 +1,24 @@
+pre {
+  overflow-x: scroll;
+}
+
+code {
+  background: $color-light;
+  border-radius: 4px;
+  color: $color-dark;
+  font-family: 'Iosevka', Menlo, Monaco, Lucida Console, Liberation Mono,
+    DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+  font-size: 14px;
+  overflow-x: scroll;
+  padding: 0 5px;
+  white-space: pre;
+}
+.codeblock {
+  overflow-x: scroll;
+  background: $color-light;
+  border: 1px solid $color-dark;
+  border-radius: 4px;
+  // box-shadow: 4px 4px 0 $color-dark;
+  display: block;
+  padding: $size-1;
+}

@@ -1,5 +1,48 @@
-// Fonts
-
 // Colors
+$color-light: #f5f5f5;
+$color-lighter: #fdfdfd;
+$color-dark: #444444;
+$color-darker: #333333;
+$color-grey: #777777;
+$color-greyer: #999999;
+$color-primary: #f5668c;
+$color-primary-less: #ff90ad;
+$color-primary-more: #fd3b6f;
+$color-secondary: #98c4ef;
+$color-secondary-more: #3292ff;
+$color-secondary-less: #b0d8ff;
+$color-tertiary: #baea93;
+$color-tertiary-less: #ccf7a9;
+$color-tertiary-more: #8aeb3c;
 
 // Sizing
+$ratio: 1.236;
+$size-1: 1rem;
+$size-2: $size-1 * $ratio;
+$size-3: $size-2 * $ratio;
+$size-4: $size-3 * $ratio;
+$size-5: $size-4 * $ratio;
+$size-6: $size-5 * $ratio;
+$size-7: $size-6 * $ratio;
+$size-8: $size-7 * $ratio;
+$size-9: $size-8 * $ratio;
+$size-10: $size-9 * $ratio;
+
+.test1 {
+  font-size: $size-2;
+}
+.test2 {
+  font-size: $size-3;
+}
+.test3 {
+  font-size: $size-4;
+}
+.test4 {
+  font-size: $size-5;
+}
+.test5 {
+  font-size: $size-6;
+}
+.test6 {
+  font-size: $size-7;
+}

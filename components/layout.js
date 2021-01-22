@@ -38,22 +38,14 @@ export default function Layout({ children, home }) {
           <>
             <Link href='/'>
               <a>
-                <img
-                  src='/images/profile.png'
-                  className={`${styles.headerImage} ${utilStyles.borderCircle}`}
-                  alt={name}
-                />
+                <img src='/Logo.svg' className={``} alt={name} />
               </a>
             </Link>
-            <h2 className={utilStyles.headingLg}>
-              <Link href='/'>
-                <a className={utilStyles.colorInherit}>{name}</a>
-              </Link>
-            </h2>
+            <h2 className={utilStyles.headingLg}></h2>
           </>
         )}
       </header>
-      <main>{children}</main>
+      <>{children}</>
       {!home && (
         <div className={styles.backToHome}>
           <Link href='/'>

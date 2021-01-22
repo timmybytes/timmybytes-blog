@@ -8,13 +8,26 @@
   &__img {
     width: 100%;
     max-width: 800px;
+    // margin: $size-1;
+  }
+  &__title {
+    display: none;
   }
   &__heading {
     display: none;
   }
   &__subheading {
-    font-family: monospace;
+    border-radius: 4px;
+    background: $color-dark;
+    color: $color-primary;
     text-align: center;
+    font-weight: 900;
+    letter-spacing: 2px;
+    font-size: $size-6;
+    padding: 0 $size-1;
+    @media screen and (max-width: 768px) {
+      font-size: 7vw;
+    }
   }
   &__description {
     font-size: 1.5rem;
