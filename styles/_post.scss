@@ -6,6 +6,11 @@
       font-size: 8vw;
     }
   }
+  &__date {
+    color: $color-grey;
+    font-size: $size-sm;
+    font-style: italic;
+  }
   &__subheader {
     font-size: $size-2;
     @media screen and (max-width: 500px) {
@@ -14,14 +19,17 @@
   }
   &__article {
     .info {
-      background: $color-tertiary-less;
-      border: 1px solid $color-dark;
+      border: 4px solid $color-secondary-less;
       border-radius: 4px;
       font-family: 'HK Grotesk';
       font-style: italic;
+      font-size: $size-med;
       margin: 0;
       overflow: auto;
       padding: $size-1;
+      code {
+        font-size: $size-sm;
+      }
     }
   }
 }

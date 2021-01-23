@@ -2,12 +2,12 @@ import React from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
 import Layout from '../../components/layout';
-import Prism from 'prismjs';
 
 const FirstPost = () => {
   return (
     <Layout>
       <Head>
+        {/* TODO: Add media cards */}
         <title>
           Keeping Git Commit Messages Consistent with a Custom Template
         </title>
@@ -19,10 +19,10 @@ const FirstPost = () => {
         <h1 className='post__header'>
           Keeping Git Commit Messages Consistent with a Custom Template
         </h1>
-        <h2 className='post__subheader'>Subheading</h2>
+        <p className='post__date'>January 21, 2021</p>
       </header>
       <article className='post__article'>
-        <p className='post__article-p'>
+        <p>
           The ability to write consistent git commit messages is a skill that
           will serve both you and any team you’re working with well in the long
           run. If you often find yourself struggling to come up with a decent

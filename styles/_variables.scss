@@ -9,7 +9,8 @@ $color-primary: #f5668c;
 $color-primary-less: #ff90ad;
 $color-primary-more: #fd3b6f;
 $color-secondary: #98c4ef;
-$color-secondary-more: #3292ff;
+$color-secondary: #3292ff;
+$color-secondary-more: #0ea1f7;
 $color-secondary-less: #b0d8ff;
 $color-tertiary: #baea93;
 $color-tertiary-less: #ccf7a9;
@@ -28,21 +29,5 @@ $size-8: $size-7 * $ratio;
 $size-9: $size-8 * $ratio;
 $size-10: $size-9 * $ratio;
 
-.test1 {
-  font-size: $size-2;
-}
-.test2 {
-  font-size: $size-3;
-}
-.test3 {
-  font-size: $size-4;
-}
-.test4 {
-  font-size: $size-5;
-}
-.test5 {
-  font-size: $size-6;
-}
-.test6 {
-  font-size: $size-7;
-}
+$size-sm: 0.75rem;
+$size-med: 0.85rem;

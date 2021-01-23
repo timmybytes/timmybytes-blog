@@ -2,7 +2,7 @@
   display: grid;
   align-items: stretch;
   justify-content: stretch;
-  max-width: 900px;
+  max-width: 1200px;
   grid-template-columns: 1fr 1fr 1fr;
   @media screen and (max-width: 850px) {
     grid-template-columns: auto;
@@ -23,7 +23,7 @@
 .card {
   margin: 0.75rem;
   flex-basis: 45%;
-  // max-width: 800px;
+  max-width: 450px;
   padding: 1.5rem;
   text-align: left;
   color: inherit;

@@ -29,7 +29,7 @@ main {
 }
 
 a {
-  color: #0070f3;
+  color: $color-secondary;
   text-decoration: none;
   &:hover {
     color: $color-secondary-more;
