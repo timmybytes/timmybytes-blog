@@ -5,6 +5,8 @@
   align-items: center;
   flex-direction: column;
   padding: 0 5vw;
+  margin: $size-1 auto;
+
   max-width: 650px;
   &__img {
     width: 100%;

@@ -18,18 +18,42 @@
     }
   }
   &__article {
-    .info {
-      border: 4px solid $color-secondary-less;
-      border-radius: 4px;
-      font-family: 'HK Grotesk';
-      font-style: italic;
-      font-size: $size-med;
-      margin: 0;
-      overflow: auto;
-      padding: $size-1;
-      code {
-        font-size: $size-sm;
+  }
+  &__footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: $size-3 0 $size-9;
+    a {
+      &:hover {
+        border-bottom: none;
+      }
+      img {
+        background: $color-lighter;
+        border: 1px solid $color-dark;
+        border-radius: 50%;
+        padding: 5px;
+        max-width: 34px;
+        height: auto;
+        transition: 0.3s;
+        &:hover {
+          box-shadow: 4px 4px 0 $color-dark;
+        }
       }
     }
+  }
+}
+
+.info {
+  border: 4px solid $color-secondary-less;
+  border-radius: 4px;
+  font-family: 'HK Grotesk';
+  font-style: italic;
+  font-size: $size-med;
+  margin: 0;
+  overflow: auto;
+  padding: $size-1;
+  code {
+    font-size: $size-sm;
   }
 }

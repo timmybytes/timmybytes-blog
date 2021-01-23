@@ -1,0 +1,44 @@
+html,
+body {
+  background: $color-lighter;
+  color: $color-dark;
+  font-family: HK Grotesk, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'HK Grotesk';
+  font-weight: 100;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+main {
+  padding: $size-3 0;
+  margin: 0 auto;
+  // flex: 1;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
+  // align-items: center;
+}
+
+a {
+  color: $color-secondary;
+  text-decoration: none;
+  &:hover {
+    color: $color-secondary-more;
+    border-bottom: 1px solid $color-secondary-more;
+  }
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.description {
+  line-height: 1.5;
+  font-size: 1.5rem;
+}
+
+strong {
+  font-weight: bold;
+}

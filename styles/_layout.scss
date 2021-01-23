@@ -3,7 +3,10 @@
   align-items: stretch;
   justify-content: stretch;
   max-width: 1200px;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: minmax(200px, 1fr) minmax(200px, 1fr) minmax(
+      200px,
+      1fr
+    );
   @media screen and (max-width: 850px) {
     grid-template-columns: auto;
   }
@@ -12,10 +15,10 @@
 .container {
   display: flex;
   flex-direction: row;
-  min-height: 95vh;
-  padding: 0 0.25rem;
-  display: flex;
   flex-direction: column;
+  min-height: 95vh;
+  // margin: 3rem auto;
+  // padding: 0 0.25rem;
   justify-content: stretch;
   align-items: center;
 }

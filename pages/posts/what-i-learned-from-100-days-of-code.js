@@ -10,9 +10,6 @@ const FirstPost = () => {
         {/* TODO: Add media cards */}
         <title>What I Learned From 100 Days of Code</title>
       </Head>
-      <Link href='/'>
-        <a>&larr; Back to home</a>
-      </Link>
       <header>
         <h1 className='post__header'>What I Learned From 100 Days of Code</h1>
         <p className='post__date'>October 7, 2020</p>

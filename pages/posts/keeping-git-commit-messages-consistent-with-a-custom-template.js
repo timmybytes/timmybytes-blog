@@ -12,9 +12,6 @@ const FirstPost = () => {
           Keeping Git Commit Messages Consistent with a Custom Template
         </title>
       </Head>
-      <Link href='/'>
-        <a>&larr; Back to home</a>
-      </Link>
       <header>
         <h1 className='post__header'>
           Keeping Git Commit Messages Consistent with a Custom Template
