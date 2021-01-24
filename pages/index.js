@@ -26,7 +26,24 @@ export default function Home() {
           />
         </Head>
         <main>
-          <div className='grid'>
+          {/* <section className='container-sm-row'>
+            <div className='button-primary'>
+              <Link href='/about'>
+                <a className=''>About</a>
+              </Link>
+            </div>
+            <div className='button-secondary'>
+              <Link href='/work'>
+                <a className=''>Work</a>
+              </Link>
+            </div>
+            <div className='button-tertiary'>
+              <Link href='/contact'>
+                <a className=''>Contact</a>
+              </Link>
+            </div>
+          </section> */}
+          <section className='grid'>
             <Link href='/posts/keeping-git-commit-messages-consistent-with-a-custom-template'>
               <a className='card'>
                 <h3>
@@ -55,7 +72,7 @@ export default function Home() {
                 </p>
               </a>
             </Link>
-          </div>
+          </section>
         </main>
         <Footer />
       </div>

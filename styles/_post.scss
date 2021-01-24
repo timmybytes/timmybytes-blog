@@ -17,8 +17,6 @@
       font-size: 6vw;
     }
   }
-  &__article {
-  }
   &__footer {
     display: flex;
     justify-content: space-around;
@@ -41,19 +39,5 @@
         }
       }
     }
-  }
-}
-
-.info {
-  border: 4px solid $color-secondary-less;
-  border-radius: 4px;
-  font-family: 'HK Grotesk';
-  font-style: italic;
-  font-size: $size-med;
-  margin: 0;
-  overflow: auto;
-  padding: $size-1;
-  code {
-    font-size: $size-sm;
   }
 }

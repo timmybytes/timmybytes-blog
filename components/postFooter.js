@@ -4,36 +4,6 @@ import utilStyles from '../styles/utils.module.scss';
 const PostFooter = () => {
   return (
     <>
-      <div className='info'>
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'row',
-            flexFlow: 'row nowrap',
-          }}>
-          <img
-            src='/images/profile.png'
-            alt='Timothy Merritt profile photo'
-            style={{
-              height: 'auto',
-              width: '100%',
-              borderRadius: '50%',
-              margin: '0 30px',
-            }}
-          />
-          <div
-            style={{
-              display: 'flex',
-              flexDirection: 'column',
-            }}>
-            <h4 className={utilStyles.headingMd}>Timothy Merritt is...</h4>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores,
-              cum!
-            </p>
-          </div>
-        </div>
-      </div>
       <section className='post__footer'>
         <a href='https://ko-fi.com/O4O82TAZB'>
           <img

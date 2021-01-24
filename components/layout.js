@@ -39,8 +39,8 @@ export default function Layout({ children, home }) {
           <a>&larr; Back to home</a>
         </Link>
         <PostFooter />
-        <Footer />
       </div>
+      <Footer />
     </>
   );
 }

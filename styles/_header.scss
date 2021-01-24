@@ -35,30 +35,3 @@
     font-size: 1.5rem;
   }
 }
-
-nav {
-  align-items: center;
-  background: $color-dark;
-  border-radius: 4px;
-  border: 1px solid $color-dark;
-  display: flex;
-  font-size: $size-2;
-  font-weight: 800;
-  justify-content: space-between;
-  list-style-type: none;
-  margin: 0 auto $size-2 auto;
-  max-width: inherit;
-  overflow-x: scroll;
-  padding: $size-1;
-  text-transform: uppercase;
-  width: 100%;
-  li {
-    padding: 0 $size-1;
-    a {
-      color: $color-primary;
-    }
-  }
-  @media screen and (max-width: 468px) {
-    font-size: 6vw;
-  }
-}

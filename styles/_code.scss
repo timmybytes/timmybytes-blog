@@ -1,5 +1,7 @@
 pre {
   overflow-x: scroll;
+  tab-size: 2;
+  white-space: pre;
 }
 
 code {
@@ -12,6 +14,7 @@ code {
   overflow-x: scroll;
   padding: 0 5px;
   white-space: pre;
+  // white-space: normal;
 }
 .codeblock {
   overflow-x: scroll;
