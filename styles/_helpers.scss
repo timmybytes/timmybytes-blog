@@ -114,7 +114,7 @@
 }
 
 .info {
-  border: 4px solid $color-secondary-less;
+  border: 4px solid $color-secondary;
   border-radius: 4px;
   font-family: 'HK Grotesk';
   font-style: italic;
@@ -145,12 +145,17 @@
   }
 }
 
-.button-secondary {
-  @include color-button($color-secondary);
-}
-.button-primary {
-  @include color-button($color-primary);
-}
-.button-tertiary {
-  @include color-button($color-tertiary);
+.button {
+  &-secondary {
+    @include color-button($color-secondary);
+    text-align: center;
+  }
+  &-primary {
+    @include color-button($color-primary);
+    text-align: center;
+  }
+  &-tertiary {
+    @include color-button($color-tertiary);
+    text-align: center;
+  }
 }

@@ -28,10 +28,13 @@ const FirstPost = () => {
         </p>
         <h2>What are GitHub Actions?</h2>
         <blockquote className='info'>
-          GitHub Actions makes it easy to automate all your software workflows,
-          now with world-class CI/CD. Build, test, and deploy your code right
-          from GitHub. Make code reviews, branch management, and issue triaging
-          work the way you want. <br />— via GitHub
+          GitHub Actions help you automate tasks within your software
+          development life cycle. GitHub Actions are event-driven, meaning that
+          you can run a series of commands after a specified event has occurred.
+          <br />— via{' '}
+          <a href='https://docs.github.com/en/actions/learn-github-actions/introduction-to-github-actions'>
+            GitHub Docs
+          </a>
         </blockquote>
         <p>
           In the simplest sense, Actions allow you to automate tasks. That might
@@ -75,27 +78,19 @@ const FirstPost = () => {
           aware the syntax is very unforgiving when it comes to whitespace. Make
           sure you’re using spaces instead of tabs for indentation.
         </p>
-        {/* prettier-ignore */}
         <pre className='codeblock'>
+          {/* prettier-ignore */}
           <code>
-# action-one.yml<br />
+<span className='codeblock__comment'># action-one.yml</span><br />
 <br />
-# Optional: the name of the workflow<br />
-name: action-one<br />
-# Specify the event trigger<br />
-on: [push]<br />
-# Groups all the 'action-one' jobs<br />
-jobs:<br />
-# Defines the 'say-hello' job<br />
-  say-hello:<br />
-  # Virtual runner environment<br />
-    runs-on: ubuntu-20.04<br />
-    # Groups all the steps for 'say-hello' job<br />
-    steps:<br />
-      # Checks out your repo so Action can access it<br />
-      - uses: actions/checkout@v2<br />
-      # Run a command on the runner<br />
-      - run: echo "Hello"<br />
+name: action-one <span className='codeblock__comment'># Optional: the name of the workflow</span><br />
+on: [push] <span className='codeblock__comment'># Specify the event trigger</span><br />
+jobs: <span className='codeblock__comment'># Groups all the 'action-one' jobs</span><br />
+{'  '}say-hello: <span className='codeblock__comment'># Defines the 'say-hello' job</span><br />
+{'    '}runs-on: ubuntu-20.04 <span className='codeblock__comment'># Virtual runner environment</span><br />
+{'    '}steps: <span className='codeblock__comment'># Groups all the steps for 'say-hello' job</span><br />
+{'      '}- uses: actions/checkout@v2 <span className='codeblock__comment'># Checks out your repo so Action can access it</span><br />
+{'      '}- run: echo "Hello" <span className='codeblock__comment'># Run a command on the runner</span>
           </code>
         </pre>
         <p>
@@ -131,24 +126,24 @@ jobs:<br />
           you have a script you want to run against your repo written in bash,
           you could run that script within the workflow like so:
         </p>
-        {/* prettier-ignore */}
-        <pre>
+        <pre className='codeblock'>
+          {/* prettier-ignore */}
           <code>
 name: action-one<br/>
 on: [push]<br/>
 jobs:<br/>
-  say-hello:<br/>
-    runs-on: ubuntu-20.04<br/>
-    steps:<br/>
-      - uses: actions/checkout@v2<br/>
-      - run: ./some-script.sh<br/>
-      shell: bash<br/>
+{'  '}say-hello:<br/>
+{'    '}runs-on: ubuntu-20.04<br/>
+{'    '}steps:<br/>
+{'      '}- uses: actions/checkout@v2<br/>
+{'      '}- run: ./some-script.sh<br/>
+{'      '}shell: bash<br/>
           </code>
         </pre>
         <p>
           This process works the same whatever your Action is, but the
           possibilities become more powerful once you incorporate Actions from
-          the
+          the{' '}
           <a href='https://github.com/marketplace?type=actions'>
             GitHub marketplace
           </a>
@@ -174,33 +169,33 @@ jobs:<br/>
 name: '🚀 publish'<br />
 <br />
 on:<br />
-  push:<br />
-    branches:<br />
-      - main<br />
+{'  '}push:<br />
+{'    '}branches:<br />
+{'      '}- main<br />
 jobs:<br />
-  release:<br />
-    name: 🚀 publish<br />
-    if:<br />
-      "contains(github.event.head_commit.message, 'deploy')"<br />
-    runs-on: ubuntu-latest<br />
-    steps:<br />
-      - name: 📚 checkout<br />
-        uses: actions/checkout@v2.3.3<br />
-      - name: 🟢 node<br />
-        uses: actions/setup-node@v1.4.4<br />
-        with:<br />
-          node-version: 12<br />
-          registry-url: https://registry.npmjs.org<br />
-      - name: 🚀 publish<br />
-        run: npm publish --access public<br />
-        env:<br />
-          NODE_AUTH_TOKEN: $&#123;&#123;secrets.NPM_AUTH_TOKEN&#125;&#125;<br />
+{'  '}release:<br />
+{'    '}name: 🚀 publish<br />
+{'    '}if:<br />
+{'      '}"contains(github.event.head_commit.message, 'deploy')"<br />
+{'    '}runs-on: ubuntu-latest<br />
+{'    '}steps:<br />
+{'      '}- name: 📚 checkout<br />
+{'        '}uses: actions/checkout@v2.3.3<br />
+{'      '}- name: 🟢 node<br />
+{'        '}uses: actions/setup-node@v1.4.4<br />
+{'        '}with:<br />
+{'          '}node-version: 12<br />
+{'          '}registry-url: https://registry.npmjs.org<br />
+{'      '}- name: 🚀 publish<br />
+{'        '}run: npm publish --access public<br />
+{'        '}env:<br />
+{'          '}NODE_AUTH_TOKEN: $&#123;&#123;secrets.NPM_AUTH_TOKEN&#125;&#125;<br />
           </code>
         </pre>
         <p>
           The Action uses the marketplace Actions "checkout" and "setup-node",
           along with a<code>NODE_AUTH_TOKEN</code>
-          that uses my npm login credentials as a
+          that uses my npm login credentials as a{' '}
           <a href='https://docs.github.com/en/free-pro-team@latest/actions/reference/encrypted-secrets'>
             Secret
           </a>

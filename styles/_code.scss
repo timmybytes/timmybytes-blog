@@ -23,4 +23,8 @@ code {
   border-radius: 4px;
   display: block;
   padding: $size-1;
+  &__comment {
+    color: $color-greyer;
+    font-style: italic;
+  }
 }

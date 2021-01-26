@@ -5,12 +5,11 @@
   align-items: center;
   flex-direction: column;
   padding: 0 5vw;
-  margin: $size-1 auto;
+  margin: $size-4 auto $size-1;
 
   max-width: 650px;
   &__img {
     width: 100%;
-    // margin: $size-1;
   }
   &__title {
     display: none;
@@ -26,6 +25,7 @@
     font-size: $size-4;
     font-weight: 900;
     letter-spacing: 2px;
+    margin: $size-1 0 0 0;
     padding: 0 $size-1;
     @media screen and (max-width: 768px) {
       font-size: 5vw;
