@@ -1,44 +1,27 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useLayoutEffect } from 'react';
 import Link from 'next/link';
 
 const NavBar = () => {
   const [screenWidth, setScreenWidth] = useState(0);
   const [menuHidden, setMenuHidden] = useState(true);
   const [navShow, setNavShow] = useState({ display: 'none' });
+  const [scrollPosition, setScrollPosition] = useState(0);
 
-  React.useEffect(() => {
-    setScreenWidth(window.innerWidth);
+  useEffect(() => {
+    window.addEventListener('scroll', () => {
+      setScrollPosition(window.scrollY);
+    });
   });
 
-  // /* Open */
-  // function openNav() {
-  //   document.getElementById('myNav').style.display = 'block';
-  // }
-
-  // /* Close */
-  // function closeNav() {
-  //   document.getElementById('myNav').style.display = 'none';
-  // }
+  useLayoutEffect(() => {
+    window.addEventListener('onresize', () => {
+      console.log(screenWidth);
+      setScreenWidth(window.innerWidth);
+    });
+  });
 
   return (
     <>
-      {/* <button
-        style={
-          screenWidth > 800
-            ? { display: 'none' }
-            : {
-                position: 'sticky',
-                left: '92%',
-                top: '5%',
-                height: '40px',
-                width: '100%',
-                background: 'none',
-                border: 'none',
-              }
-        }
-        onClick={() => setMenuHidden(!menuHidden)}>
-        +
-      </button> */}
       <div id='myNav' className='overlay' style={navShow}>
         <a
           href='javascript:void(0)'
@@ -47,32 +30,85 @@ const NavBar = () => {
           &times;
         </a>
         <div className='overlay-content'>
-          <a href='#'>About</a>
-          <a href='#'>Services</a>
-          <a href='#'>Clients</a>
-          <a href='#'>Contact</a>
+          <Link href='/'>
+            <a className=''>Home</a>
+          </Link>
+          <Link href='/about'>
+            <a className=''>About</a>
+          </Link>
+          <Link href='/work'>
+            <a className=''>Work</a>
+          </Link>
+          <Link href='/contact'>
+            <a className=''>Contact</a>
+          </Link>
         </div>
       </div>
       <button
         className='mynav-button'
-        style={{
-          position: 'fixed',
-          height: '40px',
-          top: '0',
-          right: '0',
-          padding: '5px 15px',
-          background: '#444444',
-          border: '1px solid #444444',
-          color: '#f5668c',
-          margin: '10px',
-          borderRadius: '50px',
-          cursor: 'pointer',
-          boxShadow: '4px 4px 10px rgba(0,0,0,0.3)',
-          fontSize: '1rem',
-          fontWeight: '600',
-        }}
+        style={
+          scrollPosition < 20
+            ? {
+                boxShadow: 'none',
+                background: '#fdfdfd',
+                border: 'none',
+                color: '#444444',
+                cursor: 'pointer',
+                display: 'flex',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+                fontSize: '1.5rem',
+                fontWeight: '600',
+                width: '100%',
+                height: '12%',
+                position: 'fixed',
+                right: '0',
+                top: '0',
+                transition: '0.1s',
+              }
+            : {
+                background: '#fdfdfd',
+                border: 'none',
+                boxShadow: '4px 4px 10px rgba(0,0,0,0.3)',
+                color: '#444444',
+                cursor: 'pointer',
+                display: 'flex',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+                fontSize: '1.5rem',
+                fontWeight: '600',
+                width: '100%',
+                height: '8%',
+                position: 'fixed',
+                right: '0',
+                top: '0',
+                transition: '0.1s',
+              }
+        }
         onClick={() => setNavShow({ display: 'block' })}>
-        Menu
+        <img
+          className='header__img'
+          style={
+            scrollPosition < 20
+              ? {
+                  width: '20%',
+                  minWidth: '200px',
+                  padding: '0',
+                  margin: '0',
+                  transition: '0.1s',
+                }
+              : {
+                  width: '10%',
+                  minWidth: '130px',
+                  padding: '0',
+                  margin: '0',
+                  transition: '0.1s',
+                }
+          }
+          src='/Logo.svg'
+          alt='timmybytes logo'
+        />
+        &#9776;
       </button>
     </>
   );

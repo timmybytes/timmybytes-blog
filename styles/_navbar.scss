@@ -3,7 +3,7 @@
   flex-direction: row;
   margin: $size-1 auto;
   padding: 0;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   // max-width: 650px;
   position: fixed;
@@ -76,6 +76,7 @@
 .overlay a:hover,
 .overlay a:focus {
   color: $color-primary;
+  border-bottom: none;
 }
 
 /* Position the close button (top right corner) */
@@ -99,8 +100,8 @@
 }
 
 .mynav-button {
-  display: normal;
-  @media screen and (max-height: 800px) {
+  // display: normal;
+  @media screen and (min-width: 800px) {
     display: none;
   }
 }
