@@ -5,9 +5,10 @@
   align-items: center;
   flex-direction: column;
   padding: 0 5vw;
-  margin: $size-6 auto $size-1;
-  max-width: 650px;
+  margin: $size-2 auto $size-1;
+  max-width: 950px;
   &__img {
+    max-width: 650px;
     width: 100%;
   }
   &__title {

@@ -128,7 +128,7 @@
   border: 1px solid $color-dark;
   border-radius: 10px;
   padding: 0 1rem;
-  margin: 0 $size-1;
+  margin: 10px 10px;
   font-weight: 900;
   font-size: $size-3;
   text-transform: lowercase;
@@ -149,13 +149,21 @@
   &-secondary {
     @include color-button($color-secondary);
     text-align: center;
+    width: 100%;
   }
   &-primary {
     @include color-button($color-primary);
     text-align: center;
+    width: 100%;
   }
   &-tertiary {
     @include color-button($color-tertiary);
     text-align: center;
+    width: 100%;
+  }
+  &-quaternary {
+    @include color-button($color-quaternary);
+    text-align: center;
+    width: 100%;
   }
 }
