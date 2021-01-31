@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import NavBar from './navBar';
+import HeaderRefactor from './headerRefactor';
+import Nav from './nav';
 
 const Header = () => {
   const [screenWidth, setScreenWidth] = useState(0);
@@ -13,23 +15,8 @@ const Header = () => {
   return (
     <>
       <header>
-        <NavBar />
-        {/* <Link href='/'> */}
-        {/* <a> */}
-        {/* <header className='header'> */}
-        {/* <img
-                className='header__img'
-                style={{ width: scrollWidth }}
-                src='/Logo.svg'
-                alt='timmybytes logo'
-              />
-              <h1 className='header__title' ariaRole='title'>
-                timmybytes
-              </h1>
-              <h2 className='header__subheading'>a byte-sized blog</h2> */}
-        {/* </header> */}
-        {/* </a> */}
-        {/* </Link> */}
+        <Nav />
+        {/* <NavBar /> */}
       </header>
     </>
   );

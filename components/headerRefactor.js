@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState, useEffect, useLayoutEffect } from 'react';
+import Link from 'next/link';
 
-const headerRefactor = () => {
+const HeaderRefactor = () => {
   const [screenWidth, setScreenWidth] = useState(0);
   const [menuHidden, setMenuHidden] = useState(true);
   const [navShow, setNavShow] = useState({ display: 'none' });
@@ -96,13 +97,62 @@ const headerRefactor = () => {
           </nav>
         </div>
       </div>
-      <div className='header__mobile'>
-        <div className='header__mobile-overlay'></div>
+      <div
+        className='header__mobile'
+        style={useCurrentWidth() <= 800 ? {} : { display: 'none' }}>
+        <div className='header__mobile-overlay overlay' style={navShow}>
+          <a
+            href='javascript:void(0)'
+            className='closebtn'
+            onClick={() => setNavShow({ display: 'none' })}>
+            &times;
+          </a>
+          <div className='overlay-content'>
+            <Link href='/'>
+              <a className=''>Home</a>
+            </Link>
+            <Link href='/about'>
+              <a className=''>About</a>
+            </Link>
+            <Link href='/work'>
+              <a className=''>Work</a>
+            </Link>
+            <Link href='/contact'>
+              <a className=''>Contact</a>
+            </Link>
+          </div>
+        </div>
         <div className='header__mobile-logo'>
           <Link href='/'>
             <a>
-              <img />
-              <h1></h1>
+              <img
+                className='header__img'
+                style={
+                  scrollPosition < 20
+                    ? {
+                        width: '20%',
+                        minWidth: '200px',
+                        padding: '0',
+                        margin: '0',
+                        transition: '0.2s',
+                        transitionTimingFunction: 'linear',
+                      }
+                    : {
+                        width: '10%',
+                        minWidth: '130px',
+                        padding: '0',
+                        margin: '0',
+                        transition: '0.2s',
+                        transitionTimingFunction: 'linear',
+                      }
+                }
+                src='/Logo.svg'
+                alt='timmybytes logo'
+              />
+              &#9776;
+              <h1 className='header__title' ariaRole='title'>
+                timmybytes: a byte-sized blog
+              </h1>
             </a>
           </Link>
         </div>
@@ -114,4 +164,4 @@ const headerRefactor = () => {
   );
 };
 
-export default headerRefactor;
+export default HeaderRefactor;

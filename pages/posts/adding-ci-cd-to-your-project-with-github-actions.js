@@ -128,8 +128,7 @@ jobs: <span className='codeblock__comment'># Groups all the 'action-one' jobs</s
         </p>
         <pre className='codeblock'>
           {/* prettier-ignore */}
-          <code>
-name: action-one<br/>
+          <code>name: action-one<br />
 on: [push]<br/>
 jobs:<br/>
 {'  '}say-hello:<br/>

@@ -2,7 +2,7 @@ import React, { useState, useEffect, useLayoutEffect } from 'react';
 import Link from 'next/link';
 
 const NavBar = () => {
-  const [screenWidth, setScreenWidth] = useState(0);
+  // const [screenWidth, setScreenWidth] = useState(0);
   const [menuHidden, setMenuHidden] = useState(true);
   const [navShow, setNavShow] = useState({ display: 'none' });
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -26,7 +26,16 @@ const NavBar = () => {
 
   function useCurrentWidth() {
     // save current window width in the state object
-    let [width, setWidth] = useState(getWidth());
+    // let [width, setWidth] = useState(getWidth());
+    let [width, setWidth] = useState(
+      useEffect(() => {
+        return (
+          window.innerWidth ||
+          document.documentElement.clientWidth ||
+          document.body.clientWidth
+        );
+      })
+    );
 
     // in this case useEffect will execute only once because
     // it does not have any dependencies.
@@ -37,14 +46,12 @@ const NavBar = () => {
         // prevent execution of previous setTimeout
         clearTimeout(timeoutId);
         // change width from the state object after 150 milliseconds
-        timeoutId = setTimeout(() => setWidth(getWidth()), 150);
+        timeoutId = setTimeout(() => setWidth(getWidth()), 200);
       };
-      // set resize listener
       window.addEventListener('resize', resizeListener);
 
       // clean up function
       return () => {
-        // remove resize listener
         window.removeEventListener('resize', resizeListener);
       };
     }, []);
@@ -73,7 +80,7 @@ const NavBar = () => {
                     padding: '1.75rem 0',
                     position: 'fixed',
                     top: '.25rem',
-                    transition: '0.3s',
+                    // transition: '0.3s',
                     width: '100%',
                   }
                 : {
@@ -88,7 +95,7 @@ const NavBar = () => {
                     padding: '0.25rem 0',
                     position: 'fixed',
                     top: '0',
-                    transition: '0.3s',
+                    // transition: '0.3s',
                     width: '100%',
                   }
             }>
@@ -129,7 +136,6 @@ const NavBar = () => {
           <h1 className='header__title' ariaRole='title'>
             timmybytes
           </h1>
-          {/* <h2 className='header__subheading'>a byte-sized blog</h2> */}
         </div>
         <div
           className='header__mobile'
@@ -180,8 +186,7 @@ const NavBar = () => {
                     position: 'fixed',
                     right: '0',
                     top: '0',
-                    transition: '0.2s',
-                    transitionTimingFunction: 'linear',
+                    transition: '0.1s',
                     padding: '0 .75rem',
                   }
                 : {
@@ -200,8 +205,7 @@ const NavBar = () => {
                     position: 'fixed',
                     right: '0',
                     top: '0',
-                    transition: '0.2s',
-                    transitionTimingFunction: 'linear',
+                    transition: '0.1s',
                   }
             }
             onClick={() => setNavShow({ display: 'block' })}>
@@ -214,16 +218,14 @@ const NavBar = () => {
                       minWidth: '200px',
                       padding: '0',
                       margin: '0',
-                      transition: '0.2s',
-                      transitionTimingFunction: 'linear',
+                      transition: '0.1s',
                     }
                   : {
                       width: '10%',
                       minWidth: '130px',
                       padding: '0',
                       margin: '0',
-                      transition: '0.2s',
-                      transitionTimingFunction: 'linear',
+                      transition: '0.1s',
                     }
               }
               src='/Logo.svg'
