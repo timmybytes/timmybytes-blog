@@ -1,7 +1,12 @@
+// NOTE: This is the correct article container for transitioning between mobile/desktop styles
 .container {
   max-width: 36rem;
   padding: 0 1rem;
-  margin: 6rem auto 6rem;
+  margin: 12rem auto 6rem;
+  transition: 0.3s;
+  @media screen and (max-width: 800px) {
+    margin: 6rem auto 6rem;
+  }
 }
 
 .header {

@@ -18,7 +18,10 @@
   // min-height: 95vh;
   justify-content: stretch;
   align-items: center;
-  margin: 6rem auto 6rem;
+  margin: 12rem auto 6rem;
+  @media screen and (max-width: 800px) {
+    margin: 6rem auto 6rem;
+  }
 }
 
 .container-gen {
