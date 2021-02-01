@@ -11,7 +11,6 @@ const Nav = () => {
     window.addEventListener('scroll', () => {
       setScrollPosition(window.scrollY);
     });
-    console.log(scrollPosition);
   });
 
   const setCurrentScreenWidth = () =>
@@ -51,9 +50,13 @@ const Nav = () => {
   /* Temporary inline styles */
   const nav__desktop = {
     background: '#fdfdfd',
+    boxShadow: 'none',
+    boxShadow: scrollPosition > 20 ? '4px 4px 5px rgba(0,0,0,0.2)' : 'none',
     color: '#444444',
+    display: scrollPosition > 20 ? 'flex' : 'initial',
+    justifyContent: scrollPosition > 20 ? 'space-between' : '',
     margin: '0 auto',
-    padding: '30px 0 10px 0',
+    padding: scrollPosition > 20 ? '10px 0 10px 0' : '30px 0 10px 0',
     position: 'fixed',
     textAlign: 'center',
     top: '0',
@@ -62,7 +65,44 @@ const Nav = () => {
     img: {
       height: 'auto',
       margin: '0 auto',
-      maxWidth: '450px',
+      maxWidth: scrollPosition > 20 ? '250px' : '450px',
+      padding: scrollPosition > 20 ? '0 10vw' : '',
+      transition: '0.3s',
+      width: '100%',
+    },
+    ul: {
+      alignItems: 'center',
+      display: 'flex',
+      flexDirection: 'row',
+      justifyContent: scrollPosition > 20 ? 'stretch' : 'space-evenly',
+      listStyle: 'none outside',
+      margin: '0 auto',
+      padding: scrollPosition > 20 ? '0' : '1rem 0 0 0',
+      transition: '0.3s',
+      li: {
+        fontSize: '1.5rem',
+        padding: scrollPosition > 20 ? '0 10px' : '0',
+        textTransform: 'lowercase',
+      },
+    },
+  };
+
+  const nav__desktopScroll = {
+    background: '#fdfdfd',
+    boxShadow: '4px 4px 5px rgba(0,0,0,0.2)',
+    color: '#444444',
+    margin: '0 auto',
+    padding: '10px 0 10px 0',
+    padding: '0',
+    position: 'fixed',
+    textAlign: 'center',
+    top: '0',
+    transition: '0.3s',
+    width: '100%',
+    img: {
+      height: 'auto',
+      margin: '0 auto',
+      maxWidth: '250px',
       width: '100%',
     },
     ul: {
@@ -83,12 +123,13 @@ const Nav = () => {
   const nav__mobile = {
     alignItems: 'center',
     background: '#fdfdfd',
-    boxShadow: '4px 4px 5px rgba(0,0,0,0.2)',
+    boxShadow: scrollPosition > 20 ? '4px 4px 5px rgba(0,0,0,0.2)' : 'none',
     color: '#444444',
     display: 'flex',
     flexFlow: 'column wrap',
     fontSize: '2rem',
     justifyContent: 'center',
+    overflow: 'scroll',
     position: 'fixed',
     top: '0',
     transition: '0.3s',
@@ -97,13 +138,16 @@ const Nav = () => {
     div: {
       display: 'flex',
       flexFlow: 'row wrap',
+      justifyContent: 'space-between',
+      width: '300.95px',
     },
     a: {
       img: {
         height: 'auto',
         margin: '0 auto',
-        maxWidth: '250px',
+        maxWidth: scrollPosition > 20 ? '200px' : '250px',
         padding: '10px',
+        transition: '0.3s',
         width: '100%',
       },
     },
@@ -114,17 +158,21 @@ const Nav = () => {
       fontSize: 'inherit',
       margin: '0',
       padding: '0',
-      width: '15px',
+      transition: '0.3s',
+      // width: '15px',
     },
     ul: {
       alignItems: 'center',
-      display: 'flex',
+      display: showMobileNav ? 'flex' : 'none',
       flexFlow: 'column wrap',
       justifyContent: 'space-evenly',
       listStyle: 'none outside',
-      margin: '2rem auto',
+      margin: '0 auto',
+      overflowY: 'scroll',
       padding: '1rem 0',
+      transition: '0.3s',
       li: {
+        fontSize: '1.25rem',
         fontWeight: '900',
         marginTop: '1rem',
         textTransform: 'lowercase',
@@ -181,35 +229,32 @@ const Nav = () => {
               </a>
             </Link>
             <button style={nav__mobile.button} onClick={handleClick}>
-              {/* If hamburger clicked, show `X` to close */}
+              {/* Toggle menu hamburger/close button */}
               {showMobileNav ? <span>&times;</span> : <span>&#9776;</span>}
             </button>
           </div>
-          {/* If hamburger clicked, show mobile link menu */}
-          {showMobileNav ? (
-            <ul style={nav__mobile.ul}>
-              <li style={nav__mobile.ul.li}>
-                <Link href='/'>
-                  <a>Home{'  '}</a>
-                </Link>
-              </li>
-              <li style={nav__mobile.ul.li}>
-                <Link href='/about'>
-                  <a>About </a>
-                </Link>
-              </li>
-              <li style={nav__mobile.ul.li}>
-                <Link href='/work'>
-                  <a>Work{'  '}</a>
-                </Link>
-              </li>
-              <li style={nav__mobile.ul.li}>
-                <Link href='/blog'>
-                  <a>Blog</a>
-                </Link>
-              </li>
-            </ul>
-          ) : null}
+          <ul style={nav__mobile.ul}>
+            <li style={nav__mobile.ul.li}>
+              <Link href='/'>
+                <a>Home{'  '}</a>
+              </Link>
+            </li>
+            <li style={nav__mobile.ul.li}>
+              <Link href='/about'>
+                <a>About </a>
+              </Link>
+            </li>
+            <li style={nav__mobile.ul.li}>
+              <Link href='/work'>
+                <a>Work{'  '}</a>
+              </Link>
+            </li>
+            <li style={nav__mobile.ul.li}>
+              <Link href='/blog'>
+                <a>Blog</a>
+              </Link>
+            </li>
+          </ul>
         </nav>
       )}
     </>

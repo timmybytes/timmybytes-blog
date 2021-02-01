@@ -5,18 +5,10 @@ import HeaderRefactor from './headerRefactor';
 import Nav from './nav';
 
 const Header = () => {
-  const [screenWidth, setScreenWidth] = useState(0);
-  const [scrollWidth, setScrollWidth] = useState('100%');
-
-  useEffect(() => {
-    setScreenWidth(window.innerWidth);
-  });
-
   return (
     <>
       <header>
         <Nav />
-        {/* <NavBar /> */}
       </header>
     </>
   );
