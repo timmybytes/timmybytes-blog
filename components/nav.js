@@ -5,6 +5,14 @@ const Nav = () => {
   const [screenWidth, setScreenWidth] = useState(0);
   const [showMobileNav, setShowMobileNav] = useState(false);
   // TODO: Add onScroll effect for nav to shrink to mobile style on scroll
+  const [scrollPosition, setScrollPosition] = useState(0);
+
+  useEffect(() => {
+    window.addEventListener('scroll', () => {
+      setScrollPosition(window.scrollY);
+    });
+    console.log(scrollPosition);
+  });
 
   const setCurrentScreenWidth = () =>
     window.innerWidth ||
@@ -41,17 +49,48 @@ const Nav = () => {
 
   // FIXME: Consolidate to SASS
   /* Temporary inline styles */
+  const nav__desktop = {
+    background: '#fdfdfd',
+    color: '#444444',
+    margin: '0 auto',
+    padding: '30px 0 10px 0',
+    position: 'fixed',
+    textAlign: 'center',
+    top: '0',
+    transition: '0.3s',
+    width: '100%',
+    img: {
+      height: 'auto',
+      margin: '0 auto',
+      maxWidth: '450px',
+      width: '100%',
+    },
+    ul: {
+      alignItems: 'center',
+      display: 'flex',
+      flexDirection: 'row',
+      justifyContent: 'space-evenly',
+      listStyle: 'none outside',
+      margin: '0 auto',
+      padding: '1rem 0 0 0',
+      li: {
+        fontSize: '1.5rem',
+        textTransform: 'lowercase',
+      },
+    },
+  };
+
   const nav__mobile = {
+    alignItems: 'center',
     background: '#fdfdfd',
     boxShadow: '4px 4px 5px rgba(0,0,0,0.2)',
     color: '#444444',
     display: 'flex',
     flexFlow: 'column wrap',
+    fontSize: '2rem',
     justifyContent: 'center',
-    alignItems: 'center',
     position: 'fixed',
     top: '0',
-    fontSize: '2rem',
     transition: '0.3s',
     width: '100%',
     zIndex: '1',
@@ -69,54 +108,27 @@ const Nav = () => {
       },
     },
     button: {
-      border: '0',
       background: 'inherit',
+      border: '0',
+      cursor: 'pointer',
       fontSize: 'inherit',
       margin: '0',
       padding: '0',
-      cursor: 'pointer',
       width: '15px',
     },
     ul: {
+      alignItems: 'center',
       display: 'flex',
       flexFlow: 'column wrap',
       justifyContent: 'space-evenly',
-      alignItems: 'center',
       listStyle: 'none outside',
       margin: '2rem auto',
       padding: '1rem 0',
       li: {
+        fontWeight: '900',
         marginTop: '1rem',
         textTransform: 'lowercase',
-        fontWeight: '900',
       },
-    },
-  };
-
-  const nav__desktop = {
-    background: '#fdfdfd',
-    color: '#444444',
-    position: 'fixed',
-    top: '0',
-    margin: '0 auto',
-    padding: '30px 0 10px 0',
-    textAlign: 'center',
-    transition: '0.3s',
-    width: '100%',
-    img: {
-      width: '100%',
-      height: 'auto',
-      maxWidth: '450px',
-      margin: '0 auto',
-    },
-    ul: {
-      display: 'flex',
-      flexDirection: 'row',
-      justifyContent: 'space-evenly',
-      alignItems: 'center',
-      listStyle: 'none outside',
-      margin: '0 auto',
-      padding: '1rem 0 0 0',
     },
   };
 
@@ -134,22 +146,22 @@ const Nav = () => {
             </a>
           </Link>
           <ul style={nav__desktop.ul}>
-            <li>
+            <li style={nav__desktop.ul.li}>
               <Link href='/'>
                 <a>Home{'  '}</a>
               </Link>
             </li>
-            <li>
+            <li style={nav__desktop.ul.li}>
               <Link href='/about'>
                 <a>About </a>
               </Link>
             </li>
-            <li>
+            <li style={nav__desktop.ul.li}>
               <Link href='/work'>
                 <a>Work{'  '}</a>
               </Link>
             </li>
-            <li>
+            <li style={nav__desktop.ul.li}>
               <Link href='/blog'>
                 <a>Blog</a>
               </Link>
