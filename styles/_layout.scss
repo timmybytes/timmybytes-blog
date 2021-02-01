@@ -45,6 +45,11 @@
   p {
     margin: 0.5rem 0;
   }
+  margin: 12rem auto 6rem;
+  transition: 0.3s;
+  @media screen and (max-width: 800px) {
+    margin: 6rem auto 6rem;
+  }
 }
 
 .container-sm {

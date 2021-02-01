@@ -21,9 +21,10 @@ code {
   background: $color-light;
   border: 1px solid $color-dark;
   border-radius: 4px;
+  box-shadow: -4px 0px 5px 0px rgba(0, 0, 0, 0.3) inset;
   display: block;
   padding: $size-1;
-  &__comment {
+  scro &__comment {
     color: $color-greyer;
     font-style: italic;
   }

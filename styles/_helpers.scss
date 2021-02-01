@@ -71,13 +71,10 @@
 }
 
 .header-1 {
-  font-size: $size-6;
+  font-size: $size-5;
+  line-height: 1.2;
   @media screen and (max-width: 500px) {
     font-size: 8vw;
-  }
-  @media screen and (max-width: 400px) {
-    line-height: 1.2;
-    font-size: $size-4;
   }
 }
 
@@ -165,5 +162,12 @@
     @include color-button($color-quaternary);
     text-align: center;
     width: 100%;
+  }
+}
+
+.hoverless {
+  &:hover {
+    border-bottom: inherit;
+    text-transform: none;
   }
 }

@@ -4,6 +4,7 @@ import Link from 'next/link';
 const Nav = () => {
   const [screenWidth, setScreenWidth] = useState(0);
   const [showMobileNav, setShowMobileNav] = useState(false);
+  // TODO: Add onScroll effect for nav to shrink to mobile style on scroll
 
   const setCurrentScreenWidth = () =>
     window.innerWidth ||
@@ -38,14 +39,14 @@ const Nav = () => {
     setShowMobileNav(!showMobileNav);
   };
 
-  /* Temporary CSS in JS styles */
+  // FIXME: Consolidate to SASS
+  /* Temporary inline styles */
   const nav__mobile = {
-    // FIXME: Logo Link hover border
     background: '#fdfdfd',
     boxShadow: '4px 4px 5px rgba(0,0,0,0.2)',
     color: '#444444',
     display: 'flex',
-    flexDirection: 'row',
+    flexFlow: 'column wrap',
     justifyContent: 'center',
     alignItems: 'center',
     position: 'fixed',
@@ -53,12 +54,19 @@ const Nav = () => {
     fontSize: '2rem',
     transition: '0.3s',
     width: '100%',
-    img: {
-      width: '100%',
-      height: 'auto',
-      maxWidth: '250px',
-      margin: '0 auto',
-      padding: '10px',
+    zIndex: '1',
+    div: {
+      display: 'flex',
+      flexFlow: 'row wrap',
+    },
+    a: {
+      img: {
+        height: 'auto',
+        margin: '0 auto',
+        maxWidth: '250px',
+        padding: '10px',
+        width: '100%',
+      },
     },
     button: {
       border: '0',
@@ -67,6 +75,21 @@ const Nav = () => {
       margin: '0',
       padding: '0',
       cursor: 'pointer',
+      width: '15px',
+    },
+    ul: {
+      display: 'flex',
+      flexFlow: 'column wrap',
+      justifyContent: 'space-evenly',
+      alignItems: 'center',
+      listStyle: 'none outside',
+      margin: '2rem auto',
+      padding: '1rem 0',
+      li: {
+        marginTop: '1rem',
+        textTransform: 'lowercase',
+        fontWeight: '900',
+      },
     },
   };
 
@@ -135,36 +158,40 @@ const Nav = () => {
         </nav>
       ) : (
         <nav style={nav__mobile}>
-          <Link href='/'>
-            <a>
-              <img
-                style={nav__mobile.img}
-                src='/Logo.svg'
-                alt='timmybytes logo'
-              />
-            </a>
-          </Link>
-          <button style={nav__mobile.button} onClick={handleClick}>
-            &#9776;
-          </button>
+          <div style={nav__mobile.div}>
+            <Link href='/'>
+              <a style={nav__mobile.a} className='hoverless'>
+                <img
+                  style={nav__mobile.a.img}
+                  src='/Logo.svg'
+                  alt='timmybytes logo'
+                />
+              </a>
+            </Link>
+            <button style={nav__mobile.button} onClick={handleClick}>
+              {/* If hamburger clicked, show `X` to close */}
+              {showMobileNav ? <span>&times;</span> : <span>&#9776;</span>}
+            </button>
+          </div>
+          {/* If hamburger clicked, show mobile link menu */}
           {showMobileNav ? (
-            <ul style={nav__desktop.ul}>
-              <li>
+            <ul style={nav__mobile.ul}>
+              <li style={nav__mobile.ul.li}>
                 <Link href='/'>
                   <a>Home{'  '}</a>
                 </Link>
               </li>
-              <li>
+              <li style={nav__mobile.ul.li}>
                 <Link href='/about'>
                   <a>About </a>
                 </Link>
               </li>
-              <li>
+              <li style={nav__mobile.ul.li}>
                 <Link href='/work'>
                   <a>Work{'  '}</a>
                 </Link>
               </li>
-              <li>
+              <li style={nav__mobile.ul.li}>
                 <Link href='/blog'>
                   <a>Blog</a>
                 </Link>
@@ -178,3 +205,38 @@ const Nav = () => {
 };
 
 export default Nav;
+
+{
+  /* <div className='overlay'>
+  <a
+    href='javascript:void(0)'
+    className='closebtn'
+    onClick={() => setNavShow({ display: 'block' })}>
+    &times;
+  </a>
+  <div>links
+    <ul className='overlay-content'>
+      <li>
+        <Link href='/'>
+          <a>Home</a>
+        </Link>
+      </li>
+      <li>
+        <Link href='/about'>
+          <a>About</a>
+        </Link>
+      </li>
+      <li>
+        <Link href='/work'>
+          <a>Work</a>
+        </Link>
+      </li>
+      <li>
+        <Link href='/blog'>
+          <a>Blog</a>
+        </Link>
+      </li>
+    </ul>
+  </div>
+</div> */
+}
