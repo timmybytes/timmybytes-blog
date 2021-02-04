@@ -5,6 +5,7 @@ const Nav = () => {
   const [screenWidth, setScreenWidth] = useState(0);
   const [showMobileNav, setShowMobileNav] = useState(false);
   // TODO: Add onScroll effect for nav to shrink to mobile style on scroll
+  //  TODO: Add media cards
   const [scrollPosition, setScrollPosition] = useState(0);
 
   useEffect(() => {
