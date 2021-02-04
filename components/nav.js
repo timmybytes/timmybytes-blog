@@ -5,7 +5,7 @@ const Nav = () => {
   const [screenWidth, setScreenWidth] = useState(0);
   const [showMobileNav, setShowMobileNav] = useState(false);
   // TODO: Add onScroll effect for nav to shrink to mobile style on scroll
-  //  TODO: Add media cards
+  // TODO: Add media cards
   const [scrollPosition, setScrollPosition] = useState(0);
 
   useEffect(() => {
@@ -43,11 +43,7 @@ const Nav = () => {
     return screenWidth;
   }
 
-  const handleClick = () => {
-    setShowMobileNav(!showMobileNav);
-  };
-
-  // FIXME: Consolidate to SASS
+  // FIXME: Consolidate to SASS/CSS Modules/Styled Componenets/etc
   /* Temporary inline styles */
   const nav__desktop = {
     background: '#fdfdfd',
@@ -200,7 +196,9 @@ const Nav = () => {
                 />
               </a>
             </Link>
-            <button style={nav__mobile.button} onClick={handleClick}>
+            <button
+              style={nav__mobile.button}
+              onClick={() => setShowMobileNav(!showMobileNav)}>
               {/* Toggle menu hamburger/close button */}
               {showMobileNav ? <span>&times;</span> : <span>&#9776;</span>}
             </button>
