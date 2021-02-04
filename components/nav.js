@@ -51,18 +51,18 @@ const Nav = () => {
   /* Temporary inline styles */
   const nav__desktop = {
     background: '#fdfdfd',
-    boxShadow: 'none',
     boxShadow: scrollPosition > 20 ? '4px 4px 5px rgba(0,0,0,0.2)' : 'none',
     color: '#444444',
     display: scrollPosition > 20 ? 'flex' : 'initial',
     justifyContent: scrollPosition > 20 ? 'space-between' : '',
     margin: '0 auto',
-    padding: scrollPosition > 20 ? '10px 0 10px 0' : '30px 0 10px 0',
+    padding: scrollPosition > 20 ? '10px 0 10px 0' : '30px 0 0 0',
     position: 'fixed',
     textAlign: 'center',
     top: '0',
     transition: '0.3s',
     width: '100%',
+    zIndex: '1',
     img: {
       height: 'auto',
       margin: '0 auto',
@@ -78,44 +78,12 @@ const Nav = () => {
       justifyContent: scrollPosition > 20 ? 'stretch' : 'space-evenly',
       listStyle: 'none outside',
       margin: '0 auto',
-      padding: scrollPosition > 20 ? '0' : '1rem 0 0 0',
+      maxWidth: '450px',
+      padding: scrollPosition > 20 ? '0' : '1rem 0',
       transition: '0.3s',
       li: {
         fontSize: '1.5rem',
         padding: scrollPosition > 20 ? '0 10px' : '0',
-        textTransform: 'lowercase',
-      },
-    },
-  };
-
-  const nav__desktopScroll = {
-    background: '#fdfdfd',
-    boxShadow: '4px 4px 5px rgba(0,0,0,0.2)',
-    color: '#444444',
-    margin: '0 auto',
-    padding: '10px 0 10px 0',
-    padding: '0',
-    position: 'fixed',
-    textAlign: 'center',
-    top: '0',
-    transition: '0.3s',
-    width: '100%',
-    img: {
-      height: 'auto',
-      margin: '0 auto',
-      maxWidth: '250px',
-      width: '100%',
-    },
-    ul: {
-      alignItems: 'center',
-      display: 'flex',
-      flexDirection: 'row',
-      justifyContent: 'space-evenly',
-      listStyle: 'none outside',
-      margin: '0 auto',
-      padding: '1rem 0 0 0',
-      li: {
-        fontSize: '1.5rem',
         textTransform: 'lowercase',
       },
     },
@@ -200,16 +168,19 @@ const Nav = () => {
                 <a>Home{'  '}</a>
               </Link>
             </li>
+
             <li style={nav__desktop.ul.li}>
               <Link href='/about'>
                 <a>About </a>
               </Link>
             </li>
+
             <li style={nav__desktop.ul.li}>
               <Link href='/work'>
                 <a>Work{'  '}</a>
               </Link>
             </li>
+
             <li style={nav__desktop.ul.li}>
               <Link href='/blog'>
                 <a>Blog</a>
@@ -263,38 +234,3 @@ const Nav = () => {
 };
 
 export default Nav;
-
-{
-  /* <div className='overlay'>
-  <a
-    href='javascript:void(0)'
-    className='closebtn'
-    onClick={() => setNavShow({ display: 'block' })}>
-    &times;
-  </a>
-  <div>links
-    <ul className='overlay-content'>
-      <li>
-        <Link href='/'>
-          <a>Home</a>
-        </Link>
-      </li>
-      <li>
-        <Link href='/about'>
-          <a>About</a>
-        </Link>
-      </li>
-      <li>
-        <Link href='/work'>
-          <a>Work</a>
-        </Link>
-      </li>
-      <li>
-        <Link href='/blog'>
-          <a>Blog</a>
-        </Link>
-      </li>
-    </ul>
-  </div>
-</div> */
-}

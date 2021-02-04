@@ -2,8 +2,20 @@ import Head from 'next/head';
 import Link from 'next/link';
 import Header from '../components/header';
 import Footer from '../components/footer';
+import utilStyles from '../styles/utils.module.scss';
+import { getSortedPostsData } from '../lib/posts';
 
-export default function Home() {
+export async function getStaticProps() {
+  const allPostsData = getSortedPostsData();
+  return {
+    props: {
+      allPostsData,
+    },
+  };
+}
+
+export default function Home({ allPostsData }) {
+  console.log(allPostsData[0].title);
   return (
     <>
       <Head>
@@ -24,41 +36,62 @@ export default function Home() {
         />
       </Head>
       <Header />
-      <div className='container'>
-        <main>
-          <section className='grid'>
-            <Link href='/posts/keeping-git-commit-messages-consistent-with-a-custom-template'>
-              <a className='card'>
-                <h3>
-                  Keeping Git Commit Messages Consistent with a Custom Template
-                </h3>
-                <p>
-                  Create your own template to easliy guide your commit messages.
-                </p>
-              </a>
+      <main className='container-gen'>
+        <div
+          className='card'
+          style={{
+            // boxShadow: '10px 10px 0 #444444',
+            margin: '0 auto',
+          }}>
+          <h2 className='header-2'>
+            Hi! I'm Timothy Merritt, a{' '}
+            <span className='primary'>developer</span>,{' '}
+            <span className='secondary'>designer</span>,{' '}
+            <span className='tertiary-more'>writer</span>, and{' '}
+            <span className='quaternary'>musician</span>*
+          </h2>
+          <p>
+            See more about me in the{' '}
+            <Link href='/about'>
+              <a>About</a>
+            </Link>{' '}
+            page, read my writing about coding and web development in the{' '}
+            <Link href='/blog'>
+              <a>Blog</a>
             </Link>
-            <Link href='/posts/what-i-learned-from-100-days-of-code'>
-              <a className='card'>
-                <h3>What I Learned From 100 Days of Code</h3>
-                <p>
-                  Some of what I learned after completing my first
-                  #100DaysOfCode challenge.
-                </p>
-              </a>
+            , or check out some of my featured{' '}
+            <Link href='/work'>
+              <a>Work</a>
             </Link>
-            <Link href='/posts/adding-ci-cd-to-your-project-with-github-actions'>
-              <a className='card'>
-                <h3>Adding CI/CD to Your Project with GitHub Actions</h3>
-                <p>
-                  Speed up and streamline your workflow with automation and code
-                  checks.
-                </p>
-              </a>
-            </Link>
-          </section>
-        </main>
-        <Footer />
-      </div>
+            .
+          </p>
+          <p>
+            I'm currently looking for new opportunities in frontend roles, so if
+            you'd like to chat about what I can bring to your project, please
+            contact me here!
+          </p>
+          <p>
+            <sub>
+              <sub>* I'm also pretty good at LEGOs.</sub>
+            </sub>
+          </p>
+        </div>
+        <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
+          <h2 className={utilStyles.headingLg}>Blog</h2>
+          <ul className={utilStyles.list}>
+            {allPostsData.map(({ id, date, title }) => (
+              <li className={utilStyles.listItem} key={id}>
+                {title}
+                <br />
+                {id}
+                <br />
+                {date}
+              </li>
+            ))}
+          </ul>
+        </section>
+      </main>
+      <Footer />
     </>
   );
 }
