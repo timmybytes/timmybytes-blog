@@ -5,26 +5,26 @@ pre {
 }
 
 code {
-  background: $color-light;
   border-radius: 4px;
   color: $color-dark;
   font-family: 'Iosevka', Menlo, Monaco, Lucida Console, Liberation Mono,
     DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
   font-size: 14px;
   overflow-x: scroll;
-  // padding: 0 5px;
-  white-space: pre;
-  // white-space: normal;
+  // padding: 5px;
+  // white-space: pre;
+  word-break: normal;
 }
 .codeblock {
   overflow-x: scroll;
-  background: $color-light;
-  border: 1px solid $color-dark;
+  background: $color-dark;
+  border: 1px solid $color-light;
   border-radius: 4px;
   box-shadow: -4px 0px 5px 0px rgba(0, 0, 0, 0.3) inset;
+  color: $color-light;
   display: block;
   padding: $size-1;
-  scro &__comment {
+  &__comment {
     color: $color-greyer;
     font-style: italic;
   }

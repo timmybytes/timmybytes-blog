@@ -29,15 +29,16 @@ export default function About() {
       <main className='container-gen'>
         <img
           className='img-avatar rotate'
+          // src='/images/profile.png'
           src='/images/profile.png'
           alt='Timothy Merritt profile photo'
         />
-        <h1 className='header-1 txtthick'>Hi! I'm Timothy Merritt</h1>
-        <h2 className='header-2 txtlower'>
+        <h1 className='header-1 txtthick center'>Hi! I'm Timothy Merritt</h1>
+        <h2 className='header-2 txtlower center'>
           a <span className='primary'>developer</span>,{' '}
           <span className='secondary'>designer</span>,{' '}
           <span className='tertiary-more'>writer</span>, and{' '}
-          <span className='quaternary'>musician</span>.
+          <span className='quaternary'>musician</span>.*
         </h2>
         <p>
           I’m a software developer with a background in design, music, and
@@ -51,14 +52,6 @@ export default function About() {
           </Link>
         </p>
         <p>
-          I’m currently proficient in: HTML, CSS, SASS, JS (ES6+), React (with
-          Hooks, state, etc.), git, Bash, Webpack, NPM, ESLint, Prettier, Figma,
-          InDesign, and Photoshop, and I’m always learning more technologies and
-          methods to improve my practices. I’m a seasoned team leader, trainer,
-          mentor, and collaborator, and I'm currently looking for new
-          development roles and freelance opportunities.
-        </p>
-        <p>
           If you’re interested is speaking with me please feel free to send a
           message through my{' '}
           <Link href='/contact'>
@@ -68,6 +61,10 @@ export default function About() {
           <a href='https://www.linkedin.com/in/timmybytes'>LinkedIn</a> or{' '}
           <a href='https://twitter.com/timmybytes'>Twitter</a>.
         </p>
+        <p>
+          <sub>* I'm also pretty good at LEGOs.</sub>
+        </p>
+
         <Link href='/'>
           <a>&larr; Back to home</a>
         </Link>

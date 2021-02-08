@@ -1,8 +1,10 @@
 .grid {
   display: grid;
   align-items: stretch;
+  gap: $size-1;
   justify-content: stretch;
   max-width: 1200px;
+  padding: $size-2;
   grid-template-columns: minmax(200px, 1fr) minmax(200px, 1fr) minmax(
       200px,
       1fr
@@ -29,8 +31,8 @@
   flex-direction: column;
   margin: 3rem auto 6rem;
   padding: 0 1rem;
-  justify-content: center;
-  align-items: center;
+  justify-content: stretch;
+  align-items: stretch;
   max-width: 650px;
   h1,
   h2,
@@ -44,6 +46,7 @@
   }
   p {
     margin: 0.5rem 0;
+    text-align: justify;
   }
   margin: 12rem auto 6rem;
   transition: 0.3s;
@@ -99,7 +102,7 @@
 }
 
 .card {
-  margin: 0.75rem;
+  margin: 0.75rem 1rem;
   flex-basis: 45%;
   max-width: 450px;
   padding: 1.5rem;

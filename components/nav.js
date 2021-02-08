@@ -4,8 +4,6 @@ import Link from 'next/link';
 const Nav = () => {
   const [screenWidth, setScreenWidth] = useState(0);
   const [showMobileNav, setShowMobileNav] = useState(false);
-  // TODO: Add onScroll effect for nav to shrink to mobile style on scroll
-  // TODO: Add media cards
   const [scrollPosition, setScrollPosition] = useState(0);
 
   useEffect(() => {
@@ -46,7 +44,7 @@ const Nav = () => {
   // FIXME: Consolidate to SASS/CSS Modules/Styled Componenets/etc
   /* Temporary inline styles */
   const nav__desktop = {
-    background: '#fdfdfd',
+    background: '#f1f1f1',
     boxShadow: scrollPosition > 20 ? '4px 4px 5px rgba(0,0,0,0.2)' : 'none',
     color: '#444444',
     display: scrollPosition > 20 ? 'flex' : 'initial',
@@ -87,7 +85,7 @@ const Nav = () => {
 
   const nav__mobile = {
     alignItems: 'center',
-    background: '#fdfdfd',
+    background: '#f1f1f1',
     boxShadow: scrollPosition > 20 ? '4px 4px 5px rgba(0,0,0,0.2)' : 'none',
     color: '#444444',
     display: 'flex',

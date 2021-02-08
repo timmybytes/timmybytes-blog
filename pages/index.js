@@ -15,13 +15,13 @@ export async function getStaticProps() {
 }
 
 export default function Home({ allPostsData }) {
-  console.log(allPostsData[0].title);
   return (
     <>
       <Head>
         <title>timmybytes</title>
         <link rel='icon' href='/favicon.ico' />
         {/* TODO: Add preload fonts */}
+        {/* TODO: Add social cards */}
         <link
           rel='preload'
           href='/fonts/HK-Grotesk/HKGrotesk-Regular.otf'
@@ -36,61 +36,61 @@ export default function Home({ allPostsData }) {
         />
       </Head>
       <Header />
-      <main className='container-gen'>
-        <div
-          className='card'
-          style={{
-            // boxShadow: '10px 10px 0 #444444',
-            margin: '0 auto',
-          }}>
-          <h2 className='header-2'>
-            Hi! I'm Timothy Merritt, a{' '}
-            <span className='primary'>developer</span>,{' '}
-            <span className='secondary'>designer</span>,{' '}
-            <span className='tertiary-more'>writer</span>, and{' '}
-            <span className='quaternary'>musician</span>*
-          </h2>
-          <p>
-            See more about me in the{' '}
-            <Link href='/about'>
-              <a>About</a>
-            </Link>{' '}
-            page, read my writing about coding and web development in the{' '}
-            <Link href='/blog'>
-              <a>Blog</a>
-            </Link>
-            , or check out some of my featured{' '}
-            <Link href='/work'>
-              <a>Work</a>
-            </Link>
-            .
-          </p>
-          <p>
-            I'm currently looking for new opportunities in frontend roles, so if
-            you'd like to chat about what I can bring to your project, please
-            contact me here!
-          </p>
-          <p>
-            <sub>
-              <sub>* I'm also pretty good at LEGOs.</sub>
-            </sub>
-          </p>
+      <main className='container'>
+        <div style={{ height: '100vh' }}>
+          <section className='card'>
+            <h2 className='header-2'>
+              Hi! I'm Timothy Merritt, a{' '}
+              <span className='primary'>developer</span>,{' '}
+              <span className='secondary'>designer</span>,{' '}
+              <span className='tertiary-more'>writer</span>, and{' '}
+              <span className='quaternary'>musician</span>*
+            </h2>
+            {/* <p>
+              See more about me in the{' '}
+              <Link href='/about'>
+                <a>About</a>
+              </Link>{' '}
+              page, read my writing about coding and web development in the{' '}
+              <Link href='/blog'>
+                <a>Blog</a>
+              </Link>
+              , or check out some of my featured{' '}
+              <Link href='/work'>
+                <a>Work</a>
+              </Link>
+              .
+            </p>
+            <p>
+              I'm currently looking for new opportunities in frontend roles, so
+              if you'd like to chat about what I can bring to your project,
+              please contact me here!
+            </p> */}
+            <p>
+              <sub>
+                <sub>* I'm also pretty good at LEGOs.</sub>
+              </sub>
+            </p>
+          </section>
         </div>
-        <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-          <h2 className={utilStyles.headingLg}>Blog</h2>
-          <ul className={utilStyles.list}>
+        <section
+          style={{ background: '#f5668c', width: '100%', height: '50vh' }}>
+          <h2 className='header-2 center'>Blog</h2>
+          {/* <ul className={utilStyles.list}> */}
+          <article className='grid'>
             {allPostsData.map(({ id, date, title }) => (
-              <li className={utilStyles.listItem} key={id}>
-                {title}
+              <div className='card' key={id}>
+                <h3>{title}</h3>
                 <br />
-                {id}
+                <sub>{id}</sub>
                 <br />
-                {date}
-              </li>
+                <sub>{date}</sub>
+              </div>
             ))}
-          </ul>
+          </article>
         </section>
       </main>
+
       <Footer />
     </>
   );

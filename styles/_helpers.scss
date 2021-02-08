@@ -81,22 +81,24 @@
 .header-2 {
   font-size: $size-4;
   line-height: 1.2;
+  margin: $size-5 auto $size-sm;
   @media screen and (max-width: 500px) {
     font-size: 8vw;
   }
 }
 
 .img-avatar {
-  max-width: 200px;
+  background: $color-lighter;
+  max-width: 300px;
   @media screen and (max-width: 800px) {
-    max-width: 100px;
+    max-width: 200px;
   }
   width: 100%;
   height: auto;
   border-radius: 50%;
-  border: 2px solid $color-dark;
+  border: 2px solid $color-lighter;
   margin: auto;
-  // padding: 10px;
+  // padding: 3rem;
 }
 
 @keyframes rotation {
@@ -172,4 +174,10 @@
     border-bottom: inherit;
     text-transform: none;
   }
+}
+
+.center {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
