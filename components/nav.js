@@ -44,7 +44,7 @@ const Nav = () => {
   // FIXME: Consolidate to SASS/CSS Modules/Styled Componenets/etc
   /* Temporary inline styles */
   const nav__desktop = {
-    background: '#f1f1f1',
+    background: '#fdfdfd',
     boxShadow: scrollPosition > 20 ? '4px 4px 5px rgba(0,0,0,0.2)' : 'none',
     color: '#444444',
     display: scrollPosition > 20 ? 'flex' : 'initial',
@@ -85,7 +85,7 @@ const Nav = () => {
 
   const nav__mobile = {
     alignItems: 'center',
-    background: '#f1f1f1',
+    background: '#fdfdfd',
     boxShadow: scrollPosition > 20 ? '4px 4px 5px rgba(0,0,0,0.2)' : 'none',
     color: '#444444',
     display: 'flex',

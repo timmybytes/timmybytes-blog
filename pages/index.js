@@ -4,6 +4,7 @@ import Header from '../components/header';
 import Footer from '../components/footer';
 import utilStyles from '../styles/utils.module.scss';
 import { getSortedPostsData } from '../lib/posts';
+import Show from './show';
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -37,7 +38,7 @@ export default function Home({ allPostsData }) {
       </Head>
       <Header />
       <main className='container'>
-        <div style={{ height: '100vh' }}>
+        <div>
           <section className='card'>
             <h2 className='header-2'>
               Hi! I'm Timothy Merritt, a{' '}
@@ -46,7 +47,7 @@ export default function Home({ allPostsData }) {
               <span className='tertiary-more'>writer</span>, and{' '}
               <span className='quaternary'>musician</span>*
             </h2>
-            {/* <p>
+            <p>
               See more about me in the{' '}
               <Link href='/about'>
                 <a>About</a>
@@ -65,7 +66,7 @@ export default function Home({ allPostsData }) {
               I'm currently looking for new opportunities in frontend roles, so
               if you'd like to chat about what I can bring to your project,
               please contact me here!
-            </p> */}
+            </p>
             <p>
               <sub>
                 <sub>* I'm also pretty good at LEGOs.</sub>
@@ -73,10 +74,12 @@ export default function Home({ allPostsData }) {
             </p>
           </section>
         </div>
-        <section
-          style={{ background: '#f5668c', width: '100%', height: '50vh' }}>
+        {/* <section
+          style={{
+            background: '#f5668c',
+            width: '100%',
+          }}>
           <h2 className='header-2 center'>Blog</h2>
-          {/* <ul className={utilStyles.list}> */}
           <article className='grid'>
             {allPostsData.map(({ id, date, title }) => (
               <div className='card' key={id}>
@@ -88,7 +91,7 @@ export default function Home({ allPostsData }) {
               </div>
             ))}
           </article>
-        </section>
+        </section> */}
       </main>
 
       <Footer />
