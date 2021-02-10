@@ -9,11 +9,12 @@ code {
   color: $color-dark;
   font-family: 'Iosevka', Menlo, Monaco, Lucida Console, Liberation Mono,
     DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-  font-size: 14px;
+  font-size: $size-sm-1;
   overflow-x: scroll;
-  // padding: 5px;
-  // white-space: pre;
   word-break: normal;
+  @media screen and (max-width: 850px) {
+    font-size: 12px;
+  }
 }
 .codeblock {
   overflow-x: scroll;

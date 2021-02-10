@@ -25,6 +25,9 @@ $color-quaternary-more: #fdc393;
 
 // Sizing
 $ratio: 1.236;
+$size-sm-1: 1rem / $ratio;
+$size-sm-2: $size-sm-1 / $ratio;
+$size-sm-3: $size-sm-2 / $ratio;
 $size-1: 1rem;
 $size-2: $size-1 * $ratio;
 $size-3: $size-2 * $ratio;
