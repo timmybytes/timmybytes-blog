@@ -9,22 +9,22 @@ code {
   color: $color-dark;
   font-family: 'Iosevka', Menlo, Monaco, Lucida Console, Liberation Mono,
     DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-  font-size: $size-sm-1;
+  font-size: inherit;
   overflow-x: scroll;
   word-break: normal;
   @media screen and (max-width: 850px) {
-    font-size: 12px;
+    font-size: $size-sm-1;
   }
 }
 .codeblock {
-  overflow-x: scroll;
   background: $color-dark;
-  border: 1px solid $color-light;
   border-radius: 4px;
-  box-shadow: -4px 0px 5px 0px rgba(0, 0, 0, 0.3) inset;
+  border: 1px solid $color-light;
+  box-shadow: -4px 0px 20px 0px rgba(0, 0, 0, 1) inset;
   color: $color-light;
   display: block;
-  padding: $size-1;
+  overflow-x: scroll;
+  padding: $size-4;
   &__comment {
     color: $color-greyer;
     font-style: italic;
