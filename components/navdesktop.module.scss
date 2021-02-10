@@ -1,0 +1,29 @@
+@import '../styles/variables';
+
+.nav {
+  background: $color-lighter;
+  color: $color-dark;
+  margin: 0 auto;
+  position: fixed;
+  text-align: center;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  .logo__img {
+    height: auto;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .links {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    list-style: none outside;
+    margin: 0 auto;
+    max-width: 450px;
+    .link {
+      font-size: 1.5rem;
+      text-transform: lowercase;
+    }
+  }
+}

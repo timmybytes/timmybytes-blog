@@ -1,8 +1,11 @@
 .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  margin: 12rem auto 6rem;
+  margin: 12rem auto 6rem;
   max-width: 36rem;
   padding: 0 1rem;
-  margin: 12rem auto 6rem;
-  // text-align: justify;
   transition: 0.3s;
   @media screen and (max-width: 800px) {
     margin: 6rem auto 6rem;

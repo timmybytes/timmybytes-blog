@@ -1,0 +1,59 @@
+@import '../styles/variables';
+
+.nav {
+  align-items: center;
+  background: $color-lighter;
+  color: $color-dark;
+  display: flex;
+  flex-flow: column wrap;
+  font-size: 2rem;
+  justify-content: center;
+  overflow: scroll;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  .wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 300.95px;
+  }
+  .logo {
+    &__img {
+      height: auto;
+      margin: 0 auto;
+      max-width: 250px;
+      padding: 10px;
+      width: 100%;
+    }
+    &:hover {
+      border-bottom: inherit;
+      text-transform: none;
+    }
+  }
+  .button {
+    background: inherit;
+    border: 0;
+    cursor: pointer;
+    font-size: inherit;
+    margin: 0;
+    padding: 0;
+    transition: 0.3s;
+  }
+  .links {
+    align-items: center;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    list-style: none outside;
+    margin: 0 auto;
+    overflow-y: scroll;
+    padding: 1rem 0;
+    .link {
+      font-size: 1.25rem;
+      font-weight: 900;
+      margin-top: 1rem;
+      text-transform: lowercase;
+    }
+  }
+}
