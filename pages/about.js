@@ -3,8 +3,10 @@ import Link from 'next/link';
 import Header from '../components/header';
 import Footer from '../components/Footer/footer';
 import Layout from '../components/layout';
+import { useAppContext } from '../contexts/AppContext';
 
-export default function About() {
+const About = () => {
+  const theme = useAppContext();
   return (
     <>
       <Header />
@@ -72,4 +74,5 @@ export default function About() {
       <Footer />
     </>
   );
-}
+};
+export default About;
