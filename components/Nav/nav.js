@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import navmobile from './navmobile.module.scss';
 import navdesktop from './navdesktop.module.scss';
+import DarkButton from './darkButton';
 
 const Nav = () => {
   const [screenWidth, setScreenWidth] = useState(0);
@@ -117,6 +118,13 @@ const Nav = () => {
               <Link href='/blog'>
                 <a>Blog</a>
               </Link>
+            </li>
+            <li
+              className={navdesktop.link}
+              style={
+                scrollPosition > 20 ? { padding: '0 10px' } : { padding: '0' }
+              }>
+              <DarkButton />
             </li>
           </ul>
         </nav>
