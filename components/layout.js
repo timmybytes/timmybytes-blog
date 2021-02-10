@@ -4,7 +4,7 @@ import utilStyles from '../styles/utils.module.scss';
 import Link from 'next/link';
 import Header from './header';
 import PostFooter from './postFooter';
-import Footer from '../components/footer';
+import Footer from '../components/Footer/footer';
 
 const name = 'Timothy Merritt';
 export const siteTitle = 'timmybytes';

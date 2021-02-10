@@ -1,4 +1,4 @@
-@import '../styles/variables';
+@import '../../styles/variables';
 
 .nav {
   background: $color-lighter;
@@ -9,6 +9,10 @@
   top: 0;
   width: 100%;
   z-index: 1;
+  a {
+    border-bottom: none;
+    text-transform: none;
+  }
   .logo__img {
     height: auto;
     margin: 0 auto;

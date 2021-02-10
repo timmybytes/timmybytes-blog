@@ -1,0 +1,22 @@
+@import '../../styles/variables';
+
+.footer {
+  align-items: center;
+  color: $color-greyer;
+  display: flex;
+  font-size: 10px;
+  font-weight: 200;
+  justify-content: center;
+  letter-spacing: 1.3px;
+  padding: $size-1 0;
+  text-transform: uppercase;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  & a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
