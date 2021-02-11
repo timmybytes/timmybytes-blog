@@ -1,0 +1,19 @@
+@import '../styles/variables';
+
+.darkbutton {
+  border: none;
+  border: 1px solid $color-lighter;
+  background: none;
+  border-radius: 50%;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  padding: 5px 9px;
+  font-size: $size-3;
+  cursor: pointer;
+  &:hover {
+    transition: 0.3s;
+    border: 1px solid $color-dark;
+    box-shadow: 2px 2px 0 $color-dark;
+  }
+}

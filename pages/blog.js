@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import Header from '../components/header';
-import Footer from '../components/Footer/footer';
+import Header from './components/header';
+import Footer from './components/Footer/footer';
 import { getSortedPostsData } from '../lib/posts';
 
 export async function getStaticProps() {

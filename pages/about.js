@@ -1,12 +1,11 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import Header from '../components/header';
-import Footer from '../components/Footer/footer';
-import Layout from '../components/layout';
-import { useAppContext } from '../contexts/AppContext';
+import Header from './components/header';
+import Footer from './components/Footer/footer';
+import Layout from './components/layout';
+import { useAppContext } from './contexts/AppContext';
 
 const About = () => {
-  const theme = useAppContext();
   return (
     <>
       <Header />

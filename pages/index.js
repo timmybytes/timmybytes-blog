@@ -1,8 +1,8 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import Header from '../components/header';
-import Footer from '../components/Footer/footer';
-import utilStyles from '../styles/utils.module.scss';
+import Header from './components/header';
+import Footer from './components/Footer/footer';
+import utilStyles from './components/styles/utils.module.scss';
 import { getSortedPostsData } from '../lib/posts';
 
 export async function getStaticProps() {

@@ -1,5 +1,5 @@
 import React from 'react';
-import utilStyles from '../styles/utils.module.scss';
+import utilStyles from './styles/utils.module.scss';
 
 const PostFooter = () => {
   return (

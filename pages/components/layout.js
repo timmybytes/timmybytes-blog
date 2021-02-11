@@ -1,10 +1,10 @@
 import Head from 'next/head';
 import styles from './layout.module.scss';
-import utilStyles from '../styles/utils.module.scss';
+import utilStyles from './styles/utils.module.scss';
 import Link from 'next/link';
 import Header from './header';
 import PostFooter from './postFooter';
-import Footer from '../components/Footer/footer';
+import Footer from './Footer/footer';
 
 const name = 'Timothy Merritt';
 export const siteTitle = 'timmybytes';
