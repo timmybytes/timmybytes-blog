@@ -1,14 +1,13 @@
 import React, { useState, useContext } from 'react';
 import style from './darkbutton.module.scss';
-import { AppContext } from '../../contexts/AppContext';
+import { AppContext } from '../../../contexts/AppContext';
 
 const DarkButton = () => {
   const [clicked, setClicked] = useState(false);
 
   const handleClick = () => {
     setClicked(!clicked);
-    console.log(clicked);
-    console.log(AppContext);
+    // TODO: Add Context for theme switching
   };
 
   return (

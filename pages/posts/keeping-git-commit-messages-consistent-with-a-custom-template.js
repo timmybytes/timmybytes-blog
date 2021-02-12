@@ -70,9 +70,9 @@ const FirstPost = () => {
           You can put whatever you want in your template, but here’s mine as an
           example:
         </p>
-        <pre>
+        <pre className='codeblock'>
           {/* prettier-ignore */}
-          <code className='codeblock'>
+          <code style={{display: 'inline-block'}}>
 # ----------------------------------------------------------<br />
 # Header - type(scope): Brief description<br />
 # ----------------------------------------------------------<br />

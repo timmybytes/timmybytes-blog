@@ -2,7 +2,7 @@ import Head from 'next/head';
 import styles from './layout.module.scss';
 import utilStyles from './styles/utils.module.scss';
 import Link from 'next/link';
-import Header from './header';
+import Header from './Header/header';
 import PostFooter from './postFooter';
 import Footer from './Footer/footer';
 

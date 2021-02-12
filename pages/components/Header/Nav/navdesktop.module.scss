@@ -1,4 +1,4 @@
-@import '../styles/variables';
+@import '../../styles/variables';
 
 .nav {
   background: $color-lighter;
@@ -26,8 +26,19 @@
     margin: 0 auto;
     max-width: 450px;
     .link {
-      font-size: 1.5rem;
-      text-transform: lowercase;
+      a {
+        border: 1px solid $color-lighter;
+        border-radius: 4px;
+        font-size: 1.5rem;
+        padding: 0 $size-1;
+        text-transform: lowercase;
+        &:hover {
+          color: $color-primary;
+          transition: 0.3s;
+          border: 1px solid $color-dark;
+          box-shadow: 2px 2px 0 $color-dark;
+        }
+      }
     }
   }
 }

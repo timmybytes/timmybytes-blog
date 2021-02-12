@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import Header from './components/header';
+import Header from './components/Header/header';
 import Footer from './components/Footer/footer';
 import Layout from './components/layout';
 import { useAppContext } from './contexts/AppContext';

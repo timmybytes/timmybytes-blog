@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import Header from './components/header';
+import Header from './components/Header/header';
 import Footer from './components/Footer/footer';
 import utilStyles from './components/styles/utils.module.scss';
 import { getSortedPostsData } from '../lib/posts';

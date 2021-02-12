@@ -111,6 +111,13 @@
   border: 1px solid $color-dark;
   border-radius: 10px;
   // transition: color 0.15s ease, border-color 0.15s ease;
+  & h3 {
+    margin: 0 0 1rem 0;
+    font-size: $size-2;
+  }
+  & p {
+    font-weight: 400;
+  }
 }
 
 .card:hover,
@@ -126,9 +133,4 @@
   font-weight: 900;
   letter-spacing: 1.4px;
   text-transform: uppercase;
-}
-
-.card h3 {
-  margin: 0 0 1rem 0;
-  font-size: $size-2;
 }

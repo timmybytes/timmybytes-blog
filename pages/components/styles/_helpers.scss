@@ -87,8 +87,12 @@
   }
 }
 
+.page-heading {
+  font-size: $size-7;
+}
+
 .img-avatar {
-  background: $color-lighter;
+  // background: $color-lighter;
   max-width: 300px;
   @media screen and (max-width: 800px) {
     max-width: 200px;
