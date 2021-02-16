@@ -1,0 +1,62 @@
+@import '../styles/variables';
+
+.card {
+  border: 1px solid $color-dark;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 450px;
+  padding: 1.5rem;
+  transition: 0.3s;
+  &:hover {
+    box-shadow: 4px 4px 0px $color-dark;
+  }
+}
+
+.card__header {
+  padding: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: $size-3;
+}
+
+.card__body {
+  border: 1px solid $color-dark;
+  border-width: 1px 0;
+  padding: 0 1em;
+}
+
+.card__byline {
+  align-self: center;
+  margin: 1em;
+  font-size: $size-sm;
+  & a {
+    font-style: normal;
+  }
+}
+
+.card__button {
+  margin: 1em;
+  align-self: center;
+  margin: 0;
+  white-space: nowrap;
+  padding: $size-sm;
+  background-color: $color-primary-less;
+  color: $color-dark;
+  border: 1px solid $color-dark;
+  border-radius: 4px;
+  font-size: $size-1;
+  transition: 0.3s;
+  a {
+    color: inherit;
+    text-transform: none;
+    &:hover {
+      border: none;
+    }
+  }
+  &:hover {
+    box-shadow: 2px 2px 0px $color-dark;
+    background-color: $color-secondary-less;
+  }
+}

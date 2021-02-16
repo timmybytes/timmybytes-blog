@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import Header from './components/Header/header';
 import Footer from './components/Footer/footer';
+import Card from './components/Card/Card';
 import utilStyles from './components/styles/utils.module.scss';
 import { getSortedPostsData } from '../lib/posts';
 
@@ -73,6 +74,7 @@ export default function Home({ allPostsData }) {
             </p>
           </section>
         </div>
+        <Card />
         {/* <section
           style={{
             background: '#f5668c',

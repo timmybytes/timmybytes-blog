@@ -68,7 +68,10 @@ export default function Blog({ allPostsData }) {
             <Link href='/posts/adding-ci-cd-to-your-project-with-github-actions'>
               <a className='card'>
                 <h3>Adding CI/CD to Your Project with GitHub Actions</h3>
-                <img src='' alt='' />
+                <img
+                  src='https://res.cloudinary.com/practicaldev/image/fetch/s--137JySGe--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/i/lhu9sqsut40fqhxcc6xn.png'
+                  alt='colored background'
+                />
                 <p>
                   Speed up and streamline your workflow with automation and code
                   checks.

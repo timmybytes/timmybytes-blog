@@ -4,11 +4,8 @@
   gap: $size-1;
   justify-content: stretch;
   max-width: 1200px;
-  padding: $size-2;
-  grid-template-columns: minmax(200px, 1fr) minmax(200px, 1fr) minmax(
-      200px,
-      1fr
-    );
+  // padding: $size-2;
+  grid-template-columns: repeat(3, minmax(300px, 1fr));
   @media screen and (max-width: 850px) {
     grid-template-columns: auto;
   }
