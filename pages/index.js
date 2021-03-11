@@ -27,9 +27,7 @@ export default function Home({ allPostsData }) {
       </Head>
       <Header />
       <main className='container'>
-        <section
-        // className='card'
-        >
+        <section className='card'>
           <h2 className='header-2'>
             Hi! I'm Timothy Merritt, a{' '}
             <span className='primary'>developer</span>,{' '}

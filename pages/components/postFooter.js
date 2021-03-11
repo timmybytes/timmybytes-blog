@@ -1,5 +1,6 @@
 import React from 'react';
-import utilStyles from './styles/utils.module.scss';
+import { IconContext } from 'react-icons';
+import { SiKoFi, SiDevDotTo, SiTwitter, SiLinkedin } from 'react-icons/si';
 
 const PostFooter = () => {
   return (
@@ -7,16 +8,16 @@ const PostFooter = () => {
       <h2 className='post__footer-header center'>share</h2>
       <div className='post__footer-social'>
         <a href='https://ko-fi.com/O4O82TAZB'>
-          <img src='/images/kofi-icon.png' alt='Buy Me a Coffee at ko-fi.com' />
+          <SiKoFi className='post__footer-social-icon' />
         </a>
         <a href='https://dev.to/timmybytes'>
-          <img src='/images/dev-icon.png' alt='DEV icon' />
+          <SiDevDotTo className='post__footer-social-icon' />
         </a>
         <a href='https://twitter.com/timmybytes'>
-          <img src='/images/twitter-icon.jpg' alt='Twitter icon' />
+          <SiTwitter className='post__footer-social-icon' />
         </a>
         <a href='https://www.linkedin.com/in/timmybytes'>
-          <img src='/images/linkedin-icon.png' alt='LinkedIn icon' />
+          <SiLinkedin className='post__footer-social-icon' />
         </a>
       </div>
     </section>
