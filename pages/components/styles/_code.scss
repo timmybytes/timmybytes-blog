@@ -5,17 +5,14 @@ pre {
 }
 
 code {
+  background: $color-grey-less;
   border-radius: 4px;
-  // color: $color-dark;
   font-family: 'Iosevka', Menlo, Monaco, Lucida Console, Liberation Mono,
     DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
   font-size: 13px;
-  font-weight: 100;
+  padding: 2px 5px;
   overflow-x: scroll;
   word-break: normal;
-  @media screen and (max-width: 850px) {
-    // font-size: $size-sm-2;
-  }
 }
 .codeblock {
   background: $color-dark;
