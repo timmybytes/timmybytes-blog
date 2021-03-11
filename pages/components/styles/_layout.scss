@@ -6,7 +6,7 @@
   max-width: 1200px;
   // padding: $size-2;
   grid-template-columns: repeat(3, minmax(300px, 1fr));
-  @media screen and (max-width: 850px) {
+  @media screen and (max-width: 1000px) {
     grid-template-columns: auto;
   }
 }
