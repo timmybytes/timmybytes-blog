@@ -2,11 +2,9 @@ import Nav from './Nav/nav';
 
 const Header = () => {
   return (
-    <>
-      <header>
-        <Nav />
-      </header>
-    </>
+    <header style={{ gridRow: 1 }}>
+      <Nav />
+    </header>
   );
 };
 

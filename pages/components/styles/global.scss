@@ -10,3 +10,9 @@
   color: $color-dark;
   background: $color-lighter;
 }
+
+// Maintains consistent global layout
+#__next {
+  display: grid;
+  grid-template-rows: 1fr auto 1fr;
+}

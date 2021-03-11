@@ -26,7 +26,7 @@ export default function Layout({ children, home }) {
         <meta name='twitter:card' content='summary_large_image' />
       </Head>
       <Header />
-      <div className={styles.container}>
+      <main className={styles.container}>
         <Link href='/'>
           <a>&larr; Back to home</a>
         </Link>
@@ -35,7 +35,7 @@ export default function Layout({ children, home }) {
           <a>&larr; Back to home</a>
         </Link>
         <PostFooter />
-      </div>
+      </main>
       <Footer />
     </>
   );

@@ -75,7 +75,7 @@ export default function Home({ allPostsData }) {
           </section>
         </div>
         <Card />
-        {/* <section
+        <section
           style={{
             background: '#f5668c',
             width: '100%',
@@ -92,7 +92,7 @@ export default function Home({ allPostsData }) {
               </div>
             ))}
           </article>
-        </section> */}
+        </section>
       </main>
 
       <Footer />
