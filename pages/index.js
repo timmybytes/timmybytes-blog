@@ -3,17 +3,6 @@ import Link from 'next/link';
 import Header from './components/Header/header';
 import Footer from './components/Footer/footer';
 import Card from './components/Card/Card';
-import utilStyles from './components/styles/utils.module.scss';
-import { getSortedPostsData } from '../lib/posts';
-
-export async function getStaticProps() {
-  const allPostsData = getSortedPostsData();
-  return {
-    props: {
-      allPostsData,
-    },
-  };
-}
 
 export default function Home({ allPostsData }) {
   return (
@@ -75,26 +64,7 @@ export default function Home({ allPostsData }) {
           </section>
         </div>
         <Card />
-        <section
-          style={{
-            background: '#f5668c',
-            width: '100%',
-          }}>
-          <h2 className='header-2 center'>Blog</h2>
-          <article className='grid'>
-            {allPostsData.map(({ id, date, title }) => (
-              <div className='card' key={id}>
-                <h3>{title}</h3>
-                <br />
-                <sub>{id}</sub>
-                <br />
-                <sub>{date}</sub>
-              </div>
-            ))}
-          </article>
-        </section>
       </main>
-
       <Footer />
     </>
   );
