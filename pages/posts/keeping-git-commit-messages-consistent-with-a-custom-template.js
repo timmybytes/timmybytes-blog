@@ -164,7 +164,7 @@ Closes #9<br />
           </code>
         </pre>
         <p>
-          The “header” of the commit message notes the type of the commit as
+          The “header” of the commit message notes the type of the commit as{' '}
           <code>docs</code> and a brief description that does not exceed 60
           characters to ensure readability (the commented lines are 60
           characters long and act as guides for when to use a line break). The
@@ -209,10 +209,10 @@ git config --global core.editor "vim +16 +startinsert"<br />
           on line 16 in Insert Mode as soon the editor opens. Now whenever
           you’re committing, when you type <code>git commit</code>, Neovim opens
           the template, places your cursor, and accepts typing input
-          immediately. Also note that you can still use
-          <code>git commit -m "Your message"</code>
-          exactly as you did before, but the configuration will default to the
-          template setup when you just type git commit.
+          immediately. Also note that you can still use{' '}
+          <code>git commit -m "Your message"</code> exactly as you did before,
+          but the configuration will default to the template setup when you just
+          type git commit.
         </p>
         <p>
           <a href='https://stackoverflow.com/questions/2596805/how-do-i-make-git-use-the-editor-of-my-choice-for-commits'>

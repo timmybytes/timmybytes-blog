@@ -119,13 +119,14 @@ const Nav = () => {
                 <a>Blog</a>
               </Link>
             </li>
-            <li
+            {/* TODO: Dark Mode via Context */}
+            {/* <li
               className={navdesktop.link}
               style={
                 scrollPosition > 20 ? { padding: '0 10px' } : { padding: '0' }
               }>
               <DarkButton />
-            </li>
+            </li> */}
           </ul>
         </nav>
       ) : (
