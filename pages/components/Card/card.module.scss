@@ -14,7 +14,6 @@
   flex-basis: 45%;
   margin: 0.75rem 1rem;
   max-width: 450px;
-  min-height: 450px;
   padding: 1.5rem;
   text-align: left;
   text-decoration: none;
@@ -26,6 +25,7 @@
 
 .card__img {
   border: 1px solid $color-dark;
+  border-radius: inherit;
   display: block;
   width: 100%;
   height: auto;
