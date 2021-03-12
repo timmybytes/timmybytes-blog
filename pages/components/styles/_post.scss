@@ -60,7 +60,7 @@
         border: 1px solid $color-dark;
         transition: 0.3s;
         &:hover {
-          box-shadow: 4px 4px 0 $color-dark;
+          box-shadow: 4px 4px 0 $color-primary;
         }
         @media screen and (max-width: 500px) {
           padding: 3px 10px;
