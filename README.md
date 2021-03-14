@@ -1,33 +1,48 @@
-# timmybytes Blog
+<h1 align="center">
+  <img src="./public/Logo.svg" alt="Timmybytes logo" />
+</h1>
 
-This is my personal portfolio and blog site, built with Next.js, SCSS, and currently lots of tasty spaghetti code. This (WIP) site is a replacement for my first portfolio site, which was built using more vanilla HTML, SCSS, and minor JavaScript.
+<div align="center">
+  <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/timmybytes/timmybytes-blog">
+  <img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/timmybytes/timmybytes-blog">
+</div>
 
-## About
+<div align="center">
+  <strong>A dev portfolio-blog</strong>
+</div>
 
-The project uses the following technologies, libraries, and/or approaches. All of these should currently be considered a WIP, since the site is still in development and final choices haven't yet been made.
+<p align="center">
+  <sub>Built with ❤︎ by (and for) Timothy Merritt
+</div>
 
-### Next.js/React
+This is my personal portfolio and blog site, built with React/Next.js, SCSS/styled-components/CSS Modules, React-Icons, and deployed through Vercel.
 
-- Functional component-based structure with localized state(s).
-- Next.js dynamic routes
-- Next.js pre-rendering with static props
+## For local development
 
-### Styling
+1. [Fork a copy](https://github.com/timmybytes/timmybytes-blog/fork)
+2. Clone locally:
 
-Currently experimenting between SCSS, CSS modules, and inline JSON-like styling structures—hence all the spaghetti.
+   ```sh
+   git clone https://github.com/your-user-name/timmybytes-blog.git
+   ```
 
-### Structure
+3. Install dependencies:
 
-TODO: Combine Home, About, Work into SPA; Blog as separate page
+   ```sh
+   cd timmybytes-blog/
+   npm install
+   ```
 
-- Home
-  - Landing page/CTA
-  - (TODO:) Newest blog posts feed
-- About
-  - (TODO:) CTA for contact
-- Work (TODO:)
-  - Showcased projects
-  - CTA for contact
-- Blog
-  - (TODO:) Dynamically imported post metadata for grid previews
-  - `layout` template + component for new posts vs `.md` + `yml` posts (which can then be imported with `getStaticProps`)
+4. Start development server on <http://localhost:3000> (default):
+
+   ```sh
+   npm run dev
+   ```
+
+## License
+
+**timmybytes** name, logo, and written site content &copy; Timothy Merritt, all rights reserved. All site code design offered under MIT license, except where under existing license.
+
+## Contributing
+
+I'm not currently looking for contributors to this project, as it's intended to be a fully self-built site. However, if you'd like to request a feature or report an issue, please do!
