@@ -34,19 +34,6 @@ export default function Work({ allPostsData }) {
           content='../public/images/SocialCard.png'
         />
         <meta property='twitter:creator' content='@timmybytes' />
-        {/* <link
-          rel='preload'
-          href='/fonts/HK-Grotesk/HKGrotesk-Regular.otf'
-          as='font'
-          crossOrigin=''
-        />
-
-        <link
-          rel='preload'
-          href='/fonts/HK-Grotesk/HKGrotesk-Italic.ttf'
-          as='font'
-          crossOrigin=''
-        /> */}
       </Head>
       <Header />
       <div className='container'>
