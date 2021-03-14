@@ -1,8 +1,8 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import Header from './components/Header/header';
-import Footer from './components/Footer/footer';
-import Card from './components/Card/Card';
+import Header from '../components/Header/header';
+import Footer from '../components/Footer/footer';
+import Card from '../components/Card/Card';
 
 export default function Blog({ allPostsData }) {
   return (
