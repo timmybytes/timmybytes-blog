@@ -15,7 +15,6 @@ export default function Layout({ children, home }) {
       <Head>
         <link rel='icon' href='/favicon.ico' />
         <meta name='description' content="Timothy Merritt's byte-sized blog" />
-        {/* TODO: Add media cards */}
         <meta
           property='og:image'
           content={`https://og-image.now.sh/${encodeURI(
