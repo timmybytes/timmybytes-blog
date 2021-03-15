@@ -7,16 +7,26 @@ import About from './about';
 import Work from './work';
 import Blog from './blog';
 import styled from 'styled-components';
+import { colors } from './utils';
 
 const IntroHeading = styled.h1`
+  display: block;
   font-weight: 900;
-  font-size: 4rem;
+  font-size: 3rem;
   line-height: 1.3;
-  text-transform: uppercase;
-  padding: 1rem;
-  @media screen and (max-width: 500px) {
-    font-size: 2rem;
-  }
+  padding: 0;
+  margin: 0;
+  text-align: center;
+`;
+
+const HighlightSpan = styled.span`
+  background: ${props => props.colorValue};
+  padding: 0 5px;
+  line-height: 2;
+  margin: 5px;
+  border: 1px solid ${colors.colorDark};
+  border-radius: 4px;
+  box-shadow: 2px 2px 0px 0px ${colors.colorDark};
 `;
 
 export default function Home({ allPostsData }) {
@@ -24,16 +34,29 @@ export default function Home({ allPostsData }) {
     <>
       <Header />
       <main className='container'>
-        {/* <section className='card'> */}
-        <IntroHeading>Developer, designer, writer, musician</IntroHeading>
-        {/* <h2 className='header-2'> */}
-        {/* Hi! I'm Timothy Merritt, a{' '} */}
-        {/* <span className='primary'>developer</span>,{' '} */}
-        {/* <span className='secondary'>designer</span>,{' '} */}
-        {/* <span className='tertiary-more'>writer</span>, and{' '} */}
-        {/* <span className='quaternary'>musician</span>* */}
-        {/* </h2> */}
-        {/* <p>
+        <section className='card'>
+          <IntroHeading>I'm Timothy Merritt</IntroHeading>
+          {/* <img
+            className='img-avatar rotate'
+            src='/images/profile.png'
+            alt='Timothy Merritt profile photo'
+          /> */}
+          <h2 className='header-2'>
+            <HighlightSpan colorValue={colors.colorPrimary}>
+              developer
+            </HighlightSpan>{' '}
+            <HighlightSpan colorValue={colors.colorSecondary}>
+              designer
+            </HighlightSpan>
+            <HighlightSpan colorValue={colors.colorTertiaryMore}>
+              writer
+            </HighlightSpan>
+            <HighlightSpan colorValue={colors.colorQuaternary}>
+              musician
+            </HighlightSpan>
+            *
+          </h2>
+          {/* <p>
             See more about me in the{' '}
             <Link href='/about'>
               <a>About</a>
@@ -53,13 +76,13 @@ export default function Home({ allPostsData }) {
             you'd like to chat about what I can bring to your project, please
             contact me here!
           </p>
-          <p>
-            <sub>
-              <sub>* I'm also pretty good at LEGOs.</sub>
-            </sub>
-          </p> */}
-        {/* </section> */}
-        <About />
+          <p> */}
+          <About />
+          <sub>
+            <sub>* I'm also pretty good at LEGOs.</sub>
+          </sub>
+          {/* </p> */}
+        </section>
         <Work />
         <Blog />
       </main>

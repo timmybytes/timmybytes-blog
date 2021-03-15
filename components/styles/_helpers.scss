@@ -92,7 +92,7 @@
 }
 
 .img-avatar {
-  // background: $color-lighter;
+  background: $color-primary;
   max-width: 300px;
   @media screen and (max-width: 800px) {
     max-width: 200px;
@@ -100,9 +100,8 @@
   width: 100%;
   height: auto;
   border-radius: 50%;
-  border: 2px solid $color-lighter;
+  border: 1px solid $color-dark;
   margin: auto;
-  // padding: 3rem;
 }
 
 @keyframes rotation {
