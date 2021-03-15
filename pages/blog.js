@@ -7,7 +7,7 @@ import Card from '../components/Card/Card';
 export default function Blog({ allPostsData }) {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <div className='container'>
         <h2 className='heading'>Latest Posts</h2>
         <main>
@@ -33,7 +33,7 @@ export default function Blog({ allPostsData }) {
             />
           </section>
         </main>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </>
   );

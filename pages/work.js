@@ -7,7 +7,7 @@ import { BasicCard } from '../components/Card/Card';
 export default function Work({ allPostsData }) {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <div className='container'>
         <h2 className='heading'>Work</h2>
         <main>
@@ -34,7 +34,7 @@ export default function Work({ allPostsData }) {
             />
           </section>
         </main>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </>
   );

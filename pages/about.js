@@ -8,8 +8,9 @@ import { useAppContext } from '../contexts/AppContext';
 const About = () => {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <main className='container-gen'>
+        {/* <section className='card'> */}
         <img
           className='img-avatar rotate'
           // src='/images/profile.png'
@@ -48,11 +49,12 @@ const About = () => {
           <sub>* I'm also pretty good at LEGOs.</sub>
         </p>
 
-        <Link href='/'>
-          <a>&larr; Back to home</a>
-        </Link>
+        {/* <Link href='/'> */}
+        {/* <a>&larr; Back to home</a> */}
+        {/* </Link> */}
+        {/* </section> */}
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };
