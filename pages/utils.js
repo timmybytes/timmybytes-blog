@@ -16,6 +16,6 @@ export const colors = {
   colorTertiaryLess: `#ccf7a9`,
   colorTertiaryMore: `#8aeb3c`,
   colorQuaternary: `#ffaa65`,
-  colorQuaternaryLess: `#ff9c4a`,
-  colorQuaternaryMore: `#fdc393`,
+  colorQuaternaryLess: `#fdc393`,
+  colorQuaternaryMore: `#ff9c4a`,
 };

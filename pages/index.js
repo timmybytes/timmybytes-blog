@@ -7,26 +7,52 @@ import About from './about';
 import Work from './work';
 import Blog from './blog';
 import styled from 'styled-components';
-import { colors } from './utils';
+import { colors, helpers } from './utils';
 
-const IntroHeading = styled.h1`
-  display: block;
-  font-weight: 900;
-  font-size: 3rem;
-  line-height: 1.3;
-  padding: 0;
-  margin: 0;
+const IntroH1 = styled.h1`
   text-align: center;
+  font-size: 3rem;
+  line-height: 1.1;
+  padding: 1rem 0 0 0;
+  margin: 0;
+  @media screen and (max-width: 500px) {
+    font-size: 2rem;
+  }
 `;
 
-const HighlightSpan = styled.span`
-  background: ${props => props.colorValue};
-  padding: 0 5px;
-  line-height: 2;
-  margin: 5px;
-  border: 1px solid ${colors.colorDark};
+const handleColorHover = color => {
+  switch (color) {
+    case 'colorPrimary':
+      return `background: ${colors.colorTertiary};`;
+    case 'colorSecondary':
+      return `background: ${colors.colorQuaternary};`;
+    case 'colorTertiary':
+      return `background: ${colors.colorPrimary};`;
+    case 'colorQuaternary':
+      return `background: ${colors.colorSecondary};`;
+    case 'colorDark':
+      return `background: ${colors.colorLight};`;
+    case 'colorLight':
+      return `background: ${colors.colorDark};`;
+    default:
+      return `background: ${colors.colorDark}; color: ${colors.colorLight}`;
+  }
+};
+
+const Highlight = styled.span`
+  background: ${({ color }) => colors[color]};
   border-radius: 4px;
-  box-shadow: 2px 2px 0px 0px ${colors.colorDark};
+  font-size: 2rem;
+  margin: 5px;
+  padding: 0 7px;
+  transition: 0.3s;
+  &:hover {
+    box-shadow: 4px 4px 0 0 ${colors.colorDark};
+    ${({ color }) => handleColorHover(color)};
+  }
+  @media screen and (max-width: 500px) {
+    font-size: 1.5rem;
+  }
 `;
 
 export default function Home({ allPostsData }) {
@@ -34,55 +60,27 @@ export default function Home({ allPostsData }) {
     <>
       <Header />
       <main className='container'>
-        <section className='card'>
-          <IntroHeading>I'm Timothy Merritt</IntroHeading>
-          {/* <img
+        <section className=''>
+          <img
             className='img-avatar rotate'
             src='/images/profile.png'
             alt='Timothy Merritt profile photo'
-          /> */}
-          <h2 className='header-2'>
-            <HighlightSpan colorValue={colors.colorPrimary}>
-              developer
-            </HighlightSpan>{' '}
-            <HighlightSpan colorValue={colors.colorSecondary}>
-              designer
-            </HighlightSpan>
-            <HighlightSpan colorValue={colors.colorTertiaryMore}>
-              writer
-            </HighlightSpan>
-            <HighlightSpan colorValue={colors.colorQuaternary}>
-              musician
-            </HighlightSpan>
-            *
+          />
+          <IntroH1>Hi! I'm Timothy Merritt</IntroH1>
+          <h2 className='flexRow'>
+            <Highlight color='colorPrimary'>developer</Highlight>
+            {' // '}
+            <Highlight color='colorSecondary'>designer</Highlight>
+            {' // '}
+            <Highlight color='colorTertiary'>writer</Highlight>
+            {' // '}
+            <Highlight color='colorQuaternary'>musician</Highlight>*
           </h2>
-          {/* <p>
-            See more about me in the{' '}
-            <Link href='/about'>
-              <a>About</a>
-            </Link>{' '}
-            page, read my writing about coding and web development in the{' '}
-            <Link href='/blog'>
-              <a>Blog</a>
-            </Link>
-            , or check out some of my featured{' '}
-            <Link href='/work'>
-              <a>Work</a>
-            </Link>
-            .
-          </p>
-          <p>
-            I'm currently looking for new opportunities in frontend roles, so if
-            you'd like to chat about what I can bring to your project, please
-            contact me here!
-          </p>
-          <p> */}
-          <About />
           <sub>
             <sub>* I'm also pretty good at LEGOs.</sub>
           </sub>
-          {/* </p> */}
         </section>
+        <About />
         <Work />
         <Blog />
       </main>
