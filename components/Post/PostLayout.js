@@ -1,15 +1,14 @@
 import Head from 'next/head';
-import styles from './layout.module.scss';
-import utilStyles from './styles/utils.module.scss';
+import styles, { post_container } from './layout.module.scss';
 import Link from 'next/link';
-import Header from './Header/header';
+import Header from '../Header/header';
 import PostFooter from './postFooter';
-import Footer from './Footer/footer';
+import Footer from '../Footer/footer';
 
 const name = 'Timothy Merritt';
 export const siteTitle = 'timmybytes';
 
-export default function Layout({ children, home }) {
+export default function PostLayout({ children, home }) {
   return (
     <>
       <Head>
@@ -25,7 +24,7 @@ export default function Layout({ children, home }) {
         <meta name='twitter:card' content='summary_large_image' />
       </Head>
       <Header />
-      <main className={styles.container}>
+      <main className={post_container}>
         <Link href='/'>
           <a>&larr; Back to home</a>
         </Link>

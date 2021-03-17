@@ -18,13 +18,14 @@ class MyDocument extends Document {
           />
           <link rel='icon' href='/favicon.ico' />
           {/* Open graph */}
+          <meta property='og:locale' content='en_US' />
+          <meta property='og:type' content='website' />
           <meta property='og:title' content='timmybytes' />
           <meta
             property='og:description'
             content="Timothy Merritt's development portfolio and blog"
           />
           <meta property='og:url' content='https://timmybytes.com' />
-          <meta property='og:type' content='website' />
           <meta property='og:image' content='../public/images/SocialCard.png' />
           <meta property='og:image:type' content='image/png' />
           <meta property='og:image:width' content='1200' />
