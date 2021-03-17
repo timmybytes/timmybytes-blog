@@ -21,7 +21,7 @@ import {
   SiNotion,
 } from 'react-icons/si';
 import { IconContext } from 'react-icons';
-import { colors } from './utils';
+import { colors } from '../components/utils';
 
 const About = () => {
   return (
@@ -30,12 +30,7 @@ const About = () => {
         <h2 className='heading'>About Me</h2>
         <p>
           I’m self-taught software developer with a background in design,
-          writing, and music, and I'm just as comfortable building stateful
-          React components as I am designing logos, dissecting four hundred year
-          old literature, or playing (<em>attempting</em>) a guitar solo. I'm
-          passionate about open-source and mutual aid, I love comic books, cold
-          weather, and caffeine, and I'm adamant about the benfits of learning
-          in public.
+          writing, and music.
         </p>
         <p>I'm familiar and/or proficient with the following technologies:</p>
         <section
