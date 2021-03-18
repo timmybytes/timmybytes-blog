@@ -3,7 +3,7 @@ import Footer from '../components/Footer/footer';
 import About from './about';
 import Work from './work';
 import Blog from './blog';
-import IntroCard from '../components/Card/IntroCard';
+import { IntroCard } from '../components/Card/Card';
 
 export default function Home({ allPostsData }) {
   return (

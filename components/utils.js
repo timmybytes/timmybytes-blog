@@ -1,3 +1,5 @@
+import styled from 'styled-components';
+
 export const colors = {
   colorLight: `#f5f5f5`,
   colorLighter: `#fdfdfd`,
@@ -25,3 +27,19 @@ export const colors = {
   tertiary: '#D4F566',
   quarternary: '#98c4ef',
 };
+
+export const PlainButton = styled.button`
+  border: 0;
+  border-radius: none;
+  background: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  white-space: nowrap;
+  text-decoration: inherit;
+  padding: inherit;
+  margin: none;
+  outline: none;
+  cursor: pointer;
+`;

@@ -5,12 +5,13 @@ import styled from 'styled-components';
 import styles from './card.module.scss';
 import About from '../../pages/about';
 
-const IntroH1 = styled.h1`
+const IntroHeading = styled.h1`
   text-align: center;
   font-size: 3rem;
   line-height: 1.1;
   padding: 1rem 0 0 0;
   margin: 0;
+  text-align: center;
   @media screen and (max-width: 500px) {
     font-size: 2rem;
   }
@@ -32,17 +33,17 @@ const IntroCard = () => {
             src='/images/profile.png'
             alt='Timothy Merritt profile photo'
           />
-          <IntroH1>Hi! I'm Timothy Merritt</IntroH1>
+          <IntroHeading>Hi! I'm Timothy Merritt</IntroHeading>
         </>
       }
       body={
         <>
-          <h2 className='flexRow'>
+          <div className='flexRow'>
             <Highlight color='primary'>developer</Highlight>
             <Highlight color='secondary'>designer</Highlight>
             <Highlight color='tertiary'>writer</Highlight>
             <Highlight color='quarternary'>musician</Highlight>*
-          </h2>
+          </div>
           <sub>
             <sub>* I'm also pretty good at LEGOs.</sub>
           </sub>
