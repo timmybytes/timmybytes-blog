@@ -11,6 +11,7 @@
   border-radius: 10px;
   border: 1px solid $color-dark;
   color: inherit;
+  display: grid;
   flex-basis: 45%;
   margin: 0.75rem 1rem;
   max-width: 450px;
@@ -25,7 +26,7 @@
 
 .card__img {
   border: 1px solid $color-dark;
-  border-radius: inherit;
+  border-radius: 10px;
   display: block;
   width: 100%;
   height: auto;
@@ -39,22 +40,29 @@
   font-weight: 700;
 }
 
+.card__body {
+  p {
+    margin: 0;
+    padding-bottom: 1rem;
+  }
+}
+
 .card__byline {
   font-size: $size-sm-1;
 }
 
 .card__button {
-  margin: 1em;
   align-self: center;
-  margin: 0;
-  white-space: nowrap;
-  padding: $size-sm;
   background-color: $color-primary-less;
-  color: $color-dark;
-  border: 1px solid $color-dark;
   border-radius: 4px;
+  border: 1px solid $color-dark;
+  color: $color-dark;
+  cursor: pointer;
   font-size: $size-1;
+  margin: 0;
+  padding: $size-sm;
   transition: 0.3s;
+  white-space: nowrap;
   width: 100%;
   a {
     color: inherit;

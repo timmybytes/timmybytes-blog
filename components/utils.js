@@ -18,4 +18,10 @@ export const colors = {
   colorQuaternary: `#ffaa65`,
   colorQuaternaryLess: `#fdc393`,
   colorQuaternaryMore: `#ff9c4a`,
+  light: '#fdfdfd',
+  dark: '#444444',
+  primary: '#f5668c',
+  secondary: '#F5CF66',
+  tertiary: '#D4F566',
+  quarternary: '#98c4ef',
 };

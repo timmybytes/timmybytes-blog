@@ -129,12 +129,12 @@
   font-weight: 900;
   letter-spacing: 1.4px;
   text-transform: uppercase;
+  margin: 3rem auto 1rem auto;
 }
 
 .flexRow {
   display: flex;
-  flex-flow: row wrap ;
+  flex-flow: row wrap;
   justify-content: center;
   align-items: center;
-
 }
