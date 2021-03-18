@@ -104,6 +104,19 @@ export const IntroCard = () => {
   const [isFocused, setIsFocused] = useState(false);
   const [focusValue, setFocusValue] = useState('');
 
+  const tabs = [
+    [
+      'developer',
+      'I am passionate about building responsive UI/UX with modern tech stacks.',
+    ],
+    ['designer', 'I love designing logos and graphics for a variety of media.'],
+    ['writer', 'I am an experienced copywriter and critical analyst.'],
+    [
+      'musician',
+      'For nearly twenty years, I have recorded and released music.',
+    ],
+  ];
+
   const handleClick = () => {
     setIsClicked(!isClicked);
   };
@@ -154,18 +167,17 @@ export const IntroCard = () => {
       </h2>
       {isFocused && (
         <article>
-          {focusValue === 'developer' && (
-            <>
-              <h3>Developer</h3>
-              <p>words</p>
-            </>
-          )}
-          {focusValue === 'designer' && (
-            <>
-              <h3>Designer</h3>
-              <p>words</p>
-            </>
-          )}
+          {focusValue &&
+            tabs
+              .filter(value => value[0] === focusValue)
+              .map(value => {
+                return (
+                  <>
+                    <h3>{value[0]}</h3>
+                    <p>{value[1]}</p>
+                  </>
+                );
+              })}
         </article>
       )}
       <sub>
