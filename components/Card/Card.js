@@ -13,7 +13,7 @@ export const BasicCard = ({ title, body, date, image, link = '' }) => {
             className={styles.card__img}
             src={
               image ||
-              `/images/gradients/gradienta-unsplash-${randomImage()}.jpg`
+              `/images/gradients/gradienta-unsplash-${randomImage()}.png`
             }
           />
           <header className={styles.card__header}>
@@ -41,7 +41,7 @@ const Card = ({ title, body, date, image, link = '' }) => {
             className={styles.card__img}
             src={
               image ||
-              `/images/gradients/gradienta-unsplash-${randomImage()}.jpg`
+              `/images/gradients/gradienta-unsplash-${randomImage()}.png`
             }
           />
           <header className={styles.card__header}>

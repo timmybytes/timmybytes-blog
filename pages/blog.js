@@ -26,9 +26,9 @@ export default function Blog({ allPostsData }) {
             date='10/07/2020'
           />
           <Card
-            title='Adding CI/CD to Your Project with GitHub Actions'
+            title='Adding CI/CD to Your Projects with GitHub Actions'
             body='Speed up and streamline your workflow with automation and code checks.'
-            link='/posts/adding-ci-cd-to-your-project-with-github-actions'
+            link='/posts/adding-ci-cd-to-your-projects-with-github-actions'
             date='1/22/2021'
           />
         </section>
