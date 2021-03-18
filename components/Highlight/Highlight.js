@@ -4,14 +4,14 @@ import { colors } from '../utils';
 
 const handleColorHover = color => {
   switch (color) {
-    case 'colorPrimary':
-      return `background: ${colors.colorTertiary};`;
-    case 'colorSecondary':
-      return `background: ${colors.colorQuaternary};`;
-    case 'colorTertiary':
-      return `background: ${colors.colorPrimary};`;
-    case 'colorQuaternary':
-      return `background: ${colors.colorSecondary};`;
+    case 'primary':
+      return `background: ${colors.colorPrimaryLess};`;
+    case 'secondary':
+      return `background: ${colors.colorQuaternaryLess};`;
+    case 'tertiary':
+      return `background: ${colors.colorTertiaryLess};`;
+    case 'quarternary':
+      return `background: ${colors.colorSecondaryLess};`;
     case 'colorDark':
       return `background: ${colors.colorLight};`;
     case 'colorLight':
