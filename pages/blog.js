@@ -1,4 +1,4 @@
-import Card from '@components/Card/Card';
+import Card from '@components/Cards/Cards';
 
 export default function Blog({ allPostsData }) {
   return (

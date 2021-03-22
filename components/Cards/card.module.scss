@@ -36,6 +36,9 @@
 
 .intro_card {
   @extend .card;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
   max-width: 650px;
   padding: 2rem 1.5rem;
   img {
@@ -43,6 +46,7 @@
   }
   button {
     font-weight: bold;
+    max-width: 300px;
   }
   sub {
     padding: 1rem;
@@ -79,16 +83,17 @@
 
 .card__button {
   align-self: center;
-  background-color: $color-primary-less;
+  background-color: $color-primary;
   border-radius: 4px;
+  border: none;
   border: 1px solid $color-dark;
   color: $color-dark;
   font-size: $size-1;
   margin: 0 auto;
   padding: $size-sm;
+  text-transform: uppercase;
   transition: 0.3s;
   white-space: nowrap;
-  max-width: 400px;
   width: 100%;
   cursor: pointer;
   a {
@@ -99,10 +104,10 @@
     }
   }
   &:hover {
-    box-shadow: 2px 2px 0px $color-dark;
-    transform: translate(-2px, -2px);
-
+    // box-shadow: 2px 2px 0px $color-dark;
+    // transform: translate(-2px, -2px);
     background-color: $color-secondary-less;
+    color: $color-dark;
     font-weight: 900;
   }
 }
