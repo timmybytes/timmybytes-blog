@@ -2,6 +2,29 @@ import React, { useState } from 'react';
 import styles from './card.module.scss';
 import Link from 'next/link';
 import { GoCalendar } from 'react-icons/go';
+import {
+  SiHtml5,
+  SiCss3,
+  SiJavascript,
+  SiSass,
+  SiStyledComponents,
+  SiReact,
+  SiGnubash,
+  SiVim,
+  SiV,
+  SiGit,
+  SiNpm,
+  SiNodeDotJs,
+  SiPython,
+  SiFigma,
+  SiApple,
+  SiLinux,
+  SiTypescript,
+  SiJest,
+  SiTrello,
+  SiNotion,
+} from 'react-icons/si';
+import { IconContext } from 'react-icons';
 import Highlight from '../Highlight/Highlight';
 import styled from 'styled-components';
 import About from '../../pages/about';
@@ -144,24 +167,24 @@ export const IntroCard = () => {
       <IntroHeading>Hi! I'm Timothy Merritt</IntroHeading>
       <h2 className='flexRow'>
         <Highlight color='primary'>
-          <PlainButton onClick={handleButtons} value={'developer'}>
-            developer
-          </PlainButton>
+          {/* <PlainButton onClick={handleButtons} value={'developer'}> */}
+          developer
+          {/* </PlainButton> */}
         </Highlight>
         <Highlight color='secondary'>
-          <PlainButton onClick={handleButtons} value={'designer'}>
-            designer
-          </PlainButton>
+          {/* <PlainButton onClick={handleButtons} value={'designer'}> */}
+          designer
+          {/* </PlainButton> */}
         </Highlight>
         <Highlight color='tertiary'>
-          <PlainButton onClick={handleButtons} value={'writer'}>
-            writer
-          </PlainButton>
+          {/* <PlainButton onClick={handleButtons} value={'writer'}> */}
+          writer
+          {/* </PlainButton> */}
         </Highlight>
         <Highlight color='quarternary'>
-          <PlainButton onClick={handleButtons} value={'musician'}>
-            musician
-          </PlainButton>
+          {/* <PlainButton onClick={handleButtons} value={'musician'}> */}
+          musician
+          {/* </PlainButton> */}
         </Highlight>
         *
       </h2>
@@ -180,9 +203,7 @@ export const IntroCard = () => {
               })}
         </article>
       )}
-      <sub>
-        <sub>* I'm also pretty good at LEGOs.</sub>
-      </sub>
+      <sub>* I'm also pretty good at LEGOs.</sub>
       <button className={styles.card__button} onClick={handleClick}>
         <strong>More About Me</strong>
       </button>

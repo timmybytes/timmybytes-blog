@@ -1,9 +1,8 @@
-import Header from '../components/Header/header';
-import Footer from '../components/Footer/footer';
-import About from './about';
+import Header from '@components/Header/header';
+import { IntroCard } from '@components/Card/Card';
+import Footer from '@components/Footer/footer';
 import Work from './work';
 import Blog from './blog';
-import { IntroCard } from '../components/Card/Card';
 
 export default function Home({ allPostsData }) {
   return (
@@ -11,7 +10,6 @@ export default function Home({ allPostsData }) {
       <Header />
       <main className='container'>
         <IntroCard />
-        {/* <About /> */}
         <Work />
         <Blog />
       </main>

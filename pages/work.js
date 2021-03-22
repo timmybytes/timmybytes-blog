@@ -1,4 +1,4 @@
-import { BasicCard } from '../components/Card/Card';
+import { BasicCard } from '@components/Card/Card';
 
 export default function Work({ allPostsData }) {
   return (

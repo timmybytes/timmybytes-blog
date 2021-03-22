@@ -21,12 +21,12 @@ import {
   SiNotion,
 } from 'react-icons/si';
 import { IconContext } from 'react-icons';
-import { colors } from '../components/utils';
+import { colors } from '@components/utils';
 
 const About = () => {
   return (
     <>
-      <div>
+      <div style={{ maxWidth: 'inherit' }}>
         <h2 className='heading'>About Me</h2>
         <p>
           I’m self-taught software developer with a background in design,
