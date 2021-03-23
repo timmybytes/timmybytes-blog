@@ -10,7 +10,6 @@ class MyDocument extends Document {
     return (
       <Html lang='en'>
         <Head>
-          <title>timmybytes</title>
           <meta name='title' content='timmybytes' />
           <meta
             name='description'

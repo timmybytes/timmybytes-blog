@@ -1,13 +1,17 @@
 import Card from '@components/Cards/Cards';
+import Head from 'next/head';
 
 export default function Blog({ allPostsData }) {
   return (
     <>
+      <Head>
+        <title>timmybytes</title>
+      </Head>
       <h2 className='heading'>Latest Blog Posts</h2>
       <section className='grid'>
         <Card
           title='Keeping Git Commit Messages Consistent with a Custom Template'
-          body='Create your own template to easliy guide your commit messages.'
+          body='Create your own template to easily guide your commit messages.'
           link='/posts/keeping-git-commit-messages-consistent-with-a-custom-template'
           date='1/21/2021'
         />
