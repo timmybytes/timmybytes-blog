@@ -44,7 +44,7 @@ const IntroCard = () => {
       </h2>
       <sub>* I'm also pretty good at LEGOs.</sub>
       <button className={styles.card__button} onClick={handleClick}>
-        <strong>More About Me</strong>
+        <strong>{isClicked ? 'Less' : 'More'} About Me</strong>
       </button>
       {isClicked === true && <About />}
     </section>

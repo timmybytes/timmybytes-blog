@@ -37,9 +37,8 @@
 .intro_card {
   @extend .card;
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: column wrap;
   justify-content: center;
-  max-width: 650px;
   padding: 2rem 1.5rem;
   img {
     max-width: 50%;
