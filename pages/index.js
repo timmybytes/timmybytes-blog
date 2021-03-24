@@ -1,8 +1,8 @@
 import Header from '@components/Header/Header';
-import IntroCard from '@components/Cards/IntroCard';
+import Intro from '@components/Intro/Intro';
 import Footer from '@components/Footer/Footer';
-import Work from './work';
-import Blog from './blog';
+import WorkPreview from '@components/WorkPreview/WorkPreview';
+import BlogPreview from '@components/BlogPreview/BlogPreview';
 import Head from 'next/head';
 
 export default function Home({ allPostsData }) {
@@ -13,9 +13,9 @@ export default function Home({ allPostsData }) {
       </Head>
       <Header />
       <main className='container'>
-        <IntroCard />
-        <Work />
-        <Blog />
+        <Intro />
+        <WorkPreview />
+        <BlogPreview />
       </main>
       <Footer />
     </>
