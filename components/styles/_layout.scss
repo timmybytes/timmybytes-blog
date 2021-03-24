@@ -129,7 +129,8 @@
   font-size: $size-4;
   font-weight: 900;
   letter-spacing: 1.4px;
-  text-transform: uppercase;
+  // text-transform: uppercase;
+  text-transform: lowercase;
   margin: 12rem auto 1rem auto;
   @media screen and (max-width: 500px) {
     margin: 4rem auto 1rem auto;

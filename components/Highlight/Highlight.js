@@ -5,17 +5,17 @@ import { colors } from '../utils';
 const handleColorHover = color => {
   switch (color) {
     case 'primary':
-      return `background: ${colors.colorPrimaryLess};`;
+      return `background: ${colors.primaryLess};`;
     case 'secondary':
-      return `background: ${colors.colorQuaternaryLess};`;
+      return `background: ${colors.secondaryLess};`;
     case 'tertiary':
-      return `background: ${colors.colorTertiaryLess};`;
+      return `background: ${colors.tertiaryLess};`;
     case 'quarternary':
-      return `background: ${colors.colorSecondaryLess};`;
-    case 'colorDark':
-      return `background: ${colors.colorLight};`;
-    case 'colorLight':
-      return `background: ${colors.colorDark};`;
+      return `background: ${colors.quarternaryLess};`;
+    case 'colorDark' || 'dark':
+      return `background: ${colors.light};`;
+    case 'colorLight' || 'light':
+      return `background: ${colors.dark};`;
     default:
       return `background: ${colors.colorDark}; color: ${colors.colorLight}`;
   }
@@ -24,19 +24,14 @@ const handleColorHover = color => {
 const HighlightSpan = styled.span`
   background: ${({ color }) => colors[color]};
   border-radius: 4px;
-  font-size: 2rem;
   font-weight: 800;
   margin: 5px;
   padding: 0 7px;
   transition: 0.3s;
   &:hover {
     transform: translate(-4px, -4px);
-
     box-shadow: 4px 4px 0 0 ${colors.colorDark};
     ${({ color }) => handleColorHover(color)};
-  }
-  @media screen and (max-width: 500px) {
-    font-size: 1.5rem;
   }
 `;
 
