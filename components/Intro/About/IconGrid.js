@@ -79,7 +79,7 @@ const IconGridBody = styled.ul`
   }
 `;
 
-const Icongrid = () => {
+const IconGrid = () => {
   return (
     <IconGridBody>
       <li>
@@ -182,4 +182,4 @@ const Icongrid = () => {
   );
 };
 
-export default Icongrid;
+export default IconGrid;
