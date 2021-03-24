@@ -1,11 +1,11 @@
 import React from 'react';
 import { colors } from '../../utils';
-import Icongrid from './IconGrid';
-import AboutSection from './AboutWrapper';
+import IconGrid from './IconGrid';
+import AboutWrapper from './AboutWrapper';
 
 const About = ({ children }) => {
   return (
-    <AboutSection>
+    <AboutWrapper>
       <h2>developer/designer</h2>
       <p>
         I'm a self-taught developer with a{' '}
@@ -36,7 +36,7 @@ const About = ({ children }) => {
         I'm experienced with the following tech, libraries, languages, tools,
         etc.:
       </p>
-      <Icongrid />
+      <IconGrid />
       <h2>Music</h2>
       <p>
         Outside of development, I love to play music. You can find my work with{' '}
@@ -57,7 +57,7 @@ const About = ({ children }) => {
         writing in the <a href='#blog'>blog</a>.
       </p>
       {children}
-    </AboutSection>
+    </AboutWrapper>
   );
 };
 

@@ -78,7 +78,6 @@ const IconGridBody = styled.ul`
     }
   }
 `;
-import React from 'react';
 
 const Icongrid = () => {
   return (
