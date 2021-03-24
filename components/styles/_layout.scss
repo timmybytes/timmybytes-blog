@@ -130,7 +130,10 @@
   font-weight: 900;
   letter-spacing: 1.4px;
   text-transform: uppercase;
-  margin: 3rem auto 1rem auto;
+  margin: 12rem auto 1rem auto;
+  @media screen and (max-width: 500px) {
+    margin: 4rem auto 1rem auto;
+  }
 }
 
 .flexRow {
