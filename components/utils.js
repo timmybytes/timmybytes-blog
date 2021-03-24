@@ -23,23 +23,27 @@ export const colors = {
   light: '#fdfdfd',
   dark: '#444444',
   primary: '#f5668c',
+  primaryLess: `#ff90ad`,
   secondary: '#F5CF66',
+  secondaryLess: '#ffdf85',
   tertiary: '#D4F566',
+  tertiaryLess: `#e5ff91`,
   quarternary: '#98c4ef',
+  quarternaryLess: `#b8dcff`,
 };
 
 export const PlainButton = styled.button`
-  border: 0;
-  border-radius: none;
   background: none;
+  border-radius: none;
+  border: 0;
   color: inherit;
+  cursor: pointer;
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
-  white-space: nowrap;
-  text-decoration: inherit;
-  padding: inherit;
   margin: none;
   outline: none;
-  cursor: pointer;
+  padding: inherit;
+  text-decoration: inherit;
+  white-space: nowrap;
 `;
