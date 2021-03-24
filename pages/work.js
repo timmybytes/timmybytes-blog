@@ -1,9 +1,11 @@
-import BasicCard from '@components/Cards/Cards';
+import BasicCard from '@components/Cards/BasicCard';
 
 export default function Work({ allPostsData }) {
   return (
     <>
-      <h2 className='heading'>Work</h2>
+      <h2 className='heading' id='work'>
+        Work
+      </h2>
       <section className='grid'>
         <BasicCard
           title='Rational Design'

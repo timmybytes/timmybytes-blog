@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { colors } from '../utils';
 
@@ -41,7 +41,13 @@ const HighlightSpan = styled.span`
 `;
 
 const Highlight = ({ children, color }) => {
-  return <HighlightSpan color={color}>{children}</HighlightSpan>;
+  const [highlightColor, setHighlightColor] = useState('');
+
+  useEffect(() => {
+    setHighlightColor(color);
+  }, []);
+
+  return <HighlightSpan color={highlightColor}>{children}</HighlightSpan>;
 };
 
 export default Highlight;

@@ -95,7 +95,7 @@ const Nav = () => {
               style={
                 scrollPosition > 20 ? { padding: '0 10px' } : { padding: '0' }
               }>
-              <Link href='/about'>
+              <Link href='#about'>
                 <a>About </a>
               </Link>
             </li>
@@ -105,7 +105,7 @@ const Nav = () => {
               style={
                 scrollPosition > 20 ? { padding: '0 10px' } : { padding: '0' }
               }>
-              <Link href='/work'>
+              <Link href='#work'>
                 <a>Work{'  '}</a>
               </Link>
             </li>
@@ -115,7 +115,7 @@ const Nav = () => {
               style={
                 scrollPosition > 20 ? { padding: '0 10px' } : { padding: '0' }
               }>
-              <Link href='/blog'>
+              <Link href='#blog'>
                 <a>Blog</a>
               </Link>
             </li>
@@ -164,17 +164,17 @@ const Nav = () => {
               </Link>
             </li>
             <li className={navmobile.link}>
-              <Link href='/about'>
+              <Link href='#about'>
                 <a>About </a>
               </Link>
             </li>
             <li className={navmobile.link}>
-              <Link href='/work'>
+              <Link href='#work'>
                 <a>Work{'  '}</a>
               </Link>
             </li>
             <li className={navmobile.link}>
-              <Link href='/blog'>
+              <Link href='#blog'>
                 <a>Blog</a>
               </Link>
             </li>

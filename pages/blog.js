@@ -7,7 +7,9 @@ export default function Blog({ allPostsData }) {
       <Head>
         <title>timmybytes</title>
       </Head>
-      <h2 className='heading'>Latest Blog Posts</h2>
+      <h2 className='heading' id='blog'>
+        Latest Blog Posts
+      </h2>
       <section className='grid'>
         <Card
           title='Keeping Git Commit Messages Consistent with a Custom Template'

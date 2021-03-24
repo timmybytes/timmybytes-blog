@@ -1,4 +1,5 @@
 import styles from './card.module.scss';
+import Link from 'next/link';
 
 const BasicCard = ({ children, title, body, date, image, link }) => {
   const randomImage = () => Math.floor(Math.random() * 3);
