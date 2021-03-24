@@ -24,7 +24,7 @@ import {
   SiWebpack,
   SiDebian,
 } from 'react-icons/si';
-import { colors } from '@/components/utils';
+import { colors } from '../../utils';
 import styled from 'styled-components';
 
 const IconGridBody = styled.ul`
