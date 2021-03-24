@@ -1,4 +1,4 @@
-import Header from '../components/Header/Header';
+// import Header from '../components/Header/Header';
 import Intro from '../components/Intro/Intro';
 import Footer from '../components/Footer/Footer';
 import WorkPreview from '../components/WorkPreview/WorkPreview';
@@ -11,7 +11,7 @@ export default function Home({ allPostsData }) {
       <Head>
         <title>timmybytes</title>
       </Head>
-      <Header />
+      {/* <Header /> */}
       <main className='container'>
         <Intro />
         <WorkPreview />
