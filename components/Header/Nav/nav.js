@@ -176,22 +176,22 @@ const Nav = () => {
             onClick={() => {
               setShowMobileNav(!showMobileNav);
             }}>
-            <li className={navmobile.link}>
+            <li className={`${navmobile.link} rainbow-gradient`}>
               <Link href='/'>
                 <a>Home</a>
               </Link>
             </li>
-            <li className={navmobile.link}>
+            <li className={`${navmobile.link} rainbow-gradient`}>
               <Link href='#about'>
                 <a>About</a>
               </Link>
             </li>
-            <li className={navmobile.link}>
+            <li className={`${navmobile.link} rainbow-gradient`}>
               <Link href='#work'>
                 <a>Work</a>
               </Link>
             </li>
-            <li className={navmobile.link}>
+            <li className={`${navmobile.link} rainbow-gradient`}>
               <Link href='#blog'>
                 <a>Blog</a>
               </Link>

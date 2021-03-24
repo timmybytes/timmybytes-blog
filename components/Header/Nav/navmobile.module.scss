@@ -17,13 +17,13 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    width: 300.95px;
+    // width: 300.95px;
   }
   .logo {
     &__img {
       height: auto;
       margin: 0 auto;
-      max-width: 250px;
+      max-width: 200px;
       padding: 10px;
       width: 100%;
     }
@@ -40,20 +40,39 @@
     margin: 0;
     padding: 0;
     transition: 0.3s;
+    span {
+      display: block;
+      width: 2rem;
+    }
   }
   .links {
+    // overflow-y: scroll;
     align-items: center;
-    flex-flow: column wrap;
+    display: flex;
+    flex-flow: row wrap;
     justify-content: space-evenly;
     list-style: none outside;
     margin: 0 auto;
-    overflow-y: scroll;
-    padding: 1rem 0;
+    padding: 0.5rem 0 2rem;
     .link {
-      font-size: 1.25rem;
+      // padding: 0 $size-1;
+      border-radius: 4px;
+      border: 1px solid $color-dark;
+      box-shadow: 2px 2px 0 $color-dark;
+      font-size: 1.5rem;
       font-weight: 700;
       margin-top: 1rem;
+      padding: 0 4px;
+      text-align: center;
       text-transform: lowercase;
+      transition: 0.3s;
+      width: 30%;
+      a {
+        color: $color-dark;
+      }
+      & a:hover {
+        border-bottom: none;
+      }
     }
   }
 }
