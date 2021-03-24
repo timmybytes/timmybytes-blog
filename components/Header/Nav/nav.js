@@ -157,20 +157,24 @@ const Nav = () => {
           </div>
           <ul
             className={navmobile.links}
-            style={showMobileNav ? { display: 'flex' } : { display: 'none' }}>
+            style={showMobileNav ? { display: 'flex' } : { display: 'none' }}
+            // Hide hamburger menu after link is clicked
+            onClick={() => {
+              setShowMobileNav(!showMobileNav);
+            }}>
             <li className={navmobile.link}>
               <Link href='/'>
-                <a>Home{'  '}</a>
+                <a>Home</a>
               </Link>
             </li>
             <li className={navmobile.link}>
               <Link href='#about'>
-                <a>About </a>
+                <a>About</a>
               </Link>
             </li>
             <li className={navmobile.link}>
               <Link href='#work'>
-                <a>Work{'  '}</a>
+                <a>Work</a>
               </Link>
             </li>
             <li className={navmobile.link}>
