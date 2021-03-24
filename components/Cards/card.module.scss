@@ -35,21 +35,36 @@
 }
 
 .intro_card {
-  @extend .card;
+  // @extend .card;
+  align-items: center;
+  // border-radius: 10px;
+  // border: 1px solid $color-dark;
+  color: inherit;
   display: flex;
+  // display: grid;
+  flex-basis: 45%;
   flex-flow: column wrap;
   justify-content: center;
-  padding: 2rem 1.5rem;
-  max-width: initial;
+  // justify-items: stretch;
+  // margin: 0.75rem 1rem;
+  margin: 3rem auto;
+  // max-width: 450px;
+  // max-width: initial;
+  // padding: 1.5rem;
+  padding: 4rem 0.5rem;
+  text-align: left;
+  text-decoration: none;
+  transition: 0.3s;
   h1 {
     text-align: center;
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: 900;
-    letter-spacing: 1.4px;
+    letter-spacing: -2px;
     line-height: 1.1;
     padding: 1rem 0 0 0;
     margin: 0;
     text-align: center;
+    text-transform: lowercase;
     @media screen and (max-width: 500px) {
       font-size: 2rem;
     }
@@ -58,8 +73,9 @@
     max-width: 50%;
   }
   button {
+    border: none;
     font-weight: bold;
-    max-width: 300px;
+    width: 200px;
   }
   sub {
     padding: 1rem;
@@ -77,16 +93,10 @@
     5.5px 5.5px 0 0 $color-dark, 6px 6px 0 0 $color-dark,
     6.5px 6.5px 0 0 $color-dark, 7px 7px 0 0 $color-dark,
     7.5px 7.5px 0 0 $color-dark, 8px 8px 0px $color-dark;
-  @media screen and (max-width: 500px) {
-    transform: translate(-4px, -4px);
-    box-shadow: 0.5px 0.5px 0 0 $color-dark, 1px 1px 0 0 $color-dark,
-      1.5px 1.5px 0 0 $color-dark, 2px 2px 0 0 $color-dark,
-      2.5px 2.5px 0 0 $color-dark, 3px 3px 0 0 $color-dark,
-      3.5px 3.5px 0 0 $color-dark, 4px 4px 0 0 $color-dark;
-  }
-  &:hover {
-    box-shadow: inherit;
-    transform: inherit;
+  @media screen and (max-width: 650px) {
+    // Prevent offset translation/box-shadow "pop-out" on small screens to preserve centered layout
+    transform: translate(0, 0);
+    box-shadow: 0 0 0 0;
   }
 }
 

@@ -21,13 +21,6 @@ const AboutSection = ({ children }) => {
     p {
       margin: 0.25rem auto 1rem;
     }
-    img {
-      width: 1rem;
-      height: auto;
-      display: inline;
-      padding: 0;
-      margin: 0;
-    }
     ul {
       list-style: none inside;
       padding: 1rem;

@@ -12,12 +12,11 @@ const About = ({ children }) => {
         <span
           style={{
             background: colors.primaryLess,
-            boxShadow: `2px 2px 0 0 ${colors.dark}`,
             padding: '2px 4px',
             fontWeight: 700,
             borderRadius: '4px',
           }}>
-          'maker'
+          maker
         </span>{' '}
         mindset. After spending years in corporate environments where I was
         limited in how I could apply my skills as a creative to solve problems,
