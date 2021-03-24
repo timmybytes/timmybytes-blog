@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import styles, { post_container } from './layout.module.scss';
 import Link from 'next/link';
-import Header from '../Header/Header';
+import Header from '../components/Header/Header';
 import PostFooter from './PostFooter';
 import Footer from '../Footer/Footer';
 
