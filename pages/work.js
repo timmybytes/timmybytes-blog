@@ -3,9 +3,8 @@ import BasicCard from '@components/Cards/BasicCard';
 export default function Work({ allPostsData }) {
   return (
     <>
-      <h2 className='heading' id='work'>
-        Work
-      </h2>
+      <a className='anchor' id='work'></a>
+      <h2 className='heading'>Work</h2>
       <section className='grid'>
         <BasicCard
           title='Rational Design'
