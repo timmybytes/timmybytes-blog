@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 import React, { useState } from 'react';
-import Highlight from '@components/Highlight/Highlight';
+import Highlight from '@/components/Highlight/Highlight';
 import styles from './intro.module.scss';
-import About from '@components/Intro/About/About';
+import About from '@/components/Intro/About/About';
 import { colors } from '../utils';
 
 const IntroCard = () => {

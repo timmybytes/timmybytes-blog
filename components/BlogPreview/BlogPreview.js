@@ -1,4 +1,4 @@
-import Card from '@components/Cards/Card';
+import Card from '@/components/Cards/Card';
 import Head from 'next/head';
 
 export default function Blog({ allPostsData }) {

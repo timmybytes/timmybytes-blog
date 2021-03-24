@@ -1,5 +1,5 @@
 import React from 'react';
-import { colors } from '@components/utils';
+import { colors } from '@/components/utils';
 import Icongrid from './IconGrid';
 import AboutSection from './AboutWrapper';
 
