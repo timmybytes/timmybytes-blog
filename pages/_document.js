@@ -13,7 +13,7 @@ class MyDocument extends Document {
           <meta name='title' content='timmybytes' />
           <meta
             name='description'
-            content="Timothy Merritt's developer portfolio and blog."
+            content='timmybytes is a portfolio and blog for Timothy Merritt | Developer, Designer, Writer, and Musician'
           />
           {/* Icons and Favicons */}
           <link
@@ -43,7 +43,7 @@ class MyDocument extends Document {
           <meta property='og:title' content='timmybytes' />
           <meta
             property='og:description'
-            content='Timothy Merritt is a developmer, designer, writer, and musician at timmybtyes.'
+            content='timmybytes is a portfolio and blog for Timothy Merritt | Developer, Designer, Writer, and Musician'
           />
           <meta property='og:url' content='https://timmybytes.com' />
           <meta
