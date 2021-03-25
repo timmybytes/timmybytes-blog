@@ -4,6 +4,7 @@ import Footer from '../components/Footer/Footer';
 import WorkPreview from '../components/WorkPreview/WorkPreview';
 import BlogPreview from '../components/BlogPreview/BlogPreview';
 import Head from 'next/head';
+import React from 'react';
 
 export default function Home({ allPostsData }) {
   return (
