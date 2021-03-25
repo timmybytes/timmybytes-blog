@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import navmobile from './navmobile.module.scss';
 import navdesktop from './navdesktop.module.scss';
-import DarkButton from './darkButton';
 
 const Nav = () => {
   const [screenWidth, setScreenWidth] = useState(0);
@@ -50,23 +49,31 @@ const Nav = () => {
         <nav
           className={navdesktop.nav}
           style={
+            // Shift nav horizontally, box shadow to navbar on scroll
             scrollPosition > 20
               ? {
                   boxShadow: '4px 4px 5px rgba(0,0,0,0.2)',
                   display: 'flex',
                   justifyContent: 'space-between',
-                  padding: '10px 0',
+                  // padding: '10px 0',
+                  padding: '1rem 2rem',
                 }
-              : { boxShadow: 'none', display: 'initial', padding: '30px 0 0 0' }
+              : // : { boxShadow: 'none', display: 'initial', padding: '30px 0 0 0' }
+                {
+                  boxShadow: 'none',
+                  display: 'flex',
+                  justifyContent: 'space-between',
+                  // padding: '10px 0',
+                  padding: '1rem 2rem',
+                }
           }>
           <Link href='/'>
             <a>
               <img
                 className={navdesktop.logo__img}
                 style={
-                  scrollPosition > 20
-                    ? { maxWidth: '250px', padding: '0 10vw' }
-                    : { maxWidth: '450px', padding: 'initial' }
+                  // scrollPosition > 20 ? { maxWidth: '250px', padding: '0 10vw' } : { maxWidth: '450px', padding: 'initial' }
+                  { maxWidth: '250px' }
                 }
                 src='/Logo.svg'
                 alt='timmybytes logo'
@@ -76,14 +83,18 @@ const Nav = () => {
           <ul
             className={navdesktop.links}
             style={
-              scrollPosition > 20
-                ? { justifyContent: 'stretch', padding: '0' }
-                : { justifyContent: 'space-evenly', padding: '1rem 0' }
+              // scrollPosition > 20 ? { justifyContent: 'stretch', padding: '0' } : { justifyContent: 'space-evenly', padding: '1rem 0' }
+              {
+                justifyContent: 'stretch',
+                padding: '0',
+                marginRight: '4rem',
+              }
             }>
             <li
               className={navdesktop.link}
               style={
-                scrollPosition > 20 ? { padding: '0 10px' } : { padding: '0' }
+                // scrollPosition > 20 ? { padding: '0 10px' } : { padding: '0' }
+                { padding: '0 10px' }
               }>
               <Link href='/'>
                 <a>Home{'  '}</a>
@@ -93,9 +104,10 @@ const Nav = () => {
             <li
               className={navdesktop.link}
               style={
-                scrollPosition > 20 ? { padding: '0 10px' } : { padding: '0' }
+                // scrollPosition > 20 ? { padding: '0 10px' } : { padding: '0' }
+                { padding: '0 10px' }
               }>
-              <Link href='/about'>
+              <Link href='#about'>
                 <a>About </a>
               </Link>
             </li>
@@ -103,9 +115,10 @@ const Nav = () => {
             <li
               className={navdesktop.link}
               style={
-                scrollPosition > 20 ? { padding: '0 10px' } : { padding: '0' }
+                // scrollPosition > 20 ? { padding: '0 10px' } : { padding: '0' }
+                { padding: '0 10px' }
               }>
-              <Link href='/work'>
+              <Link href='#work'>
                 <a>Work{'  '}</a>
               </Link>
             </li>
@@ -113,9 +126,10 @@ const Nav = () => {
             <li
               className={navdesktop.link}
               style={
-                scrollPosition > 20 ? { padding: '0 10px' } : { padding: '0' }
+                // scrollPosition > 20 ? { padding: '0 10px' } : { padding: '0' }
+                { padding: '0 10px' }
               }>
-              <Link href='/blog'>
+              <Link href='#blog'>
                 <a>Blog</a>
               </Link>
             </li>
@@ -157,24 +171,28 @@ const Nav = () => {
           </div>
           <ul
             className={navmobile.links}
-            style={showMobileNav ? { display: 'flex' } : { display: 'none' }}>
-            <li className={navmobile.link}>
+            style={showMobileNav ? { display: 'flex' } : { display: 'none' }}
+            // Hide hamburger menu after link is clicked
+            onClick={() => {
+              setShowMobileNav(!showMobileNav);
+            }}>
+            <li className={`${navmobile.link} rainbow-gradient`}>
               <Link href='/'>
-                <a>Home{'  '}</a>
+                <a>Home</a>
               </Link>
             </li>
-            <li className={navmobile.link}>
-              <Link href='/about'>
-                <a>About </a>
+            <li className={`${navmobile.link} rainbow-gradient`}>
+              <Link href='#about'>
+                <a>About</a>
               </Link>
             </li>
-            <li className={navmobile.link}>
-              <Link href='/work'>
-                <a>Work{'  '}</a>
+            <li className={`${navmobile.link} rainbow-gradient`}>
+              <Link href='#work'>
+                <a>Work</a>
               </Link>
             </li>
-            <li className={navmobile.link}>
-              <Link href='/blog'>
+            <li className={`${navmobile.link} rainbow-gradient`}>
+              <Link href='#blog'>
                 <a>Blog</a>
               </Link>
             </li>

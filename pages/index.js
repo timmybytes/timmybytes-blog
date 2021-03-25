@@ -1,48 +1,22 @@
+import Header from '../components/Header/Header';
+import Intro from '../components/Intro/Intro';
+import Footer from '../components/Footer/Footer';
+import WorkPreview from '../components/WorkPreview/WorkPreview';
+import BlogPreview from '../components/BlogPreview/BlogPreview';
 import Head from 'next/head';
-import Link from 'next/link';
-import Header from '../components/Header/header';
-import Footer from '../components/Footer/footer';
-import Card from '../components/Card/Card';
+import React from 'react';
 
 export default function Home({ allPostsData }) {
   return (
     <>
+      <Head>
+        <title>timmybytes</title>
+      </Head>
       <Header />
       <main className='container'>
-        <section className='card'>
-          <h2 className='header-2'>
-            Hi! I'm Timothy Merritt, a{' '}
-            <span className='primary'>developer</span>,{' '}
-            <span className='secondary'>designer</span>,{' '}
-            <span className='tertiary-more'>writer</span>, and{' '}
-            <span className='quaternary'>musician</span>*
-          </h2>
-          <p>
-            See more about me in the{' '}
-            <Link href='/about'>
-              <a>About</a>
-            </Link>{' '}
-            page, read my writing about coding and web development in the{' '}
-            <Link href='/blog'>
-              <a>Blog</a>
-            </Link>
-            , or check out some of my featured{' '}
-            <Link href='/work'>
-              <a>Work</a>
-            </Link>
-            .
-          </p>
-          <p>
-            I'm currently looking for new opportunities in frontend roles, so if
-            you'd like to chat about what I can bring to your project, please
-            contact me here!
-          </p>
-          <p>
-            <sub>
-              <sub>* I'm also pretty good at LEGOs.</sub>
-            </sub>
-          </p>
-        </section>
+        <Intro />
+        <WorkPreview />
+        <BlogPreview />
       </main>
       <Footer />
     </>

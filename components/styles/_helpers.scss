@@ -92,7 +92,7 @@
 }
 
 .img-avatar {
-  // background: $color-lighter;
+  background: $color-primary;
   max-width: 300px;
   @media screen and (max-width: 800px) {
     max-width: 200px;
@@ -100,9 +100,8 @@
   width: 100%;
   height: auto;
   border-radius: 50%;
-  border: 2px solid $color-lighter;
+  border: 1px solid $color-dark;
   margin: auto;
-  // padding: 3rem;
 }
 
 @keyframes rotation {
@@ -184,4 +183,66 @@
   text-align: center;
   justify-content: center;
   align-items: center;
+}
+
+.anchor::before {
+  display: block;
+  position: relative;
+  top: -250px;
+  visibility: hidden;
+}
+
+.rainbow-gradient {
+  background: linear-gradient(226deg, #ff90ad, #ffdf85, #e5ff91, #b8dcff);
+  background-size: 800% 800%;
+
+  -webkit-animation: RainbowGradient 9s ease infinite;
+  -moz-animation: RainbowGradient 9s ease infinite;
+  -o-animation: RainbowGradient 9s ease infinite;
+  animation: RainbowGradient 9s ease infinite;
+}
+
+@-webkit-keyframes RainbowGradient {
+  0% {
+    background-position: 0% 14%;
+  }
+  50% {
+    background-position: 100% 87%;
+  }
+  100% {
+    background-position: 0% 14%;
+  }
+}
+@-moz-keyframes RainbowGradient {
+  0% {
+    background-position: 0% 14%;
+  }
+  50% {
+    background-position: 100% 87%;
+  }
+  100% {
+    background-position: 0% 14%;
+  }
+}
+@-o-keyframes RainbowGradient {
+  0% {
+    background-position: 0% 14%;
+  }
+  50% {
+    background-position: 100% 87%;
+  }
+  100% {
+    background-position: 0% 14%;
+  }
+}
+@keyframes RainbowGradient {
+  0% {
+    background-position: 0% 14%;
+  }
+  50% {
+    background-position: 100% 87%;
+  }
+  100% {
+    background-position: 0% 14%;
+  }
 }

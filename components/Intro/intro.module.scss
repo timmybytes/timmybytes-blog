@@ -1,0 +1,101 @@
+@import '../styles/variables';
+
+.intro_card {
+  align-items: center;
+  color: inherit;
+  display: flex;
+  flex-basis: 45%;
+  flex-flow: column wrap;
+  justify-content: center;
+  margin: 3rem auto;
+  padding: 4rem 0.5rem;
+  text-align: left;
+  text-decoration: none;
+  transition: 0.3s;
+  width: 99%;
+  h1 {
+    display: block;
+    font-size: 4rem;
+    font-weight: 900;
+    letter-spacing: -2px;
+    line-height: 1.1;
+    margin: 0;
+    padding: 1rem 0 0 0;
+    text-align: center;
+    text-transform: lowercase;
+  }
+  h2.tags {
+    display: flex;
+    flex-flow: row wrap;
+    font-size: 2rem;
+    justify-content: center;
+    justify-items: stretch;
+    align-items: center;
+    margin-top: 0.5rem;
+  }
+  img {
+    max-width: 50%;
+  }
+  button {
+    border: none;
+    width: 200px;
+    strong {
+      font-weight: 800;
+      text-transform: lowercase;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    width: 95%;
+    h1 {
+      font-size: 3rem;
+      letter-spacing: -1px;
+    }
+    h2.tags {
+      display: grid;
+      grid-template-columns: auto auto;
+      justify-content: stretch;
+      text-align: center;
+      width: 100%;
+    }
+  }
+  @media screen and (max-width: 350px) {
+    h1 {
+      font-size: 2rem;
+    }
+    h2.tags {
+      font-size: 1.75rem;
+    }
+  }
+}
+
+.card__button {
+  align-self: center;
+  background-color: $color-primary;
+  border-radius: 4px;
+  border: none;
+  border: 1px solid $color-dark;
+  color: $color-dark;
+  font-size: $size-1;
+  margin: 0 auto;
+  padding: $size-sm;
+  text-transform: uppercase;
+  transition: 0.3s;
+  white-space: nowrap;
+  width: 100%;
+  cursor: pointer;
+  a {
+    color: inherit;
+    text-transform: none;
+    &:hover {
+      border: none;
+    }
+  }
+  &:hover {
+    box-shadow: 2px 2px 0px $color-dark;
+    transform: translate(-2px, -2px);
+    background-color: $color-secondary-less;
+    color: $color-dark;
+    font-weight: 900;
+  }
+}

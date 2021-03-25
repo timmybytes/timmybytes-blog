@@ -1,6 +1,6 @@
-import BasicCard from '../components/Cards/BasicCard';
+import BasicCard from '../Cards/BasicCard';
 
-export default function Work({ allPostsData }) {
+export default function WorkPreview({ allPostsData }) {
   return (
     <>
       <a className='anchor' id='work'></a>

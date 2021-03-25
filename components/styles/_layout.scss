@@ -107,7 +107,7 @@
   text-decoration: none;
   border: 1px solid $color-dark;
   border-radius: 10px;
-  // transition: color 0.15s ease, border-color 0.15s ease;
+  transition: 0.3s;
   & h3 {
     margin: 0 0 1rem 0;
     font-size: $size-2;
@@ -120,8 +120,8 @@
 .card:hover,
 .card:focus,
 .card:active {
-  transition: 0.3s;
   box-shadow: 4px 4px 0 $color-dark;
+  transform: translate(-4px, -4px);
 }
 
 .heading {
@@ -129,5 +129,18 @@
   font-size: $size-4;
   font-weight: 900;
   letter-spacing: 1.4px;
-  text-transform: uppercase;
+  // text-transform: uppercase;
+  text-transform: lowercase;
+  margin: 12rem auto 1rem auto;
+  @media screen and (max-width: 500px) {
+    margin: 4rem auto 1rem auto;
+  }
+}
+
+.flexRow {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  justify-items: stretch;
+  align-items: center;
 }

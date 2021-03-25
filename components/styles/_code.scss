@@ -27,6 +27,9 @@ code {
     color: $color-greyer;
     font-style: italic;
   }
+  & code {
+    background: none;
+  }
   @media screen and (max-width: 850px) {
     padding: $size-1 $size-2;
   }

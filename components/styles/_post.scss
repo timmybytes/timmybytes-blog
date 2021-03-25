@@ -50,20 +50,22 @@
         border-bottom: none;
       }
       .post__footer-social-icon {
-        background: $color-darker;
+        // background: $color-darker;
         color: $color-primary;
         display: block;
-        border-radius: 4px;
+        border-radius: 10px;
         padding: 7px 25px;
         min-width: 34px;
         height: auto;
         border: 1px solid $color-dark;
         transition: 0.3s;
         &:hover {
-          box-shadow: 4px 4px 0 $color-primary;
+          box-shadow: 4px 4px 0 $color-dark;
+          transform: translate(-4px, -4px);
         }
         @media screen and (max-width: 500px) {
-          padding: 3px 10px;
+          min-width: 44px;
+          padding: 5px 10px;
         }
       }
     }
