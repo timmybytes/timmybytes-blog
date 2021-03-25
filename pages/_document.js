@@ -48,7 +48,7 @@ class MyDocument extends Document {
           <meta property='og:url' content='https://timmybytes.com' />
           <meta
             property='og:image'
-            content='/images/timmybytes-Plain-Business-OG-Card.png'
+            content='https://raw.githubusercontent.com/timmybytes/timmybytes-blog/main/public/images/timmybytes-Plain-Business-OG-Card.png'
           />
           <meta property='og:image:type' content='image/png' />
           <meta property='og:image:width' content='1200' />
@@ -57,7 +57,7 @@ class MyDocument extends Document {
           <meta property='twitter:card' content='summary_large_image' />
           <meta
             property='twitter:image'
-            content='/images/timmybytes-Plain-Business-OG-Card.png'
+            content='https://raw.githubusercontent.com/timmybytes/timmybytes-blog/main/public/images/timmybytes-Plain-Business-OG-Card.png'
           />
           <meta property='twitter:creator' content='@timmybytes' />
         </Head>
