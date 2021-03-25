@@ -13,7 +13,7 @@ class MyDocument extends Document {
           <meta name='title' content='timmybytes' />
           <meta
             name='description'
-            content="Timothy Merritt's developer portfolio and blog"
+            content="Timothy Merritt's developer portfolio and blog."
           />
           <link rel='icon' href='/favicon.ico' />
           {/* Open graph */}
@@ -22,10 +22,13 @@ class MyDocument extends Document {
           <meta property='og:title' content='timmybytes' />
           <meta
             property='og:description'
-            content="Timothy Merritt's development portfolio and blog"
+            content='Timothy Merritt is a developmer, designer, writer, and musician at timmybtyes.'
           />
           <meta property='og:url' content='https://timmybytes.com' />
-          <meta property='og:image' content='../public/images/SocialCard.png' />
+          <meta
+            property='og:image'
+            content='/images/timmybytes-Plain-Business-OG-Card.png'
+          />
           <meta property='og:image:type' content='image/png' />
           <meta property='og:image:width' content='1200' />
           <meta property='og:image:height' content='647' />
@@ -33,7 +36,7 @@ class MyDocument extends Document {
           <meta property='twitter:card' content='summary_large_image' />
           <meta
             property='twitter:image'
-            content='../public/images/SocialCard.png'
+            content='/images/timmybytes-Plain-Business-OG-Card.png'
           />
           <meta property='twitter:creator' content='@timmybytes' />
         </Head>
