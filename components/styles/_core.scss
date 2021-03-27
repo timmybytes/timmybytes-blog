@@ -19,11 +19,11 @@ main {
 }
 
 a {
-  color: $color-secondary-more;
+  color: $blue;
   text-decoration: none;
   &:hover {
-    color: $color-secondary-more;
-    border-bottom: 1px solid $color-secondary-more;
+    color: $blue;
+    border-bottom: 1px solid $blue;
   }
 }
 

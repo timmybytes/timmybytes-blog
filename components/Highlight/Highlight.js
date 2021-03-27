@@ -10,8 +10,8 @@ const handleColorHover = color => {
       return `background: ${colors.secondaryLess};`;
     case 'tertiary':
       return `background: ${colors.tertiaryLess};`;
-    case 'quarternary':
-      return `background: ${colors.quarternaryLess};`;
+    case 'quaternary':
+      return `background: ${colors.quaternaryLess};`;
     case 'colorDark' || 'dark':
       return `background: ${colors.light};`;
     case 'colorLight' || 'light':

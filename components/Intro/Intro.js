@@ -23,7 +23,7 @@ const IntroCard = () => {
         <Highlight color='primary'>developer</Highlight>
         <Highlight color='secondary'>designer</Highlight>
         <Highlight color='tertiary'>writer</Highlight>
-        <Highlight color='quarternary'>musician</Highlight>
+        <Highlight color='quaternary'>musician</Highlight>
       </h2>
       <button
         className={`${styles.card__button} rainbow-gradient`}
