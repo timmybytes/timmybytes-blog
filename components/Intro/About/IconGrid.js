@@ -1,46 +1,68 @@
 import {
-  SiHtml5,
-  SiCss3,
-  SiJavascript,
-  SiSass,
-  SiStyledComponents,
-  SiReact,
-  SiGnubash,
-  SiGit,
-  SiNpm,
-  SiNodeDotJs,
-  SiPython,
-  SiFigma,
-  SiTrello,
-  SiNotion,
-  SiNextDotJs,
-  SiBabel,
-  SiEslint,
-  SiPrettier,
   SiAdobe,
+  SiApple,
+  SiBabel,
+  SiCss3,
+  SiDebian,
+  SiEslint,
+  SiFigma,
+  SiFirebase,
   SiGimp,
+  SiGit,
   SiGithub,
   SiGithubactions,
+  SiGnubash,
+  SiHtml5,
+  SiJavascript,
+  SiLighthouse,
+  SiLinux,
+  SiMacos,
+  SiMarkdown,
+  SiNextDotJs,
+  SiNodeDotJs,
+  SiNotion,
+  SiNpm,
+  SiAdobephotoshop,
+  SiAdobeindesign,
+  SiPrettier,
+  SiPython,
+  SiReact,
+  SiReactrouter,
+  SiSass,
+  SiScrutinizerci,
+  SiStyledComponents,
+  SiToggl,
+  SiTrello,
+  SiVim,
+  SiVisualstudiocode,
   SiWebpack,
-  SiDebian,
+  SiWordpress,
 } from 'react-icons/si';
+import { IoLogoVercel } from 'react-icons/io5';
 import { colors } from '../../utils';
 import styled from 'styled-components';
 
-const IconGridBody = styled.ul`
+const IconGridWrapper = styled.div`
+  padding: 1.5rem;
   border-radius: 10px;
   box-shadow: -4px 0px 20px 0px ${colors.dark} inset;
+  @media screen and (max-width: 500px) {
+    padding: 0;
+  }
+`;
+
+const IconGridBody = styled.ul`
   display: grid;
   grid-template-columns: repeat(4, auto);
-  max-height: 400px;
-  overflow: scroll;
-  list-style: none inside;
-  padding: 1rem;
   justify-content: space-between;
   justify-items: center;
   align-items: center;
   text-align: center;
   line-height: 1.1;
+  max-height: 400px;
+  overflow: scroll;
+  list-style: none inside;
+  padding: 1rem;
   li {
     background: none;
     color: ${colors.colorDarker};
@@ -81,104 +103,122 @@ const IconGridBody = styled.ul`
 
 const IconGrid = () => {
   return (
-    <IconGridBody>
-      <li>
-        <SiHtml5 style={{ color: colors.secondaryLess }} />
-        <span>HTML</span>
-      </li>
-      <li>
-        <SiCss3 style={{ color: colors.tertiaryLess }} />
-        <span>CSS</span>
-      </li>
-      <li>
-        <SiJavascript style={{ color: colors.quarternaryLess }} />
-        <span>JavaScript</span>
-      </li>
-      <li>
-        <SiSass style={{ color: colors.primaryLess }} />
-        <span>SASS</span>
-      </li>
-      <li>
-        <SiStyledComponents style={{ color: colors.secondaryLess }} />
-        <span>Styled Components</span>
-      </li>
-      <li>
-        <SiReact style={{ color: colors.tertiaryLess }} />
-        <span>React</span>
-      </li>
-      <li>
-        <SiNextDotJs style={{ color: colors.quarternaryLess }} />
-        <span>Next.js</span>
-      </li>
-      <li>
-        <SiGnubash style={{ color: colors.secondaryLess }} />
-        <span>Bash</span>
-      </li>
-      <li>
-        <SiPython style={{ color: colors.tertiaryLess }} />
-        <span>Python</span>
-      </li>
-      <li>
-        <SiGit style={{ color: colors.quarternaryLess }} />
-        <span>Git</span>
-      </li>
-      <li>
-        <SiNpm style={{ color: colors.primaryLess }} />
-        <span>NPM</span>
-      </li>
-      <li>
-        <SiNodeDotJs style={{ color: colors.secondaryLess }} />
-        <span>Node</span>
-      </li>
-      <li>
-        <SiBabel style={{ color: colors.tertiaryLess }} />
-        <span>ES6+/Babel</span>
-      </li>
-      <li>
-        <SiGithub style={{ color: colors.secondaryLess }} />
-        <span>GitHub</span>
-      </li>
-      <li>
-        <SiGithubactions style={{ color: colors.quarternaryLess }} />
-        <span>GitHub Actions</span>
-      </li>
-      <li>
-        <SiEslint style={{ color: colors.tertiaryLess }} />
-        <span>ESLint</span>
-      </li>
-      <li>
-        <SiPrettier style={{ color: colors.quarternaryLess }} />
-        <span>Prettier</span>
-      </li>
-      <li>
-        <SiWebpack style={{ color: colors.primaryLess }} />
-        <span>Webpack</span>
-      </li>
-      <li>
-        <SiFigma style={{ color: colors.tertiaryLess }} />
-        <span>Figma</span>
-      </li>
-      <li>
-        <SiAdobe style={{ color: colors.quarternaryLess }} />
-        <span>Adobe Suite</span>
-      </li>
-      <li>
-        <SiGimp style={{ color: colors.primaryLess }} />
-        <span>GIMP</span>
-      </li>
-      <li>
-        <SiTrello style={{ color: colors.secondaryLess }} />
-        <span>Trello</span>
-      </li>
-      <li>
-        <SiNotion style={{ color: colors.tertiaryLess }} />
-        <span>Notion</span>
-      </li>
-      <li>
-        <SiDebian style={{ color: colors.primaryLess }} />
-        <span>Debian</span>
-      </li>
-    </IconGridBody>
+    <IconGridWrapper>
+      <IconGridBody>
+        <li>
+          <SiHtml5 style={{ color: colors.primary }} />
+          <span>HTML</span>
+        </li>
+        <li>
+          <SiCss3 style={{ color: colors.secondary }} />
+          <span>CSS</span>
+        </li>
+        <li>
+          <SiJavascript style={{ color: colors.tertiary }} />
+          <span>JavaScript</span>
+        </li>
+        <li>
+          <SiSass style={{ color: colors.quaternary }} />
+          <span>SASS</span>
+        </li>
+        <li>
+          <SiStyledComponents style={{ color: colors.primary }} />
+          <span>styled-components</span>
+        </li>
+        <li>
+          <SiReact style={{ color: colors.secondary }} />
+          <span>React</span>
+        </li>
+        <li>
+          <SiNextDotJs style={{ color: colors.tertiary }} />
+          <span>Next.js</span>
+        </li>
+        <li>
+          <SiReactrouter style={{ color: colors.quaternary }} />
+          <span>React Router</span>
+        </li>
+        <li>
+          <SiGnubash style={{ color: colors.primary }} />
+          <span>Bash</span>
+        </li>
+        <li>
+          <SiVim style={{ color: colors.secondary }} />
+          <span>Vim</span>
+        </li>
+        <li>
+          <SiPython style={{ color: colors.tertiary }} />
+          <span>Python</span>
+        </li>
+        <li>
+          <SiGit style={{ color: colors.primary }} />
+          <span>Git</span>
+        </li>
+        <li>
+          <SiNpm style={{ color: colors.secondary }} />
+          <span>NPM</span>
+        </li>
+        <li>
+          <SiNodeDotJs style={{ color: colors.tertiary }} />
+          <span>Node</span>
+        </li>
+        <li>
+          <SiBabel style={{ color: colors.quaternary }} />
+          <span>ES6+/Babel</span>
+        </li>
+        <li>
+          <SiGithub style={{ color: colors.primary }} />
+          <span>GitHub</span>
+        </li>
+        <li>
+          <SiGithubactions style={{ color: colors.secondary }} />
+          <span>GitHub Actions</span>
+        </li>
+        <li>
+          <SiEslint style={{ color: colors.tertiary }} />
+          <span>ESLint</span>
+        </li>
+        <li>
+          <SiPrettier style={{ color: colors.quaternary }} />
+          <span>Prettier</span>
+        </li>
+        <li>
+          <SiWebpack style={{ color: colors.primary }} />
+          <span>Webpack</span>
+        </li>
+        <li>
+          <SiFirebase style={{ color: colors.secondary }} />
+          <span>Firebase</span>
+        </li>
+        <li>
+          <IoLogoVercel style={{ color: colors.tertiary }} />
+          <span>Vercel</span>
+        </li>
+        <li>
+          <SiLighthouse style={{ color: colors.quaternary }} />
+          <span>Lighthouse</span>
+        </li>
+        <li>
+          <SiFigma style={{ color: colors.primary }} />
+          <span>Figma</span>
+        </li>
+        <li>
+          <SiAdobephotoshop style={{ color: colors.secondary }} />
+          <span>Photoshop</span>
+        </li>
+        <li>
+          <SiAdobeindesign style={{ color: colors.tertiary }} />
+          <span>InDesign</span>
+        </li>
+        <li>
+          <SiGimp style={{ color: colors.quaternary }} />
+          <span>GIMP</span>
+        </li>
+        <li>
+          <SiWordpress style={{ color: colors.primary }} />
+          <span>Wordpress</span>
+        </li>
+      </IconGridBody>
+    </IconGridWrapper>
   );
 };
 
