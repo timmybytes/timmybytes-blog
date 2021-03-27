@@ -26,21 +26,25 @@ const AboutWrapper = ({ children }) => {
       padding: 1rem;
       margin: 0;
     }
-    .logo {
+    .ap_logo {
       border: 1px solid ${colors.dark};
       display: block;
       max-width: 100%;
       width: 90%;
       height: auto;
-      margin: 0 auto;
+      margin: 1.5rem auto;
       padding: 1rem;
       transition: 0.3s;
       @media screen and (max-width: 500px) {
         padding: 0.5rem;
       }
       &:hover {
-        box-shadow: 4px 4px 0 0 ${colors.dark};
-        transform: translate(-4px, -4px);
+        box-shadow: 8px 8px 0 0 ${colors.dark};
+        transform: translate(-8px, -8px);
+        @media screen and (max-width: 500px) {
+          box-shadow: 4px 4px 0 0 ${colors.dark};
+          transform: translate(-4px, -4px);
+        }
       }
     }
     button {
