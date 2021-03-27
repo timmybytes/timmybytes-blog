@@ -9,6 +9,7 @@
   font-size: 2rem;
   justify-content: center;
   overflow: scroll;
+  padding: 0.5rem 0;
   position: fixed;
   top: 0;
   width: 100%;
@@ -24,7 +25,6 @@
       height: auto;
       margin: 0 auto;
       max-width: 200px;
-      padding: 10px;
       width: 100%;
     }
     &:hover {
