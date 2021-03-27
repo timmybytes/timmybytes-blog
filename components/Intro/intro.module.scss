@@ -13,6 +13,9 @@
   text-decoration: none;
   transition: 0.3s;
   width: 99%;
+  article {
+    padding-top: 2rem;
+  }
   h1 {
     display: block;
     font-size: 4rem;
@@ -43,6 +46,9 @@
       font-weight: 800;
       text-transform: lowercase;
     }
+  }
+  button:nth-of-type(1) {
+    margin-top: 3rem;
   }
 
   @media screen and (max-width: 600px) {
