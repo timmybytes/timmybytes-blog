@@ -24,7 +24,7 @@ const Post = ({
         <title>{postTitle}</title>
         <meta name='description' content={description} />
         <meta name='title' content={postTitle} />
-        <link rel='icon' href='/favicon.ico' />
+        <link rel='icon' href='/favicons/favicon.ico' />
         <meta property='og:title' content='timmybytes' />
         <meta property='og:description' content={description} />
         <meta property='og:url' content={titleUrl} />
