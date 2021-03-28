@@ -12,7 +12,7 @@ const BasicCard = ({ children, title, body, date, image, alt, link }) => {
             className={styles.card__img}
             src={
               image ||
-              `/images/gradients/gradienta-unsplash-${randomImage()}.png`
+              `/images/gradients/gradienta-unsplash-${randomImage()}.jpg`
             }
             alt={alt || 'gradient background'}
           />
