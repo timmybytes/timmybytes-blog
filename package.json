@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "test": "jest"
   },
   "dependencies": {
     "gray-matter": "^4.0.2",
@@ -19,6 +20,11 @@
     "sass": "^1.32.4"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.11.10",
+    "@testing-library/react": "^11.2.5",
+    "babel-jest": "^26.6.3",
+    "jest": "^26.6.3",
+    "jest-axe": "^4.1.0",
     "styled-components": "^5.2.1"
   }
 }
