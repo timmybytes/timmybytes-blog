@@ -1,10 +1,11 @@
 import BasicCard from '../Cards/BasicCard';
+import Link from 'next/head';
 
 export default function WorkPreview({ allPostsData }) {
   return (
     <>
       <a className='anchor' id='work'></a>
-      <h2 className='heading'>Work</h2>
+      <h2 className='home-section-heading'>Work</h2>
       <section className='grid'>
         <BasicCard
           title='Rational Design'
