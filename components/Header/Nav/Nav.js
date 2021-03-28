@@ -72,8 +72,17 @@ const Nav = () => {
               <img
                 className={navdesktop.logo__img}
                 style={
-                  // scrollPosition > 20 ? { maxWidth: '250px', padding: '0 10vw' } : { maxWidth: '450px', padding: 'initial' }
-                  { maxWidth: '250px' }
+                  scrollPosition > 20
+                    ? {
+                        maxWidth: '150px',
+                        transition: '0.3s',
+                        padding: '.5rem 1rem 0 1rem',
+                      }
+                    : {
+                        maxWidth: '250px',
+                        padding: 'initial',
+                        transition: '0.3s',
+                      }
                 }
                 src='/Logo.svg'
                 alt='timmybytes logo'
@@ -82,65 +91,34 @@ const Nav = () => {
           </Link>
           <ul
             className={navdesktop.links}
-            style={
-              // scrollPosition > 20 ? { justifyContent: 'stretch', padding: '0' } : { justifyContent: 'space-evenly', padding: '1rem 0' }
-              {
-                justifyContent: 'stretch',
-                padding: '0',
-                marginRight: '4rem',
-              }
-            }>
-            <li
-              className={navdesktop.link}
-              style={
-                // scrollPosition > 20 ? { padding: '0 10px' } : { padding: '0' }
-                { padding: '0 10px' }
-              }>
+            style={{
+              justifyContent: 'stretch',
+              padding: '0',
+              marginRight: '4rem',
+            }}>
+            <li className={navdesktop.link} style={{ padding: '0 10px' }}>
               <Link href='/'>
                 <a>Home{'  '}</a>
               </Link>
             </li>
 
-            <li
-              className={navdesktop.link}
-              style={
-                // scrollPosition > 20 ? { padding: '0 10px' } : { padding: '0' }
-                { padding: '0 10px' }
-              }>
+            <li className={navdesktop.link} style={{ padding: '0 10px' }}>
               <Link href='#about'>
                 <a>About </a>
               </Link>
             </li>
 
-            <li
-              className={navdesktop.link}
-              style={
-                // scrollPosition > 20 ? { padding: '0 10px' } : { padding: '0' }
-                { padding: '0 10px' }
-              }>
+            <li className={navdesktop.link} style={{ padding: '0 10px' }}>
               <Link href='#work'>
                 <a>Work{'  '}</a>
               </Link>
             </li>
 
-            <li
-              className={navdesktop.link}
-              style={
-                // scrollPosition > 20 ? { padding: '0 10px' } : { padding: '0' }
-                { padding: '0 10px' }
-              }>
-              <Link href='#blog'>
+            <li className={navdesktop.link} style={{ padding: '0 10px' }}>
+              <Link href='/blog'>
                 <a>Blog</a>
               </Link>
             </li>
-            {/* TODO: Dark Mode via Context */}
-            {/* <li
-              className={navdesktop.link}
-              style={
-                scrollPosition > 20 ? { padding: '0 10px' } : { padding: '0' }
-              }>
-              <DarkButton />
-            </li> */}
           </ul>
         </nav>
       ) : (
@@ -192,7 +170,7 @@ const Nav = () => {
               </Link>
             </li>
             <li className={`${navmobile.link} rainbow-gradient`}>
-              <Link href='#blog'>
+              <Link href='/blog'>
                 <a>Blog</a>
               </Link>
             </li>
