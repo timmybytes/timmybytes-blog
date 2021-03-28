@@ -19,7 +19,7 @@ export default function Blog() {
             textAlign: 'center',
             textTransform: 'lowercase',
           }}>
-          Latest Blog Posts
+          blog
         </h2>
         <section className='grid'>
           <Card
