@@ -34,7 +34,7 @@ const Card = ({ children, title, body, date, image, alt, link = '' }) => {
           </p>
         </div>
         {children}
-        <a className={styles.link}>
+        <a className={styles.link} aria-label={`link to ${title}`}>
           <button className={styles.card__button}>
             <strong>More</strong>
           </button>
