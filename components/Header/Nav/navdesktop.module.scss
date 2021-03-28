@@ -29,6 +29,7 @@
       a {
         border: 1px solid $color-lighter;
         border-radius: 4px;
+        color: $color-tertiary-darker;
         font-size: 1.5rem;
         font-weight: 700;
         padding: 0 $size-1;
@@ -39,6 +40,8 @@
           border: 1px solid $color-dark;
           box-shadow: 2px 2px 0 $color-dark;
           transform: translate(-2px, -2px);
+        }
+        &:visited {
         }
       }
     }

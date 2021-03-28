@@ -20,11 +20,14 @@ main {
 }
 
 a {
-  color: $blue;
+  color: $color-tertiary-darker;
   text-decoration: none;
   &:hover {
-    color: $blue;
+    color: $color-primary-darker;
     border-bottom: 1px solid $blue;
+  }
+  &:visited {
+    color: $color-primary-darker;
   }
 }
 
