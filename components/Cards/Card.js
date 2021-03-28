@@ -3,7 +3,7 @@ import styles from './card.module.scss';
 import Link from 'next/link';
 import { GoCalendar } from 'react-icons/go';
 
-const Card = ({ children, title, body, date, image, link = '' }) => {
+const Card = ({ children, title, body, date, image, alt, link = '' }) => {
   const randomImage = () => Math.floor(Math.random() * 3);
   return (
     <Link href={link} passHref>
@@ -17,6 +17,7 @@ const Card = ({ children, title, body, date, image, link = '' }) => {
               image ||
               `/images/gradients/gradienta-unsplash-${randomImage()}.png`
             }
+            alt={alt || 'gradient background'}
           />
         </a>
         <header className={styles.card__header}>{title || 'Card Title'}</header>
