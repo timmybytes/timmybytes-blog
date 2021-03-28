@@ -18,23 +18,22 @@ const IntroCard = () => {
 
   return (
     <section id='about' className={styles.intro_card}>
-      <h1>Timothy Merritt is a...</h1>
+      <h1>
+        Timothy Merritt <br />
+        is a...
+      </h1>
       <h2 className={styles.tags}>
         <Highlight color='primary'>developer</Highlight>
         <Highlight color='secondary'>designer</Highlight>
         <Highlight color='tertiary'>writer</Highlight>
         <Highlight color='quaternary'>musician</Highlight>
       </h2>
-      <button
-        className={`${styles.card__button} rainbow-gradient`}
-        onClick={handleClick}>
-        <strong>{isClicked ? 'Less' : 'More'}</strong>
+      <button className='rainbow-gradient' onClick={handleClick}>
+        <strong>{isClicked ? 'Less about me' : 'More about me'}</strong>
       </button>
       {isClicked === true && (
         <About onChange={handleClickScroll}>
-          <button
-            className={`${styles.card__button} rainbow-gradient`}
-            onClick={handleClickScroll}>
+          <button className='rainbow-gradient' onClick={handleClickScroll}>
             <strong>Less</strong>
           </button>
         </About>
