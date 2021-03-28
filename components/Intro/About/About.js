@@ -8,6 +8,7 @@ const About = ({ children }) => {
   return (
     <>
       <AboutWrapper>
+        <h2>Hi! I'm Tim.</h2>
         <p>
           I’m a <strong>multidisciplinarian</strong>: a maker passionate about
           exploration and experimentation in a variety of creative fields. I
@@ -19,7 +20,11 @@ const About = ({ children }) => {
           As a developer, I create frontend applications using a variety of
           tools and frameworks, but I primarily work with React. I’m also
           partial to working with the command line and automating tasks with
-          shell scripts.
+          shell scripts. See some of my{' '}
+          <Link href='/work'>
+            <a>work</a>
+          </Link>
+          .
         </p>
         <p>
           I’m comfortable using the following languages, frameworks, libraries,
