@@ -15,112 +15,6 @@ class MyDocument extends Document {
             name='description'
             content='timmybytes is a portfolio and blog for Timothy Merritt | Developer, Designer, Writer, and Musician'
           />
-          {/* Fonts */}
-          <link
-            rel='preload'
-            href='/fonts/HK-Grotesk/HKGrotesk-Black.otf'
-            as='font'
-            type='font/ttf'
-            crossorigin
-          />
-          <link
-            rel='preload'
-            href='/fonts/HK-Grotesk/HKGrotesk-Bold.otf'
-            as='font'
-            type='font/ttf'
-            crossorigin
-          />
-          <link
-            rel='preload'
-            href='/fonts/HK-Grotesk/HKGrotesk-BoldItalic.otf'
-            as='font'
-            type='font/ttf'
-            crossorigin
-          />
-          <link
-            rel='preload'
-            href='/fonts/HK-Grotesk/HKGrotesk-ExtraBold.otf'
-            as='font'
-            type='font/ttf'
-            crossorigin
-          />
-          <link
-            rel='preload'
-            href='/fonts/HK-Grotesk/HHKGrotesk-Italic.otf'
-            as='font'
-            type='font/ttf'
-            crossorigin
-          />
-          <link
-            rel='preload'
-            href='/fonts/HK-Grotesk/HKGrotesk-Light.otf'
-            as='font'
-            type='font/ttf'
-            crossorigin
-          />
-          <link
-            rel='preload'
-            href='/fonts/HK-Grotesk/HKGrotesk-LightItalic.otf'
-            as='font'
-            type='font/ttf'
-            crossorigin
-          />
-          <link
-            rel='preload'
-            href='/fonts/HK-Grotesk/HKGrotesk-Medium.otf'
-            as='font'
-            type='font/ttf'
-            crossorigin
-          />
-          <link
-            rel='preload'
-            href='/fonts/HK-Grotesk/HKGrotesk-MediumItalic.otf'
-            as='font'
-            type='font/ttf'
-            crossorigin
-          />
-          <link
-            rel='preload'
-            href='/fonts/HK-Grotesk/HKGrotesk-Regular.otf'
-            as='font'
-            type='font/ttf'
-            crossorigin
-          />
-          <link
-            rel='preload'
-            href='/fonts/HK-Grotesk/HKGrotesk-SemiBold.otf'
-            as='font'
-            type='font/ttf'
-            crossorigin
-          />
-          <link
-            rel='preload'
-            href='/fonts/HK-Grotesk/HKGrotesk-SemiBoldItalic.otf'
-            as='font'
-            type='font/ttf'
-            crossorigin
-          />
-          <link
-            rel='preload'
-            href='/fonts/Iosevka/iosevka-bold.ttf'
-            as='font'
-            type='font/ttf'
-            crossorigin
-          />
-          <link
-            rel='preload'
-            href='/fonts/Iosevka/iosevka-italic.ttf'
-            as='font'
-            type='font/ttf'
-            crossorigin
-          />
-          <link
-            rel='preload'
-            href='/fonts/Iosevka/iosevka-regular.ttf'
-            as='font'
-            type='font/ttf'
-            crossorigin
-          />
           {/* Icons and Favicons */}
           <link
             rel='apple-touch-icon'
@@ -139,7 +33,7 @@ class MyDocument extends Document {
             sizes='16x16'
             href='/favicons/favicon-16x16.png'
           />
-          <link rel='manifest' href='/site.webmanifest' />
+          {/* <link rel='manifest' href='/site.webmanifest' /> */}
           <link rel='mask-icon' href='/safari-pinned-tab.svg' color='#5bbad5' />
           <meta name='msapplication-TileColor' content='#da532c' />
           <meta name='theme-color' content='#ff90ad' />

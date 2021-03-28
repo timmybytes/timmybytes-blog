@@ -1,7 +1,7 @@
 import styles from './card.module.scss';
 import Link from 'next/link';
 
-const BasicCard = ({ children, title, body, date, image, link }) => {
+const BasicCard = ({ children, title, body, date, image, alt, link }) => {
   const randomImage = () => Math.floor(Math.random() * 3);
   return (
     <>
@@ -14,6 +14,7 @@ const BasicCard = ({ children, title, body, date, image, link }) => {
               image ||
               `/images/gradients/gradienta-unsplash-${randomImage()}.png`
             }
+            alt={alt || 'gradient background'}
           />
         )}
 
@@ -28,7 +29,7 @@ const BasicCard = ({ children, title, body, date, image, link }) => {
         {/* If no link provided, do not render <Link> and avoid undefined href error  */}
         {link && (
           <Link href={link} passHref>
-            <a className={styles.link}>
+            <a className={styles.link} aria-label={`link to ${title}`}>
               <button className={styles.card__button}>
                 <strong>More</strong>
               </button>
