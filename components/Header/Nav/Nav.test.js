@@ -1,11 +1,9 @@
-// import { render, screen } from '@testing-library/react';
 import { render, screen } from '../../../test/test-utils';
-import { axe } from 'jest-axe';
 import Nav from './Nav';
 
 describe('Nav', () => {
   // Links using <Link> from 'next/link' are based on root '/', rather than full domain 'https://...', and should be tested as such
-  test('Links point to correct addresses', async () => {
+  test('Links point to correct addresses', () => {
     render(<Nav />);
     const homeLink = screen
       .getByRole('link', {
@@ -30,16 +28,9 @@ describe('Nav', () => {
         name: /Blog/i,
       })
       .getAttribute('href');
-    expect(await homeLink).toBe('/');
-    expect(await aboutLink).toBe('/#about');
-    expect(await workLink).toBe('/#work');
-    expect(await blogLink).toBe('/blog');
-  });
-});
-
-describe('The <Nav /> component', () => {
-  it('should not fail any accessibility tests', async () => {
-    const { container } = render(<Nav />);
-    expect(await axe(container)).toHaveNoViolations();
+    expect(homeLink).toBe('/');
+    expect(aboutLink).toBe('/#about');
+    expect(workLink).toBe('/#work');
+    expect(blogLink).toBe('/blog');
   });
 });
