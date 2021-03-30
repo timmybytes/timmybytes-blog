@@ -20,7 +20,7 @@
   }
   h1 {
     display: block;
-    font-size: 4rem;
+    font-size: 5rem;
     font-weight: 900;
     letter-spacing: -2px;
     line-height: 1.1;
@@ -28,11 +28,16 @@
     padding: 1rem 0 0 0;
     text-align: center;
     text-transform: lowercase;
+    white-space: nowrap;
     br {
       display: none;
       @media screen and (max-width: 520px) {
         display: block;
       }
+    }
+    span {
+      font-size: 0.7em;
+      letter-spacing: 0;
     }
   }
   h2.tags {
@@ -85,10 +90,17 @@
       }
     }
   }
+  @media screen and (max-width: 750px) {
+    h1 {
+      font-size: 3.9rem;
+    }
+  }
   @media screen and (max-width: 600px) {
+    margin: 1rem auto;
+    padding: 1rem 0.5rem;
     width: 95%;
     h1 {
-      font-size: 3rem;
+      font-size: 2.75rem;
       letter-spacing: -1px;
     }
     h2.tags {
@@ -100,8 +112,10 @@
     }
   }
   @media screen and (max-width: 350px) {
+    margin: 3rem auto;
+    padding: 1rem 0.5rem;
     h1 {
-      font-size: 2rem;
+      font-size: 2.5rem;
     }
     h2.tags {
       font-size: 1.75rem;

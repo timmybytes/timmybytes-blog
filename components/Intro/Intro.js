@@ -20,7 +20,7 @@ const IntroCard = () => {
     <section id='about' className={styles.intro_card}>
       <h1>
         Timothy Merritt <br />
-        is a...
+        <span>is a...</span>
       </h1>
       <h2 className={styles.tags}>
         <Highlight color='primary'>developer</Highlight>
