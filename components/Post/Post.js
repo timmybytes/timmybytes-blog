@@ -2,6 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import PostLayout from './PostLayout';
 import PostImage from './PostImage';
+import PostFooter from './PostFooter';
 
 const Post = ({
   children,
@@ -65,6 +66,7 @@ const Post = ({
           <p className='post__date'>{postDate}</p>
         </header>
         <article className='post__article'>{children}</article>
+        <PostFooter postTitle={title} />
       </PostLayout>
     </>
   );

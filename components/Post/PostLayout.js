@@ -20,7 +20,7 @@ export default function PostLayout({ children, home }) {
         <Link href='/'>
           <a>&larr; Back to home</a>
         </Link>
-        <PostFooter />
+        {/* <PostFooter postTitle={} /> */}
       </main>
       <Footer />
     </>
