@@ -4,9 +4,6 @@ import Head from 'next/head';
 export default function Blog({ allPostsData }) {
   return (
     <>
-      <Head>
-        <title>timmybytes</title>
-      </Head>
       <a className='anchor' id='blog'></a>
       <h2 className='home-section-heading'>Latest Blog Posts</h2>
       <section className='grid'>

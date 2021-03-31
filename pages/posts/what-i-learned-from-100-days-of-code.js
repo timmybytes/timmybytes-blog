@@ -7,7 +7,7 @@ const FirstPost = () => {
   return (
     <Post
       title='What I Learned From 100 Days of Code'
-      image='/images/100DaysOfCode.png'
+      image='https://timmybytes.com/images/100DaysOfCode.png'
       description='Over these last few months, I’ve completely thrown
         myself into learning to code, web development best practices, and
         computer science theory (in a limited fashion). Here are some tips I’ve
