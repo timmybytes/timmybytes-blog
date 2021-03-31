@@ -7,7 +7,7 @@ const NewPost = () => {
       title='Adding CI/CD to Your Projects With GitHub Actions'
       date='January 22, 2021'
       description='If you’re hosting your code on GitHub, you can use to add useful workflows to your project. In this guide, I’ll show you what Actions are, and how you can use them to streamline your development process and add automation.'
-      image='/images/github-actions.png'>
+      image='https://timmybytes.com/images/github-actions.png'>
       <p>
         If you’re hosting your code on GitHub, you can use{' '}
         <a href='https://docs.github.com/en/free-pro-team@latest/actions/learn-github-actions/introduction-to-github-actions'>
