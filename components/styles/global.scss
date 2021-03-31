@@ -1,6 +1,6 @@
-@import './_fonts.scss';
-@import './_variables.scss';
-@import './_layout.scss';
+@use './_variables.scss' as *;
+@use './_fonts.scss';
+@use './_layout.scss';
 @import './_code.scss';
 @import './_core.scss';
 @import './_post.scss';
