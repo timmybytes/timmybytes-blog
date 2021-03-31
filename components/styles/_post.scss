@@ -1,3 +1,5 @@
+@use 'variables' as *;
+
 .post {
   &__article {
     @media screen and (max-width: 500px) {

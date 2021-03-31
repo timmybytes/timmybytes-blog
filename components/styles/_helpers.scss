@@ -1,3 +1,5 @@
+@use 'variables' as *;
+@use "sass:color";
 .txtupper {
   text-transform: uppercase;
 }
@@ -112,7 +114,7 @@
 }
 
 @mixin color-button($color: $color-primary) {
-  background-color: lighten($color, 10%);
+  background-color: color.adjust($color, $lightness: 10%);
   border: 1px solid $color-dark;
   border-radius: 10px;
   padding: 0 1rem;
