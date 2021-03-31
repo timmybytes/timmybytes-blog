@@ -37,14 +37,10 @@ const Post = ({
         {/* FIXME: Default image for social media sharing if none provided - 1280x640 Required */}
         {image ? (
           <>
-            <meta
-              property='og:image'
-              content={`https://timmybytes.com/images/${image}`}
-              key='og-img'
-            />
+            <meta property='og:image' content={`${image}`} key='og-img' />
             <meta
               property='og:image:type'
-              content='image/png'
+              content='image/jpg'
               key='og-img-type'
             />
             <meta
@@ -54,7 +50,7 @@ const Post = ({
             />
             <meta
               property='twitter:image'
-              content={`https://timmybytes.com/images/${image}`}
+              content={`${image}`}
               key='twitter-img'
             />
             <meta property='og:image:width' content='1280' key='og-img-width' />
@@ -73,7 +69,7 @@ const Post = ({
             />
             <meta
               property='og:image:type'
-              content='image/jpg'
+              content='image/png'
               key='og-img-type'
             />
             <meta
