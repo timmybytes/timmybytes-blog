@@ -10,9 +10,9 @@ class MyDocument extends Document {
     return (
       <Html lang='en'>
         <Head>
-          <title key='title'>
+          {/* <title key='title'>
             timmybytes | Developer, Designer, Writer, Musician
-          </title>
+          </title> */}
           <meta name='title' content='timmybytes' key='meta-title' />
           <meta
             name='description'
@@ -88,11 +88,11 @@ class MyDocument extends Document {
             content='summary_large_image'
             key='twitter-card'
           />
-          <meta
+          {/* <meta
             property='twitter:image'
             content='https://raw.githubusercontent.com/timmybytes/timmybytes-blog/main/public/images/timmybytes-Plain-Business-OG-Card.png'
             key='twitter-img'
-          />
+          /> */}
           <meta
             property='twitter:creator'
             content='@timmybytes'
