@@ -13,12 +13,12 @@ export default function PostLayout({ children, home }) {
     <>
       <Header />
       <main className={post_container}>
-        <Link href='/'>
-          <a>&larr; Back to home</a>
+        <Link href='/blog'>
+          <a>&larr; Back to blog home</a>
         </Link>
         <>{children}</>
-        <Link href='/'>
-          <a>&larr; Back to home</a>
+        <Link href='/blog'>
+          <a>&larr; Back to blog home</a>
         </Link>
         {/* <PostFooter postTitle={} /> */}
       </main>
