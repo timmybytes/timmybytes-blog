@@ -7,7 +7,7 @@ export default function Blog() {
   return (
     <>
       <Head>
-        <title>timmybytes</title>
+        <title key='title'>timmybytes blog</title>
       </Head>
       <Header />
       <main className='container' style={{ marginTop: '0', paddingTop: 0 }}>

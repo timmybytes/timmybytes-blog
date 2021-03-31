@@ -10,7 +10,9 @@ export default function Home({ allPostsData }) {
   return (
     <>
       <Head>
-        <title>timmybytes</title>
+        <title key='title'>
+          timmybytes | developer, designer, writer, musician
+        </title>
       </Head>
       <Header />
       <main className='container'>

@@ -7,7 +7,7 @@ export default function Work({ allPostsData }) {
   return (
     <>
       <Head>
-        <title>timmybytes</title>
+        <title key='title'>timmybytes | my work</title>
       </Head>
       <Header />
       <main className='container'>

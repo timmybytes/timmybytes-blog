@@ -22,48 +22,88 @@ const Post = ({
   return (
     <>
       <Head>
-        <title>{postTitle}</title>
-        <meta name='description' content={description} />
-        <meta name='title' content={postTitle} />
-        <link rel='icon' href='/favicons/favicon.ico' />
-        <meta property='og:title' content='timmybytes' />
-        <meta property='og:description' content={description} />
-        <meta property='og:url' content={titleUrl} />
-        <meta property='og:type' content='article' />
-        {/* Default Image for social media sharing - 1280x640 PNG Required */}
+        <title key='title'>{postTitle}</title>
+        <meta name='title' content={postTitle} key='meta-title' />
+        <meta name='description' content={description} key='description' />
+        {/* Open Graph */}
+        <meta property='og:title' content={postTitle} key='og-title' />
+        <meta
+          property='og:description'
+          content={description}
+          key='description'
+        />
+        <meta property='og:url' content={titleUrl} key='og-url' />
+        <meta property='og:type' content='article' key='og-type' />
+        {/* FIXME: Default image for social media sharing if none provided - 1280x640 Required */}
         {image ? (
           <>
             <meta
               property='og:image'
               content={`https://timmybytes.com/images/${image}`}
+              key='og-img'
             />
-            <meta property='og:image:alt' content='Post image' />
-            <meta property='og:image:type' content='image/png' />
+            <meta
+              property='og:image:type'
+              content='image/png'
+              key='og-img-type'
+            />
+            <meta
+              property='og:image:alt'
+              content='Post image'
+              key='og-img-alt'
+            />
             <meta
               property='twitter:image'
               content={`https://timmybytes.com/images/${image}`}
+              key='twitter-img'
             />
-            <meta property='og:image:width' content='1280' />
-            <meta property='og:image:height' content='640' />
+            <meta property='og:image:width' content='1280' key='og-img-width' />
+            <meta
+              property='og:image:height'
+              content='640'
+              key='og-img-height'
+            />
           </>
         ) : (
           <>
             <meta
               property='og:image'
               content='https://timmybytes.com/images/timmybytes-Plain-Business-OG-Card.png'
+              key='og-img'
             />
-            <meta property='og:image:alt' content='Color gradient' />
-            <meta property='og:image:type' content='image/jpg' />
+            <meta
+              property='og:image:type'
+              content='image/jpg'
+              key='og-img-type'
+            />
+            <meta
+              property='og:image:alt'
+              content='Color gradient'
+              key='og-img-alt'
+            />
             <meta
               property='twitter:image'
               content='https://timmybytes.com/images/timmybytes-Plain-Business-OG-Card.png'
+              key='twitter-img'
             />
-            <meta property='og:image:width' content='1920' />
-            <meta property='og:image:height' content='1280' />
+            <meta property='og:image:width' content='1920' key='og-img-width' />
+            <meta
+              property='og:image:height'
+              content='1280'
+              key='og-img-height'
+            />
           </>
         )}
-        <meta property='twitter:card' content='summary_large_image' />
-        <meta property='twitter:creator' content='@timmybytes' />
+        <meta
+          property='twitter:card'
+          content='summary_large_image'
+          key='twitter-card'
+        />
+        <meta
+          property='twitter:creator'
+          content='@timmybytes'
+          key='twitter-creator'
+        />
       </Head>
       <PostLayout>
         <header>
