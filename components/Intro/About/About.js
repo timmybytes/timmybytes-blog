@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { colors } from '../../utils';
+import { SiKoFi, SiLinkedin, SiDevDotTo, SiTwitter } from 'react-icons/si';
 import IconGrid from './IconGrid';
 import AboutWrapper from './AboutWrapper';
 
@@ -64,6 +64,19 @@ const About = ({ children }) => {
             alt='Animal Politik logo'
           />
         </a>
+        {/* TODO: Style and update social media links */}
+        {/* <a href='https://ko-fi.com/O4O82TAZB'>
+          <SiKoFi className='post__footer-social-icon' />
+        </a>
+        <a href='https://dev.to/timmybytes'>
+          <SiDevDotTo className='post__footer-social-icon' />
+        </a>
+        <a href='https://twitter.com/timmybytes'>
+          <SiTwitter className='post__footer-social-icon' />
+        </a>
+        <a href='https://www.linkedin.com/in/timmybytes'>
+          <SiLinkedin className='post__footer-social-icon' />
+        </a> */}
         {children}
       </AboutWrapper>
     </>

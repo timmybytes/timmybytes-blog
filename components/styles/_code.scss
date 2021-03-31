@@ -1,3 +1,5 @@
+@use 'variables' as *;
+
 pre {
   overflow-x: scroll;
   tab-size: 2;
@@ -9,7 +11,7 @@ code {
   border-radius: 4px;
   font-family: 'Iosevka', Menlo, Monaco, Lucida Console, Liberation Mono,
     DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-  font-size: 16px;
+  font-size: 13px;
   padding: 2px 5px;
   overflow-x: scroll;
   word-break: normal;
