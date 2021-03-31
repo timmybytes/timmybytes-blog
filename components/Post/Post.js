@@ -33,10 +33,16 @@ const Post = ({
         {/* Default Image for social media sharing - 1280x640 PNG Required */}
         {image ? (
           <>
-            <meta property='og:image' content={image} />
+            <meta
+              property='og:image'
+              content={`https://timmybytes.com/images/${image}`}
+            />
             <meta property='og:image:alt' content='Post image' />
             <meta property='og:image:type' content='image/png' />
-            <meta property='twitter:image' content={image} />
+            <meta
+              property='twitter:image'
+              content={`https://timmybytes.com/images/${image}`}
+            />
             <meta property='og:image:width' content='1280' />
             <meta property='og:image:height' content='640' />
           </>
@@ -44,13 +50,13 @@ const Post = ({
           <>
             <meta
               property='og:image'
-              content='../../public/images/gradients/gradienta-unsplash-1.png'
+              content='https://timmybytes.com/images/timmybytes-Plain-Business-OG-Card.png'
             />
             <meta property='og:image:alt' content='Color gradient' />
             <meta property='og:image:type' content='image/jpg' />
             <meta
               property='twitter:image'
-              content='../../public/images/gradients/gradienta-unsplash-1.png'
+              content='https://timmybytes.com/images/timmybytes-Plain-Business-OG-Card.png'
             />
             <meta property='og:image:width' content='1920' />
             <meta property='og:image:height' content='1280' />
@@ -66,7 +72,7 @@ const Post = ({
           <p className='post__date'>{postDate}</p>
         </header>
         <article className='post__article'>{children}</article>
-        <PostFooter postTitle={title} />
+        <PostFooter postTitle={title} postUrl={titleUrl} />
       </PostLayout>
     </>
   );

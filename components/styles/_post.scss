@@ -30,7 +30,7 @@
   }
   &__footer-header {
     border-top: 1px solid $color-dark;
-    color: $color-primary;
+    color: $color-dark;
     display: block;
     font-size: $size-5;
     margin-bottom: 0;
@@ -50,22 +50,23 @@
         border-bottom: none;
       }
       .post__footer-social-icon {
-        // background: $color-darker;
-        color: $color-primary;
-        display: block;
         border-radius: 10px;
-        padding: 7px 25px;
-        min-width: 34px;
-        height: auto;
         border: 1px solid $color-dark;
+        color: $color-secondary-darker;
+        display: block;
+        font-size: 2rem;
+        height: auto;
+        min-width: 34px;
+        padding: 17px 25px;
         transition: 0.3s;
         &:hover {
           box-shadow: 4px 4px 0 $color-dark;
+          color: $color-tertiary-darker;
           transform: translate(-4px, -4px);
         }
         @media screen and (max-width: 500px) {
           min-width: 44px;
-          padding: 5px 10px;
+          padding: 10px 15px;
         }
       }
     }
