@@ -1,4 +1,3 @@
-import styled from 'styled-components';
 import {
   SiKoFi,
   SiLinkedin,
@@ -7,45 +6,13 @@ import {
   SiDribbble,
   SiGithub,
 } from 'react-icons/si';
+import { IoDocumentTextOutline } from 'react-icons/io5';
 import React, { useState } from 'react';
 import Highlight from '../Highlight/Highlight';
 import styles from './intro.module.scss';
 import About from '../Intro/About/About';
 import { colors } from '../utils';
 
-const SocialLinks = styled.ul`
-  align-items: center;
-  display: flex;
-  justify-items: stretch;
-  list-style: inside none;
-  margin: 1rem auto;
-  padding: 1rem 0;
-  li {
-    & a:hover {
-      border: none;
-    }
-    & a:visited {
-      color: none;
-    }
-    svg {
-      border-radius: 4px;
-      color: ${colors.dark};
-      height: auto;
-      margin: 1rem;
-      padding: 7px 10px;
-      transition: 0.3s;
-      width: 38px;
-      &:hover {
-        box-shadow: 4px 4px 0 0 ${colors.dark};
-        transform: translate(-4px, -4px);
-      }
-      @media screen and (max-width: 400px) {
-        margin: 0.25rem;
-        padding: 2px 5px;
-      }
-    }
-  }
-`;
 const IntroCard = () => {
   const [isClicked, setIsClicked] = useState(false);
   const handleClick = () => {
@@ -69,7 +36,7 @@ const IntroCard = () => {
         <Highlight color='tertiary'>writer</Highlight>
         <Highlight color='quaternary'>musician</Highlight>
       </h2>
-      <button className='rainbow-gradient' onClick={handleClick}>
+      {/* <button className='rainbow-gradient' onClick={handleClick}>
         <strong>{isClicked ? 'Less about me' : 'More about me'}</strong>
       </button>
       {isClicked === true && (
@@ -78,8 +45,8 @@ const IntroCard = () => {
             <strong>Less</strong>
           </button>
         </About>
-      )}
-      <SocialLinks>
+      )} */}
+      <ul className={styles.social}>
         <li>
           <a href='https://twitter.com/timmybytes' target='_blank'>
             <SiTwitter style={{ background: colors.primary }} />
@@ -110,7 +77,12 @@ const IntroCard = () => {
             <SiKoFi style={{ background: colors.secondary }} />
           </a>
         </li>
-      </SocialLinks>
+        <li>
+          <a href='./Resume.pdf' target='_blank'>
+            <IoDocumentTextOutline style={{ background: colors.secondary }} />
+          </a>
+        </li>
+      </ul>
     </section>
   );
 };

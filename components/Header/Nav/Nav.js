@@ -103,13 +103,13 @@ const Nav = () => {
             </li>
 
             <li className={navdesktop.link} style={{ padding: '0 10px' }}>
-              <Link href='#about'>
+              <Link href='/about'>
                 <a>About </a>
               </Link>
             </li>
 
             <li className={navdesktop.link} style={{ padding: '0 10px' }}>
-              <Link href='#work'>
+              <Link href='/work'>
                 <a>Work{'  '}</a>
               </Link>
             </li>

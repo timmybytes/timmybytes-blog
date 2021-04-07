@@ -27,7 +27,7 @@ const BasicCard = ({ children, title, body, date, image, alt, link }) => {
         </div>
 
         {/* If no link provided, do not render <Link> and avoid undefined href error  */}
-        {link && (
+        {/* {link && (
           <Link href={link} passHref>
             <a className={styles.link} aria-label={`link to ${title}`}>
               <button className={styles.card__button}>
@@ -35,7 +35,7 @@ const BasicCard = ({ children, title, body, date, image, alt, link }) => {
               </button>
             </a>
           </Link>
-        )}
+        )} */}
         {children}
       </article>
     </>
