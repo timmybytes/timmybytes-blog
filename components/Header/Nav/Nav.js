@@ -137,6 +137,7 @@ const Nav = () => {
                   className={navmobile.logo__img}
                   src='/Logo.svg'
                   alt='timmybytes logo'
+                  style={scrollPosition > 20 ? { maxWidth: '170px' } : {}}
                 />
               </a>
             </Link>
