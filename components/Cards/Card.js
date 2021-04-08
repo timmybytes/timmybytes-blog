@@ -10,7 +10,7 @@ const Card = ({ children, title, body, date, image, alt, link = '' }) => {
       <article
         style={link !== '' && { cursor: 'pointer' }}
         className={styles.card}>
-        <a className={styles.link}>
+        <a className={styles.link} target='_blank'>
           <img
             className={styles.card__img}
             src={

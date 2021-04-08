@@ -1,4 +1,4 @@
-@use '../styles/variables' as *;
+@use '../../styles/variables' as *;
 
 .intro_card {
   align-items: center;
@@ -13,6 +13,7 @@
   text-decoration: none;
   transition: 0.3s;
   width: 99%;
+  height: auto;
   // "More about me" section; keep width 100% to fit
   article {
     padding-top: 2rem;
@@ -155,13 +156,14 @@
 }
 
 .social {
-  align-items: center;
+  align-items: stretch;
   display: flex;
   flex-flow: row wrap;
   justify-items: stretch;
+  justify-content: center;
   list-style: inside none;
-  margin: 1rem auto;
-  padding: 1rem 0;
+  margin: 0;
+  padding: 0;
   li {
     & a:hover {
       border: none;
@@ -173,7 +175,7 @@
       border-radius: 4px;
       color: $color-dark;
       height: auto;
-      margin: 1rem;
+      margin: 5px;
       padding: 7px 10px;
       transition: 0.3s;
       width: 38px;
