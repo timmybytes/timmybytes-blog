@@ -1,0 +1,195 @@
+@use '../../styles/variables' as *;
+
+.intro_card {
+  align-items: center;
+  color: inherit;
+  display: flex;
+  flex-basis: 45%;
+  flex-flow: column wrap;
+  justify-content: center;
+  margin: 3rem auto;
+  padding: 4rem 0.5rem;
+  text-align: left;
+  text-decoration: none;
+  transition: 0.3s;
+  width: 99%;
+  height: auto;
+  // "More about me" section; keep width 100% to fit
+  article {
+    padding-top: 2rem;
+    width: 100%;
+  }
+  h1 {
+    display: block;
+    font-size: 5rem;
+    font-weight: 900;
+    letter-spacing: -2px;
+    line-height: 1.1;
+    margin: 0;
+    padding: 1rem 0 0 0;
+    text-align: center;
+    text-transform: lowercase;
+    white-space: nowrap;
+    br {
+      display: none;
+      @media screen and (max-width: 520px) {
+        display: block;
+      }
+    }
+    span {
+      font-size: 0.7em;
+      letter-spacing: 0;
+    }
+  }
+  h2.tags {
+    display: flex;
+    flex-flow: row wrap;
+    font-size: 2rem;
+    justify-content: center;
+    justify-items: stretch;
+    align-items: center;
+    margin: 0;
+    margin-top: 0.5rem;
+  }
+  img {
+    max-width: 50%;
+  }
+  button {
+    border: none;
+    border-radius: 4px;
+    color: $color-dark;
+    height: 48px;
+    justify-self: center;
+    margin: 5px auto;
+    padding: 0;
+    transition: 0.3s;
+    strong {
+      font-weight: 800;
+      text-transform: lowercase;
+      border: none;
+      font-size: 1.8rem;
+      padding: 0 7px;
+      cursor: pointer;
+    }
+    a {
+      color: inherit;
+      text-transform: none;
+      &:hover {
+        border: none;
+      }
+    }
+    &:hover {
+      box-shadow: 4px 4px 0px $color-dark;
+      transform: translate(-4px, -4px);
+      background-color: $color-secondary;
+      color: $color-dark;
+      font-weight: 900;
+    }
+    @media screen and (max-width: 500px) {
+      strong {
+        font-size: 1.75rem;
+      }
+    }
+  }
+  @media screen and (max-width: 750px) {
+    h1 {
+      font-size: 3.9rem;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    margin: 1rem auto;
+    padding: 1rem 0.5rem;
+    width: 95%;
+    h1 {
+      font-size: 2.75rem;
+      letter-spacing: -1px;
+    }
+    h2.tags {
+      display: grid;
+      grid-template-columns: auto auto;
+      justify-content: stretch;
+      text-align: center;
+      width: 100%;
+    }
+  }
+  @media screen and (max-width: 350px) {
+    margin: 3rem auto;
+    padding: 1rem 0.5rem;
+    h1 {
+      font-size: 2.5rem;
+    }
+    h2.tags {
+      font-size: 1.75rem;
+    }
+  }
+}
+
+.card__button {
+  align-self: center;
+  background-color: $color-primary;
+  border-radius: 4px;
+  border: none;
+  border: 1px solid $color-dark;
+  color: $color-dark;
+  font-size: $size-1;
+  margin: 0 auto;
+  padding: $size-sm;
+  text-transform: uppercase;
+  transition: 0.3s;
+  white-space: nowrap;
+  width: 100%;
+  cursor: pointer;
+  a {
+    color: inherit;
+    text-transform: none;
+    &:hover {
+      border: none;
+    }
+  }
+  &:hover {
+    box-shadow: 2px 2px 0px $color-dark;
+    transform: translate(-2px, -2px);
+    background-color: $color-secondary;
+    color: $color-dark;
+    font-weight: 900;
+  }
+}
+
+.social {
+  align-items: stretch;
+  display: flex;
+  flex-flow: row wrap;
+  justify-items: stretch;
+  justify-content: center;
+  list-style: inside none;
+  margin: 0;
+  padding: 0;
+  li {
+    & a:hover {
+      border: none;
+    }
+    svg {
+      border-radius: 4px;
+      color: $color-dark;
+      height: auto;
+      margin: 5px;
+      padding: 7px 10px;
+      transition: 0.3s;
+      width: 38px;
+      &:hover {
+        box-shadow: 4px 4px 0 0 $color-dark;
+        transform: translate(-4px, -4px);
+      }
+      @media screen and (max-width: 700px) {
+        margin: 0.25rem;
+        padding: 0.25rem 0.5rem;
+        width: 50px;
+      }
+    }
+  }
+  @media screen and (max-width: 700px) {
+    justify-content: center;
+    margin: 5px;
+    padding: 0 7px;
+  }
+}

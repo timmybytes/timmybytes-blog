@@ -20,7 +20,7 @@ export default function Home({ allPostsData }) {
       <main className='container'>
         <Intro />
         <section id='about' className={styles.intro_card}>
-          <h2 className='heading'>about</h2>
+          <h2 className='heading txt-center'>about</h2>
           <About />
         </section>
         <WorkPreview />

@@ -15,7 +15,7 @@ const AboutPage = () => {
       <Header />
       <main className='container' style={{ marginTop: '0', paddingTop: 0 }}>
         <section id='about' className={styles.intro_card}>
-          <h2 className='heading'>about</h2>
+          <h2 className='heading txt-center'>about</h2>
           <About />
         </section>
       </main>

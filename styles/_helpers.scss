@@ -1,5 +1,9 @@
 @use 'variables' as *;
 @use "sass:color";
+.txt-center {
+  text-align: center;
+}
+
 .txtupper {
   text-transform: uppercase;
 }
