@@ -96,6 +96,12 @@
     gap: 5px;
     grid-template-columns: repeat(4, auto);
     justify-content: stretch;
+    overflow: hidden;
+    margin: 0;
+    padding: 10px;
+    li {
+      margin: 10px;
+    }
   }
 
   li {
