@@ -16,10 +16,7 @@ const IntroCard = () => {
 
   return (
     <section className={styles.intro__grid}>
-      <h1 className={styles.intro__header}>
-        Timothy Merritt {/* <br /> */}
-        {/* <span style={{ fontSize: '.7em', fontWeight: '200' }}>is a...</span> */}
-      </h1>
+      <h1 className={styles.intro__header}>Timothy Merritt</h1>
       <div className={styles.intro__tags}>
         <span
           className={styles.intro__tags_tag}
