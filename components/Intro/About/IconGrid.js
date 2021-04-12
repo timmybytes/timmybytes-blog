@@ -52,17 +52,17 @@ const IconGridWrapper = styled.div`
 `;
 
 const IconGridBody = styled.ul`
+  align-items: center;
   display: grid;
   grid-template-columns: repeat(4, auto);
   justify-content: space-between;
   justify-items: center;
-  align-items: center;
-  text-align: center;
   line-height: 1.1;
+  list-style: none inside;
   max-height: 400px;
   overflow: scroll;
-  list-style: none inside;
   padding: 1rem;
+  text-align: center;
   li {
     background: none;
     color: ${colors.colorDarker};
@@ -84,16 +84,14 @@ const IconGridBody = styled.ul`
       transition: 0.05s;
       width: min-content;
     }
-    @media screen and (max-width: 500px) {
-      margin: 0.5rem;
-      padding: 0.5rem 0.5rem 0 0.5rem;
-    }
   }
   @media screen and (max-width: 500px) {
     grid-template-columns: repeat(3, auto);
+    padding: 0;
     li {
       margin: 0.5rem;
       padding: 0;
+      font-size: 1.75rem;
       span {
         font-size: 0.85rem;
       }

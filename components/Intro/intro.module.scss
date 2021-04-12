@@ -1,5 +1,24 @@
 @use '../../styles/variables' as *;
 
+.intro_card {
+  // align-items: center;
+  // color: inherit;
+  // display: flex;
+  // flex-basis: 45%;
+  // flex-flow: column wrap;
+  // justify-content: center;
+  margin: 13rem auto; // Reset to 3rem auto;
+  // padding: 4rem 0.25rem;
+  text-align: left;
+  text-decoration: none;
+  // transition: 0.3s;
+  // width: 100%;
+  // height: auto;
+  @media screen and (max-width: 400px) {
+    width: 100%;
+  }
+}
+
 .intro__grid {
   display: grid;
   gap: 10px;
@@ -99,9 +118,8 @@
         box-shadow: 4px 4px 0 0 $color-dark;
         transform: translate(-4px, -4px);
       }
-      ̦ @media screen and (max-width: 500px) {
+      @media screen and (max-width: 500px) {
         margin: 0;
-        // width: 100%;
       }
     }
   }
