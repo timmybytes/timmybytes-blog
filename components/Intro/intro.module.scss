@@ -87,22 +87,10 @@
   display: flex;
   flex-flow: row wrap;
   justify-items: stretch;
-  justify-content: center;
+  justify-content: space-evenly;
   list-style: inside none;
   margin: 0;
   padding: 0;
-  @media screen and (max-width: 600px) {
-    display: grid;
-    gap: 5px;
-    grid-template-columns: repeat(4, auto);
-    justify-content: stretch;
-    overflow: hidden;
-    margin: 0;
-    padding: 10px;
-    li {
-      margin: 10px;
-    }
-  }
 
   li {
     align-self: center;
@@ -127,6 +115,43 @@
       @media screen and (max-width: 500px) {
         margin: 0;
       }
+    }
+  }
+  @media screen and (max-width: 800px) {
+    justify-content: space-between;
+  }
+
+  @media screen and (max-width: 580px) {
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(4, auto);
+    li > a > svg {
+      padding: 7px 40px;
+      margin: 0;
+    }
+  }
+
+  @media screen and (max-width: 530px) {
+    li > a > svg {
+      padding: 7px 30px;
+    }
+  }
+
+  @media screen and (max-width: 450px) {
+    li > a > svg {
+      padding: 7px 25px;
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    li > a > svg {
+      padding: 7px 20px;
+    }
+  }
+
+  @media screen and (max-width: 365px) {
+    li > a > svg {
+      padding: 7px 15px;
     }
   }
 }
