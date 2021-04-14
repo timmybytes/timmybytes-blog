@@ -1,5 +1,5 @@
 import React from 'react';
-import { colors } from '../utils';
+import { colors } from '@/components/utils';
 import styled from 'styled-components';
 
 const AboutWrapper = ({ children }) => {

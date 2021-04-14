@@ -9,7 +9,7 @@ import {
 } from 'react-icons/si';
 import { IoDocumentTextOutline } from 'react-icons/io5';
 import styles from './intro.module.scss';
-import { colors } from '../utils';
+import { colors } from '@/components/utils';
 
 const IntroCard = () => {
   const { primary, secondary, tertiary, quaternary } = colors;
