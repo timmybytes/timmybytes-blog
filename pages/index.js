@@ -20,8 +20,12 @@ export default function Home({ allPostsData }) {
       <Header />
       <main className='container'>
         <section style={{ margin: '0.25rem auto 1rem', maxWidth: '60ch' }}>
-          {/* <h2 className='heading txt-center'>Hi! I'm Timothy Merritt</h2> */}
           <Intro />
+          <h2
+            style={{ marginTop: '3rem', lineHeight: '1.1' }}
+            className='heading txt-center'>
+            Hi! I'm Timothy Merritt
+          </h2>
           <p>
             I’m a <strong>multidisciplinarian</strong> passionate about making,
             exploring, and experimenting in a variety of creative fields.
