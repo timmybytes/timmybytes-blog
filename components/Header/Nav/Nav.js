@@ -161,12 +161,12 @@ const Nav = () => {
               </Link>
             </li>
             <li className={`${navmobile.link} rainbow-gradient`}>
-              <Link href='#about'>
+              <Link href='/about'>
                 <a>About</a>
               </Link>
             </li>
             <li className={`${navmobile.link} rainbow-gradient`}>
-              <Link href='#work'>
+              <Link href='/work'>
                 <a>Work</a>
               </Link>
             </li>
