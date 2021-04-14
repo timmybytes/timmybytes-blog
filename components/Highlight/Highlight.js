@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import { colors } from '../utils';
+import { colors } from '@/components/utils';
 
 const handleColorHover = color => {
   switch (color) {

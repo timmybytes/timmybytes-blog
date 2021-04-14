@@ -1,5 +1,4 @@
-import Card from '../Cards/Card';
-import Link from 'next/head';
+import Card from '@/components/Cards/Card';
 
 export default function WorkPreview({ allPostsData }) {
   return (
