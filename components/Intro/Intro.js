@@ -1,43 +1,94 @@
-import styled from 'styled-components';
-import React, { useState } from 'react';
-import Highlight from '../Highlight/Highlight';
+import {
+  SiKoFi,
+  SiLinkedin,
+  SiDevDotTo,
+  SiTwitter,
+  SiDribbble,
+  SiGithub,
+  SiReddit,
+} from 'react-icons/si';
+import { IoDocumentTextOutline } from 'react-icons/io5';
 import styles from './intro.module.scss';
-import About from '../Intro/About/About';
 import { colors } from '../utils';
 
 const IntroCard = () => {
-  const [isClicked, setIsClicked] = useState(false);
-  const handleClick = () => {
-    setIsClicked(!isClicked);
-  };
-
-  const handleClickScroll = () => {
-    setIsClicked(!isClicked);
-    window.scrollTo(0, 0);
-  };
+  const { primary, secondary, tertiary, quaternary } = colors;
 
   return (
-    <section id='about' className={styles.intro_card}>
-      <h1>
-        Timothy Merritt <br />
-        <span>is a...</span>
-      </h1>
-      <h2 className={styles.tags}>
-        <Highlight color='primary'>developer</Highlight>
-        <Highlight color='secondary'>designer</Highlight>
-        <Highlight color='tertiary'>writer</Highlight>
-        <Highlight color='quaternary'>musician</Highlight>
-      </h2>
-      <button className='rainbow-gradient' onClick={handleClick}>
-        <strong>{isClicked ? 'Less about me' : 'More about me'}</strong>
-      </button>
-      {isClicked === true && (
-        <About onChange={handleClickScroll}>
-          <button className='rainbow-gradient' onClick={handleClickScroll}>
-            <strong>Less</strong>
-          </button>
-        </About>
-      )}
+    <section className={styles.intro__grid}>
+      <h1 className={styles.intro__header}>Timothy Merritt</h1>
+      <div className={styles.intro__tags}>
+        <span
+          className={styles.intro__tags_tag}
+          style={{
+            background: primary,
+          }}>
+          developer
+        </span>
+        <span
+          className={styles.intro__tags_tag}
+          style={{
+            background: secondary,
+          }}>
+          designer
+        </span>
+        <span
+          className={styles.intro__tags_tag}
+          style={{
+            background: tertiary,
+          }}>
+          writer
+        </span>
+        <span
+          className={styles.intro__tags_tag}
+          style={{
+            background: quaternary,
+          }}>
+          musician
+        </span>
+      </div>
+      <ul className={styles.intro__social}>
+        <li>
+          <a href='https://twitter.com/timmybytes' target='_blank'>
+            <SiTwitter style={{ background: primary }} />
+          </a>
+        </li>
+        <li>
+          <a href='https://github.com/timmybytes' target='_blank'>
+            <SiGithub style={{ background: secondary }} />
+          </a>
+        </li>
+        <li>
+          <a href='https://www.linkedin.com/in/timmybytes' target='_blank'>
+            <SiLinkedin style={{ background: tertiary }} />
+          </a>
+        </li>
+        <li>
+          <a href='https://dev.to/timmybytes' target='_blank'>
+            <SiDevDotTo style={{ background: quaternary }} />
+          </a>
+        </li>
+        <li>
+          <a href='https://dribbble.com/timmybytes' target='_blank'>
+            <SiDribbble style={{ background: primary }} />
+          </a>
+        </li>
+        <li>
+          <a href='https://ko-fi.com/O4O82TAZB' target='_blank'>
+            <SiKoFi style={{ background: secondary }} />
+          </a>
+        </li>
+        <li>
+          <a href='https://reddit.com/u/timmybytes' target='_blank'>
+            <SiReddit style={{ background: tertiary }} />
+          </a>
+        </li>
+        <li>
+          <a href='./Resume.pdf' target='_blank'>
+            <IoDocumentTextOutline style={{ background: quaternary }} />
+          </a>
+        </li>
+      </ul>
     </section>
   );
 };

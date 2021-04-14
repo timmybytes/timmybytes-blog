@@ -29,8 +29,8 @@ describe('Nav', () => {
       })
       .getAttribute('href');
     expect(homeLink).toBe('/');
-    expect(aboutLink).toBe('/#about');
-    expect(workLink).toBe('/#work');
+    expect(aboutLink).toBe('/about');
+    expect(workLink).toBe('/work');
     expect(blogLink).toBe('/blog');
   });
 });

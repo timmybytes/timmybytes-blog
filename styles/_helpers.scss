@@ -1,5 +1,9 @@
 @use 'variables' as *;
 @use "sass:color";
+.txt-center {
+  text-align: center;
+}
+
 .txtupper {
   text-transform: uppercase;
 }
@@ -38,6 +42,26 @@
 
 .txt200 {
   font-weight: 200;
+}
+
+.mar-y-1 {
+  margin: 1rem auto;
+}
+
+.mar-y-2 {
+  margin: 2rem auto;
+}
+
+.mar-y-3 {
+  margin: 3rem auto;
+}
+
+.mar-y-4 {
+  margin: 4rem auto;
+}
+
+.mar-y-5 {
+  margin: 5rem auto;
 }
 
 .primary {

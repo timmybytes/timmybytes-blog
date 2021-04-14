@@ -24,12 +24,10 @@ main {
 a {
   color: $color-tertiary-darker;
   text-decoration: none;
+  font-weight: bold;
   &:hover {
-    color: $color-primary-darker;
-    border-bottom: 1px solid $blue;
-  }
-  &:visited {
-    color: $color-primary-darker;
+    // color: $color-secondary-darker;
+    border-bottom: 1px solid $color-tertiary-darker;
   }
 }
 

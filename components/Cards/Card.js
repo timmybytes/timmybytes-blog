@@ -10,7 +10,7 @@ const Card = ({ children, title, body, date, image, alt, link = '' }) => {
       <article
         style={link !== '' && { cursor: 'pointer' }}
         className={styles.card}>
-        <a className={styles.link}>
+        <a className={styles.link} target='_blank'>
           <img
             className={styles.card__img}
             src={
@@ -27,18 +27,18 @@ const Card = ({ children, title, body, date, image, alt, link = '' }) => {
               'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, rem a facilis laudantium expedita reiciendis!'}
           </p>
         </div>
-        <div>
+        {/* <div>
           <p className={styles.card__byline}>
             Published: <GoCalendar />
             <span> {date || <em>?/?/?</em>}</span>
           </p>
-        </div>
+        </div> */}
         {children}
-        <a className={styles.link} aria-label={`link to ${title}`}>
+        {/* <a className={styles.link} aria-label={`link to ${title}`}>
           <button className={styles.card__button}>
             <strong>More</strong>
           </button>
-        </a>
+        </a> */}
       </article>
     </Link>
   );

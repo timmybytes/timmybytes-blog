@@ -1,31 +1,34 @@
-@import '../../styles/variables';
+@use '../../../styles/variables' as *;
 
 .nav {
-  align-items: center;
+  align-items: normal;
   background: $color-lighter;
   color: $color-dark;
   display: flex;
   flex-flow: column wrap;
   font-size: 2rem;
-  justify-content: center;
+  justify-content: space-between;
   overflow: scroll;
   padding: 0.5rem 0;
   position: fixed;
   top: 0;
+  max-width: 100vw;
   width: 100%;
   z-index: 1;
   .wrapper {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    // width: 300.95px;
+    padding: 0 0 0 1rem;
   }
   .logo {
     &__img {
       height: auto;
       margin: 0 auto;
+      padding: 0.25rem;
       max-width: 200px;
       width: 100%;
+      transition: 0.3s;
     }
     &:hover {
       border-bottom: inherit;
@@ -42,6 +45,8 @@
     transition: 0.3s;
     span {
       display: block;
+      margin-right: 1rem;
+      margin-bottom: 4px;
       width: 2rem;
     }
   }

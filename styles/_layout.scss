@@ -18,9 +18,10 @@
   flex-direction: column;
   justify-content: stretch;
   align-items: center;
-  margin: 12rem auto 6rem;
+  margin: 5rem auto 6rem;
   @media screen and (max-width: 800px) {
     margin: 6rem auto 6rem;
+    padding: 1rem;
   }
 }
 
@@ -128,7 +129,7 @@
 
 .heading {
   color: $color-dark;
-  font-size: $size-4;
+  font-size: $size-5;
   font-weight: 900;
   letter-spacing: 1.4px;
   text-transform: lowercase;
@@ -136,7 +137,8 @@
 
 .home-section-heading {
   @extend .heading;
-  margin: 12rem auto 1rem auto;
+
+  margin: 6rem auto 1rem auto;
   @media screen and (max-width: 500px) {
     margin: 4rem auto 1rem auto;
   }
