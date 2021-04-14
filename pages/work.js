@@ -1,7 +1,7 @@
-import Card from '../components/Cards/Card';
 import Head from 'next/head';
-import Header from '../components/Header/Header';
-import Footer from '../components/Footer/Footer';
+import Card from '@/components/Cards/Card';
+import Header from '@/components/Header/Header';
+import Footer from '@/components/Footer/Footer';
 
 export default function Work({ allPostsData }) {
   return (
