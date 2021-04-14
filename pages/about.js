@@ -1,10 +1,9 @@
 import React from 'react';
-import Card from '../components/Cards/Card';
 import Head from 'next/head';
-import Header from '../components/Header/Header';
-import Footer from '../components/Footer/Footer';
-import About from '../components/About/About';
-import styles from '../components/Intro/intro.module.scss';
+import Header from '@/components/Header/Header';
+import Footer from '@/components/Footer/Footer';
+import About from '@/components/About/About';
+import styles from '@/components/Intro/intro.module.scss';
 
 const AboutPage = () => {
   return (
