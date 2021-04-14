@@ -39,7 +39,7 @@ import {
   SiWordpress,
 } from 'react-icons/si';
 import { IoLogoVercel } from 'react-icons/io5';
-import { colors } from '../../utils';
+import { colors } from '../utils';
 import styled from 'styled-components';
 
 const IconGridWrapper = styled.div`
