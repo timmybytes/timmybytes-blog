@@ -6,8 +6,6 @@ import Intro from '../components/Intro/Intro';
 import Footer from '../components/Footer/Footer';
 import WorkPreview from '../components/WorkPreview/WorkPreview';
 import BlogPreview from '../components/BlogPreview/BlogPreview';
-import About from '../components/About/About';
-import styles from '../components/Intro/intro.module.scss';
 
 export default function Home({ allPostsData }) {
   return (
@@ -40,28 +38,17 @@ export default function Home({ allPostsData }) {
             <Link href='/work'>
               <a>work page</a>
             </Link>{' '}
-            (more being added soon) and the social media links above. You can
-            also keep up with what I'm doing by checking out{' '}
+            (more being added soon), the social media links above, and{' '}
+            <Link href='/Resume.pdf'>
+              <a target='_blank'>my resume</a>
+            </Link>
+            . You can also keep up with what I'm doing by checking out{' '}
             <Link href='/blog'>
               <a>my blog</a>
             </Link>
             . Thanks for stopping by!
           </p>
-          {/* <img
-            src='/favicons/safari-pinned-tab.svg'
-            alt='timmybytes tb icon'
-            style={{
-              width: '100%',
-              height: 'auto  ',
-              margin: '0 auto',
-              maxWidth: '100px',
-            }}
-          /> */}
         </section>
-        {/* <section id='about' className={styles.intro_card}>
-          <h2 className='heading txt-center'>about</h2>
-          <About />
-        </section> */}
         <WorkPreview />
         <BlogPreview />
       </main>
