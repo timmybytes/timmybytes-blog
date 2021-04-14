@@ -212,8 +212,15 @@
   animation: RainbowGradient 6s ease infinite;
 }
 
+.rainbow-gradient-spin {
+  animation: RainbowGradientFlash 12s linear infinite;
+}
+
 @-webkit-keyframes RainbowGradient {
   0% {
+    background-position: 0% 0%;
+  }
+  25% {
     background-position: 0% 14%;
   }
   50% {
@@ -254,5 +261,19 @@
   }
   100% {
     background-position: 0% 14%;
+  }
+}
+
+@keyframes RainbowGradientFlash {
+  0% {
+    transform: rotate(0deg);
+    background: $color-primary;
+  }
+  50% {
+    background: $color-tertiary;
+  }
+  100% {
+    transform: rotate(360deg);
+    background: $color-primary;
   }
 }
