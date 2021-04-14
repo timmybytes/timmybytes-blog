@@ -1,11 +1,11 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import Header from '../components/Header/Header';
-import Intro from '../components/Intro/Intro';
-import Footer from '../components/Footer/Footer';
-import WorkPreview from '../components/WorkPreview/WorkPreview';
-import BlogPreview from '../components/BlogPreview/BlogPreview';
+import Header from '@/components/Header/Header';
+import Intro from '@/components/Intro/Intro';
+import Footer from '@/components/Footer/Footer';
+import WorkPreview from '@/components/WorkPreview/WorkPreview';
+import BlogPreview from '@/components/BlogPreview/BlogPreview';
 
 export default function Home({ allPostsData }) {
   return (

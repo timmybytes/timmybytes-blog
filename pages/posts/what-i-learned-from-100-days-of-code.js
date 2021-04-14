@@ -1,7 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
-import Head from 'next/head';
-import Post from '../../components/Post/Post';
+import Post from '@/components/Post/Post';
 
 const FirstPost = () => {
   return (
