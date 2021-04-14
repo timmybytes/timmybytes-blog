@@ -19,7 +19,7 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    // width: 300.95px;
+    padding: 0 0 0 1rem;
   }
   .logo {
     &__img {
@@ -46,6 +46,7 @@
     span {
       display: block;
       margin-right: 1rem;
+      margin-bottom: 4px;
       width: 2rem;
     }
   }
