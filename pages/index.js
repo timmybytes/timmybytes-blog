@@ -6,7 +6,7 @@ import Intro from '../components/Intro/Intro';
 import Footer from '../components/Footer/Footer';
 import WorkPreview from '../components/WorkPreview/WorkPreview';
 import BlogPreview from '../components/BlogPreview/BlogPreview';
-import About from '../components/Intro/About/About';
+import About from '../components/About/About';
 import styles from '../components/Intro/intro.module.scss';
 
 export default function Home({ allPostsData }) {
