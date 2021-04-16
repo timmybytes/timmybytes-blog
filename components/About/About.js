@@ -7,7 +7,19 @@ import AboutWrapper from './AboutWrapper';
 const About = ({ children }) => {
   return (
     <>
+      <h2 className='heading txt-center'>about me</h2>
       <AboutWrapper>
+        <img
+          className='rainbow-gradient-spin'
+          style={{
+            display: 'block',
+            margin: '0 auto',
+            width: '50%',
+            borderRadius: '50%',
+          }}
+          src='/images/avatar_eyebrow-transparent.png'
+          alt='Avatar image of Timothy Merritt'
+        />
         <h2>Hi! I'm Tim.</h2>
         <p>
           I’m a <strong>multidisciplinarian</strong> passionate about making,
@@ -31,25 +43,18 @@ const About = ({ children }) => {
           simply, and I have experience creating logos and branding, graphics,
           typographically-focused layouts, and album artwork.
         </p>
-        {/* <p>
+        <p>
           See some of my{' '}
           <Link href='/work'>
             <a>work</a>
           </Link>
           .
-        </p> */}
+        </p>
         <p>
           I’m comfortable using the following languages, frameworks, libraries,
           and tools in a given tech stack:
         </p>
-        {/* <h3>#uses</h3> */}
         <IconGrid />
-        {/* <h2>designer</h2> */}
-        {/* <p>
-          I’m passionate about clean, meaningful design to communicate ideas
-          simply, and I have experience creating logos and branding, graphics,
-          typographically-focused layouts, and album artwork.
-        </p> */}
         <h2>writer</h2>
         <p>
           I’ve written and presented award-winning academic literary criticism,
