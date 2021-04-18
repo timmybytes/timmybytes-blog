@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Header from '@/components/Header/Header';
 import Footer from '@/components/Footer/Footer';
 import About from '@/components/About/About';
-import styles from '@/components/Intro/intro.module.scss';
+import styles from '@/components/Intro/intro-section.module.scss';
 
 const AboutPage = () => {
   return (
