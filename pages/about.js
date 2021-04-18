@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Header from '@/components/Header/Header';
 import Footer from '@/components/Footer/Footer';
 import About from '@/components/About/About';
-import styles from '@/components/Intro/intro.module.scss';
+import styles from '@/components/Intro/intro-section.module.scss';
 
 const AboutPage = () => {
   return (
@@ -14,7 +14,6 @@ const AboutPage = () => {
       <Header />
       <main className='container' style={{ marginTop: '0', paddingTop: 0 }}>
         <section id='about' className={styles.intro_card}>
-          <h2 className='heading txt-center'>about</h2>
           <About />
         </section>
       </main>
