@@ -1,7 +1,7 @@
 @use '../../../styles/variables' as *;
 
 .nav {
-  background: $color-lighter;
+  background: $color-light;
   color: $color-dark;
   margin: 0 auto;
   position: fixed;
@@ -27,7 +27,7 @@
     max-width: 450px;
     .link {
       a {
-        border: 1px solid $color-lighter;
+        border: 1px solid $color-light;
         border-radius: 4px;
         color: $color-tertiary-darker;
         font-size: 1.5rem;

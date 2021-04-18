@@ -65,7 +65,7 @@ const IconGridBody = styled.ul`
   text-align: center;
   li {
     background: none;
-    color: ${colors.colorDarker};
+    color: ${colors.dark};
     border-radius: 4px;
     font-size: 2rem;
     margin: 1rem;

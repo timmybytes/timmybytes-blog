@@ -1,51 +1,10 @@
-//   light: '#fdfdfd',
-//   dark: '#444444',
-//   primary: '#FF90AD',
-//   primaryDarker: '#FF3D71',
-//   primaryLess: `#FF90AD`,
-//   secondary: '#FFDF85',
-//   secondaryDarker: '#FFC933',
-//   secondaryLess: '#FFDF85',
-//   tertiary: '#B8DCFF',
-//   tertiaryDarker: '#66B2FF',
-//   tertiaryLess: `#B8DCFF`,
-//   quaternary: '#CAFFBF',
-//   quaternaryDarker: '#84FF6B',
-//   quaternaryLess: `#CAFFBF`,
-
-// $color-primary: #f5668c;
-// $color-primary-less: #ff90ad;
-// $color-primary-less: #ff90ad;
-// $color-primary-more: #fd3b6f;
-// $color-primary-more: #ff90ad;
-// $color-secondary: #98c4ef;
-// $color-secondary-less: #b0d8ff;
-// $color-secondary-less: #ffdf85;
-// $color-secondary-more: #3997f5;
-// $color-secondary-more: #ffdf85;
-// $color-tertiary: #baea93;
-// $color-tertiary-less: #ccf7a9;
-// $color-tertiary-less: #b8dcff;
-// $color-tertiary-more: #8aeb3c;
-// $color-tertiary-more: #b8dcff;
-// $color-quaternary: #ffaa65;
-// $color-quaternary-less: #ff9c4a;
-// $color-quaternary-less: #caffbf;
-// $color-quaternary-more: #fdc393;
-// $color-quaternary-more: #caffbf;
-
 // Colors
-$color-lighter: #fdfdfd;
-$color-light: #f5f5f5;
-$color-grey-less: #dddddd;
-$color-greyer: #999999;
-$color-grey: #777777;
+$color-light: #fdfdfd;
+$color-grey-light: #dddddd;
+$color-grey: #a0a0a0;
 $color-dark: #444444;
-$color-darker: #333333;
 $color-primary: #ff90ad;
-$color-primary-darker: #ff3d71;
 $color-secondary: #ffdf85;
-$color-secondary-darker: #ffc933;
 $color-tertiary: #b8dcff;
 $color-tertiary-darker: #66b2ff;
 $color-quaternary: #caffbf;
