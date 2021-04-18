@@ -1,8 +1,6 @@
-@use '../../../styles/variables' as *;
-
 .nav {
   align-items: normal;
-  background: $color-lighter;
+  background: $color-light;
   color: $color-dark;
   display: flex;
   flex-flow: column wrap;

@@ -11,84 +11,65 @@ import {
 } from 'react-icons/si';
 import { IoDocumentTextOutline } from 'react-icons/io5';
 import styles from '@/components/Intro/intro-section.module.scss';
-import { colors } from '@/components/utils';
 
 const IntroSection = () => {
-  const { primary, secondary, tertiary, quaternary } = colors;
-
   return (
     <section className={styles.intro_section}>
       <div className={styles.intro__tags_grid}>
         <h1 className={styles.intro__header}>Timothy Merritt</h1>
         <div className={styles.intro__tags}>
-          <span
-            className={styles.intro__tags_tag}
-            style={{
-              background: primary,
-            }}>
+          <span className={`${styles.intro__tags_tag} ${styles.bg_primary}`}>
             developer
           </span>
-          <span
-            className={styles.intro__tags_tag}
-            style={{
-              background: secondary,
-            }}>
+          <span className={`${styles.intro__tags_tag} ${styles.bg_secondary}`}>
             designer
           </span>
-          <span
-            className={styles.intro__tags_tag}
-            style={{
-              background: tertiary,
-            }}>
+          <span className={`${styles.intro__tags_tag} ${styles.bg_tertiary}`}>
             writer
           </span>
-          <span
-            className={styles.intro__tags_tag}
-            style={{
-              background: quaternary,
-            }}>
+          <span className={`${styles.intro__tags_tag} ${styles.bg_quaternary}`}>
             musician
           </span>
         </div>
         <ul className={styles.intro__social}>
           <li>
             <a href='https://twitter.com/timmybytes' target='_blank'>
-              <SiTwitter style={{ background: primary }} />
+              <SiTwitter className={styles.bg_primary} />
             </a>
           </li>
           <li>
             <a href='https://github.com/timmybytes' target='_blank'>
-              <SiGithub style={{ background: secondary }} />
+              <SiGithub className={styles.bg_secondary} />
             </a>
           </li>
           <li>
             <a href='https://www.linkedin.com/in/timmybytes' target='_blank'>
-              <SiLinkedin style={{ background: tertiary }} />
+              <SiLinkedin className={styles.bg_tertiary} />
             </a>
           </li>
           <li>
             <a href='https://dev.to/timmybytes' target='_blank'>
-              <SiDevDotTo style={{ background: quaternary }} />
+              <SiDevDotTo className={styles.bg_quaternary} />
             </a>
           </li>
           <li>
             <a href='https://dribbble.com/timmybytes' target='_blank'>
-              <SiDribbble style={{ background: primary }} />
+              <SiDribbble className={styles.bg_primary} />
             </a>
           </li>
           <li>
             <a href='https://ko-fi.com/O4O82TAZB' target='_blank'>
-              <SiKoFi style={{ background: secondary }} />
+              <SiKoFi className={styles.bg_secondary} />
             </a>
           </li>
           <li>
             <a href='https://reddit.com/u/timmybytes' target='_blank'>
-              <SiReddit style={{ background: tertiary }} />
+              <SiReddit className={styles.bg_tertiary} />
             </a>
           </li>
           <li>
             <a href='./Resume.pdf' target='_blank'>
-              <IoDocumentTextOutline style={{ background: quaternary }} />
+              <IoDocumentTextOutline className={styles.bg_quaternary} />
             </a>
           </li>
         </ul>

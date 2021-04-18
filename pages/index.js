@@ -1,6 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
 import Header from '@/components/Header/Header';
 import Footer from '@/components/Footer/Footer';
 import WorkPreview from '@/components/WorkPreview/WorkPreview';
@@ -16,7 +15,9 @@ export default function Home({ allPostsData }) {
         </title>
       </Head>
       <Header />
-      <main className='container'>
+      <main
+        // style={{ background: primary }}
+        className='container'>
         <IntroSection />
         <WorkPreview />
         <BlogPreview />

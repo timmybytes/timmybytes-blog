@@ -17,4 +17,8 @@ module.exports = {
   // future: {
   //   webpack5: true,
   // },
+  sassOptions: {
+    prependData: `@use '/styles/variables' as *;`,
+    outoutStyle: 'compressed',
+  },
 };
