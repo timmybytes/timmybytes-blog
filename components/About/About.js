@@ -1,14 +1,13 @@
 import React from 'react';
 import Link from 'next/link';
-
-import IconGrid from './IconGrid';
-import AboutWrapper from './AboutWrapper';
+import UseIcons from './UseIcons';
+import styles from './about.module.scss';
 
 const About = ({ children }) => {
   return (
     <>
       <h2 className='heading txt-center'>about me</h2>
-      <AboutWrapper>
+      <section className={styles.about__section}>
         <img
           className='rainbow-gradient-spin'
           style={{
@@ -54,7 +53,7 @@ const About = ({ children }) => {
           I’m comfortable using the following languages, frameworks, libraries,
           and tools in a given tech stack:
         </p>
-        <IconGrid />
+        <UseIcons />
         <h2>writer</h2>
         <p>
           I’ve written and presented award-winning academic literary criticism,
@@ -85,7 +84,7 @@ const About = ({ children }) => {
           />
         </a>
         {children}
-      </AboutWrapper>
+      </section>
     </>
   );
 };

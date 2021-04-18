@@ -1,4 +1,18 @@
-@use '../../styles/variables' as *;
+.bg_primary {
+  background: $color-primary;
+}
+
+.bg_secondary {
+  background: $color-secondary;
+}
+
+.bg_tertiary {
+  background: $color-tertiary;
+}
+
+.bg_quaternary {
+  background: $color-quaternary;
+}
 
 .intro_card {
   margin: 6rem auto 1rem; // Reset to 3rem auto;
