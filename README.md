@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="./public/Logo.svg" alt="Timmybytes logo" />
+  <img src="./public/images/timmybytes-Plain-Business-OG-Card.svg" alt="Timmybytes logo" />
 </h1>
 
 <div align="center">
