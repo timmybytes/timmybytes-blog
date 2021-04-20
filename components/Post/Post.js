@@ -34,7 +34,6 @@ const Post = ({
         />
         <meta property='og:url' content={titleUrl} key='og-url' />
         <meta property='og:type' content='article' key='og-type' />
-        {/* FIXME: Default image for social media sharing if none provided - 1280x640 Required */}
         {image ? (
           <>
             <meta property='og:image' content={`${image}`} key='og-img' />
