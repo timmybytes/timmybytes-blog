@@ -1,44 +1,41 @@
-import React from 'react';
 import styles from './card.module.scss';
 import Link from 'next/link';
-import { GoCalendar } from 'react-icons/go';
 
-const Card = ({ children, title, body, date, image, alt, link = '' }) => {
-  const randomImage = () => Math.floor(Math.random() * 3);
+const Card = ({
+  children,
+  title = 'Card Title',
+  body = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor',
+  date,
+  image,
+  alt,
+  // href is required for next/link; if none provided, setting as empty string prevents error
+  link = '',
+}) => {
+  const processImage = image => {
+    // Return random gradient Card image and alt if none are provided
+    let randomImage = () => Math.floor(Math.random() * 3);
+    return (
+      <img
+        className={styles.card__img}
+        src={
+          image || `/images/gradients/gradienta-unsplash-${randomImage()}.jpg`
+        }
+        alt={alt || 'card image'}
+      />
+    );
+  };
+
   return (
     <Link href={link} passHref>
-      <article
-        style={link !== '' && { cursor: 'pointer' }}
-        className={styles.card}>
+      <article className={styles.card}>
         <a className={styles.link} target='_blank'>
-          <img
-            className={styles.card__img}
-            src={
-              image ||
-              `/images/gradients/gradienta-unsplash-${randomImage()}.jpg`
-            }
-            alt={alt || 'gradient background'}
-          />
+          {processImage(image)}
         </a>
-        <header className={styles.card__header}>{title || 'Card Title'}</header>
+        <header className={styles.card__header}>{title}</header>
         <div className={styles.card__body}>
-          <p>
-            {body ||
-              'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, rem a facilis laudantium expedita reiciendis!'}
-          </p>
+          <p>{body}</p>
         </div>
-        {/* <div>
-          <p className={styles.card__byline}>
-            Published: <GoCalendar />
-            <span> {date || <em>?/?/?</em>}</span>
-          </p>
-        </div> */}
         {children}
-        {/* <a className={styles.link} aria-label={`link to ${title}`}>
-          <button className={styles.card__button}>
-            <strong>More</strong>
-          </button>
-        </a> */}
       </article>
     </Link>
   );

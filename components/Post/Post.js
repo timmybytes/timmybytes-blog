@@ -25,7 +25,6 @@ const Post = ({
         <title key='title'>{postTitle}</title>
         <meta name='title' content={postTitle} key='meta-title' />
         <meta name='description' content={description} key='description' />
-        {/* Open Graph */}
         <meta property='og:title' content={postTitle} key='og-title' />
         <meta
           property='og:description'
@@ -34,7 +33,6 @@ const Post = ({
         />
         <meta property='og:url' content={titleUrl} key='og-url' />
         <meta property='og:type' content='article' key='og-type' />
-        {/* FIXME: Default image for social media sharing if none provided - 1280x640 Required */}
         {image ? (
           <>
             <meta property='og:image' content={`${image}`} key='og-img' />

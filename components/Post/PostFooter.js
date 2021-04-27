@@ -22,7 +22,6 @@ const PostFooter = ({ postTitle, postUrl }) => {
           target='_blank'>
           <SiTwitter className='post__footer-social-icon' />
         </a>
-        {/* http://www.linkedin.com/shareArticle?mini=true&url=${dashedUrl}&title=${dashedUrl}&summary=${dashedUrl}&source=${dashedUrl} */}
         <a
           href={`http://www.linkedin.com/shareArticle?mini=true&url=${postUrl}`}
           target='_blank'>
