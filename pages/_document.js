@@ -10,16 +10,12 @@ class MyDocument extends Document {
     return (
       <Html lang='en'>
         <Head>
-          {/* <title key='title'>
-            timmybytes | Developer, Designer, Writer, Musician
-          </title> */}
           <meta name='title' content='timmybytes' key='meta-title' />
           <meta
             name='description'
             content='timmybytes is a portfolio and blog for Timothy Merritt | Developer, Designer, Writer, and Musician'
             key='description'
           />
-          {/* Icons and Favicons */}
           <link
             rel='apple-touch-icon'
             sizes='180x180'
@@ -52,7 +48,6 @@ class MyDocument extends Document {
             key='ms-tile'
           />
           <meta name='theme-color' content='#ff90ad' key='theme-color' />
-          {/* Open graph */}
           <meta property='og:locale' content='en_US' key='og-locale' />
           <meta property='og:type' content='website' key='og-type' />
           <meta property='og:title' content='timmybytes' key='og-title' />
@@ -88,11 +83,11 @@ class MyDocument extends Document {
             content='summary_large_image'
             key='twitter-card'
           />
-          {/* <meta
+          <meta
             property='twitter:image'
-            content='https://raw.githubusercontent.com/timmybytes/timmybytes-blog/main/public/images/timmybytes-Plain-Business-OG-Card.png'
+            content='https://timmybytes.com/images/timmybytes-Plain-Business-OG-Card.png'
             key='twitter-img'
-          /> */}
+          />
           <meta
             property='twitter:creator'
             content='@timmybytes'

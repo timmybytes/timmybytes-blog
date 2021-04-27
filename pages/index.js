@@ -19,7 +19,9 @@ export default function Home({ allPostsData }) {
         // style={{ background: primary }}
         className='container'>
         <IntroSection />
+        <h2 className='home-section-heading'>Work</h2>
         <WorkPreview />
+        <h2 className='home-section-heading'>Latest</h2>
         <BlogPreview />
       </main>
       <Footer />

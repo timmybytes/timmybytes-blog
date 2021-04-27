@@ -25,7 +25,6 @@ const Post = ({
         <title key='title'>{postTitle}</title>
         <meta name='title' content={postTitle} key='meta-title' />
         <meta name='description' content={description} key='description' />
-        {/* Open Graph */}
         <meta property='og:title' content={postTitle} key='og-title' />
         <meta
           property='og:description'
