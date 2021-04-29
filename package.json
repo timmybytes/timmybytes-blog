@@ -26,7 +26,6 @@
     "babel-plugin-styled-components": "^1.12.0",
     "jest": "^26.6.3",
     "jest-axe": "^4.1.0",
-    "styled-components": "^5.2.1",
-    "y18n": ">=3.2.2"
+    "styled-components": "^5.2.1"
   }
 }
