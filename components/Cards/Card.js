@@ -26,18 +26,18 @@ const Card = ({
   };
 
   return (
-    <Link href={link} passHref>
-      <article className={styles.card}>
+    <article className={styles.card}>
+      <Link href={link} passHref>
         <a className={styles.link} target='_blank'>
           {processImage(image)}
         </a>
-        <header className={styles.card__header}>{title}</header>
-        <div className={styles.card__body}>
-          <p>{body}</p>
-        </div>
-        {children}
-      </article>
-    </Link>
+      </Link>
+      <header className={styles.card__header}>{title}</header>
+      <div className={styles.card__body}>
+        <p>{body}</p>
+      </div>
+      {children}
+    </article>
   );
 };
 
