@@ -1,5 +1,5 @@
-import styles from './card.module.scss';
 import Link from 'next/link';
+import styles from './card.module.scss';
 
 const Card = ({
   children,
@@ -28,15 +28,15 @@ const Card = ({
   return (
     <article className={styles.card}>
       <Link href={link} passHref>
-        <a className={styles.link} target='_blank'>
+        <a className={styles.link}>
           {processImage(image)}
-        </a>
-      </Link>
       <header className={styles.card__header}>{title}</header>
       <div className={styles.card__body}>
         <p>{body}</p>
       </div>
       {children}
+        </a>
+      </Link>
     </article>
   );
 };

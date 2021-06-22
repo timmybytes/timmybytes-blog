@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 // Colors
 $color-light: #fdfdfd;
 $color-grey-light: #dddddd;
@@ -17,9 +19,9 @@ $green: $color-quaternary;
 
 // Sizing
 $ratio: 1.236;
-$size-sm-1: 1rem / $ratio;
-$size-sm-2: $size-sm-1 / $ratio;
-$size-sm-3: $size-sm-2 / $ratio;
+$size-sm-1: math.div(1rem, $ratio);
+$size-sm-2: math.div($size-sm-1, $ratio);
+$size-sm-3: math.div($size-sm-2, $ratio);
 $size-1: 1rem;
 $size-2: $size-1 * $ratio;
 $size-3: $size-2 * $ratio;
