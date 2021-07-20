@@ -26,125 +26,85 @@ import {
   SiVim,
   SiWebpack,
   SiWordpress,
+  SiTypescript,
+  SiAdobecreativecloud,
 } from 'react-icons/si';
 import { IoLogoVercel } from 'react-icons/io5';
 import styles from './about.module.scss';
+import React from 'react';
+
+const stack = [
+  {
+    name: 'JavaScript',
+    icon: <SiJavascript className={styles.fg_primary} />,
+  },
+  {
+    name: 'HTML',
+    icon: <SiHtml5 className={styles.fg_secondary} />,
+  },
+  {
+    name: 'CSS',
+    icon: <SiCss3 className={styles.fg_tertiary} />,
+  },
+  {
+    name: 'Git',
+    icon: <SiGit className={styles.fg_tertiary} />,
+  },
+  {
+    name: 'Sass',
+    icon: <SiSass className={styles.fg_quaternary} />,
+  },
+  {
+    name: 'React',
+    icon: <SiReact className={styles.fg_primary} />,
+  },
+  {
+    name: 'Next.js',
+    icon: <SiNextDotJs className={styles.fg_secondary} />,
+  },
+  {
+    name: 'Node.js',
+    icon: <SiNodeDotJs className={styles.fg_tertiary} />,
+  },
+  {
+    name: 'TypeScript',
+    icon: <SiTypescript className={styles.fg_quaternary} />,
+  },
+  {
+    name: 'Bash',
+    icon: <SiGnubash className={styles.fg_quaternary} />,
+  },
+  {
+    name: 'NPM',
+    icon: <SiNpm className={styles.fg_quaternary} />,
+  },
+  {
+    name: 'Github',
+    icon: <SiGithub className={styles.fg_quaternary} />,
+  },
+  {
+    name: 'Github Actions',
+    icon: <SiGithubactions className={styles.fg_primary} />,
+  },
+  {
+    name: 'Figma',
+    icon: <SiFigma className={styles.fg_secondary} />,
+  },
+  {
+    name: 'Creative Cloud',
+    icon: <SiAdobecreativecloud className={styles.fg_tertiary} />,
+  },
+];
 
 const UseIcons = () => (
   <div className={styles.icons__wrapper}>
     <ul className={styles.icons__grid}>
-      <li>
-        <SiHtml5 className={`${styles.fg_primary}`} />
-        <span>HTML</span>
-      </li>
-      <li>
-        <SiCss3 className={styles.fg_secondary} />
-        <span>CSS</span>
-      </li>
-      <li>
-        <SiJavascript className={styles.fg_tertiary} />
-        <span>JavaScript</span>
-      </li>
-      <li>
-        <SiSass className={styles.fg_quaternary} />
-        <span>SASS</span>
-      </li>
-      <li>
-        <SiStyledComponents className={styles.fg_primary} />
-        <span>styled-components</span>
-      </li>
-      <li>
-        <SiReact className={styles.fg_secondary} />
-        <span>React</span>
-      </li>
-      <li>
-        <SiNextDotJs className={styles.fg_tertiary} />
-        <span>Next.js</span>
-      </li>
-      <li>
-        <SiReactrouter className={styles.fg_quaternary} />
-        <span>React Router</span>
-      </li>
-      <li>
-        <SiGnubash className={styles.fg_primary} />
-        <span>Bash</span>
-      </li>
-      <li>
-        <SiVim className={styles.fg_secondary} />
-        <span>Vim</span>
-      </li>
-      <li>
-        <SiPython className={styles.fg_tertiary} />
-        <span>Python</span>
-      </li>
-      <li>
-        <SiGit className={styles.fg_quaternary} />
-        <span>Git</span>
-      </li>
-      <li>
-        <SiNpm className={styles.fg_primary} />
-        <span>NPM</span>
-      </li>
-      <li>
-        <SiNodeDotJs className={styles.fg_secondary} />
-        <span>Node</span>
-      </li>
-      <li>
-        <SiBabel className={styles.fg_tertiary} />
-        <span>ES6+/Babel</span>
-      </li>
-      <li>
-        <SiGithub className={styles.fg_quaternary} />
-        <span>GitHub</span>
-      </li>
-      <li>
-        <SiGithubactions className={styles.fg_primary} />
-        <span>GitHub Actions</span>
-      </li>
-      <li>
-        <SiEslint className={styles.fg_secondary} />
-        <span>ESLint</span>
-      </li>
-      <li>
-        <SiPrettier className={styles.fg_tertiary} />
-        <span>Prettier</span>
-      </li>
-      <li>
-        <SiWebpack className={styles.fg_quaternary} />
-        <span>Webpack</span>
-      </li>
-      <li>
-        <SiFirebase className={styles.fg_primary} />
-        <span>Firebase</span>
-      </li>
-      <li>
-        <IoLogoVercel className={styles.fg_secondary} />
-        <span>Vercel</span>
-      </li>
-      <li>
-        <SiLighthouse className={styles.fg_tertiary} />
-        <span>Lighthouse</span>
-      </li>
-      <li>
-        <SiFigma className={styles.fg_quaternary} />
-        <span>Figma</span>
-      </li>
-      <li>
-        <SiAdobephotoshop className={styles.fg_primary} />
-        <span>Photoshop</span>
-      </li>
-      <li>
-        <SiAdobeindesign className={styles.fg_secondary} />
-        <span>InDesign</span>
-      </li>
-      <li>
-        <SiGimp className={styles.fg_tertiary} />
-        <span>GIMP</span>
-      </li>
-      <li>
-        <SiWordpress className={styles.fg_quaternary} />
-        <span>Wordpress</span>
-      </li>
+      {stack.map(({ name, icon }, idx) => (
+        <li key={name} className={styles.icons__item}>
+          {icon}
+          <span>{name}</span>
+        </li>
+      ))}
     </ul>
   </div>
 );

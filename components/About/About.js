@@ -4,6 +4,12 @@ import UseIcons from './UseIcons';
 import styles from './about.module.scss';
 
 const About = ({ children }) => {
+  //ℹ️ I’m a freelance software developer with a background in design, music, and writing. I’m open to new frontend-focused roles and opportunities.
+
+  // ⚙️ My current technical skills include: HTML, CSS, SCSS/SASS, JS (ES6+), React (with Hooks, state, etc.), Next.js, TypeScript, Styled Components, CSS Modules, git, Bash, Webpack, NPM, ESLint, Prettier, Figma, Adobe XD, InDesign, and Photoshop.
+
+  // 💻 I’m currently working on a new project with a client.
+  // // 📨 If you’re interested is speaking with me please feel free to send me a message or add me to your network.
   return (
     <>
       <h2 className='heading txt-center'>about me</h2>
@@ -21,10 +27,11 @@ const About = ({ children }) => {
         />
         <h2>Hi! I'm Tim.</h2>
         <p>
-          I’m a <strong>multidisciplinarian</strong> passionate about making,
-          exploring, and experimenting in a variety of creative fields.
+          I’m a <strong>multidisciplinarian</strong> freelance software
+          developer with a background in design, music, and writing. I’m
+          currently open to new frontend-focused roles and opportunities.
         </p>
-        <h2>developer / designer</h2>
+        <h2>developer + designer</h2>
         <p>
           As a developer,{' '}
           <a href='https://github.com/timmybytes' target='_blank'>
@@ -38,23 +45,19 @@ const About = ({ children }) => {
           </a>
         </p>
         <p>
-          I’m passionate about clean, meaningful design to communicate ideas
-          simply, and I have experience creating logos and branding, graphics,
-          typographically-focused layouts, and album artwork.
-        </p>
-        <p>
           See some of my{' '}
           <Link href='/work'>
             <a>work</a>
           </Link>
           .
         </p>
-        <p>
+        {/* <p>
           I’m comfortable using the following languages, frameworks, libraries,
           and tools in a given tech stack:
-        </p>
+        </p> */}
+        <h2>Tech Stack</h2>
         <UseIcons />
-        <h2>writer</h2>
+        <h2>+ writer</h2>
         <p>
           I’ve written and presented award-winning academic literary criticism,
           media reviews and studies, technical documentation, product copy, and
@@ -65,7 +68,7 @@ const About = ({ children }) => {
           </Link>
           .
         </p>
-        <h2>musician</h2>
+        <h2>+ musician</h2>
         <p>
           For nearly twenty years I’ve been a songwriter, collaborator,
           performer, and recording musician. I’m currently part of{' '}
