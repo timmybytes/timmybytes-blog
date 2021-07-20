@@ -55,7 +55,7 @@ const About = ({ children }) => {
           I’m comfortable using the following languages, frameworks, libraries,
           and tools in a given tech stack:
         </p> */}
-        <h2>Tech Stack</h2>
+        <h3>Tech Stack</h3>
         <UseIcons />
         <h2>+ writer</h2>
         <p>
