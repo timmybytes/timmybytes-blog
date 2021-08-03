@@ -1,37 +1,22 @@
+import React from 'react';
 import {
-  SiBabel,
+  SiAdobecreativecloud,
   SiCss3,
-  SiEslint,
   SiFigma,
-  SiFirebase,
-  SiGimp,
   SiGit,
   SiGithub,
   SiGithubactions,
   SiGnubash,
   SiHtml5,
   SiJavascript,
-  SiLighthouse,
   SiNextDotJs,
   SiNodeDotJs,
   SiNpm,
-  SiAdobephotoshop,
-  SiAdobeindesign,
-  SiPrettier,
-  SiPython,
   SiReact,
-  SiReactrouter,
   SiSass,
-  SiStyledComponents,
-  SiVim,
-  SiWebpack,
-  SiWordpress,
   SiTypescript,
-  SiAdobecreativecloud,
 } from 'react-icons/si';
-import { IoLogoVercel } from 'react-icons/io5';
 import styles from './about.module.scss';
-import React from 'react';
 
 const stack = [
   {
