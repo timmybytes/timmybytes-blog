@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import navmobile from './navmobile.module.scss';
+import React, { useEffect, useState } from 'react';
 import navdesktop from './navdesktop.module.scss';
+import navmobile from './navmobile.module.scss';
 
 const Nav = () => {
   const [screenWidth, setScreenWidth] = useState(0);
@@ -103,13 +103,13 @@ const Nav = () => {
             </li>
 
             <li className={navdesktop.link} style={{ padding: '0 10px' }}>
-              <Link href='/about'>
+              <Link href='/#aboutme'>
                 <a>About </a>
               </Link>
             </li>
 
             <li className={navdesktop.link} style={{ padding: '0 10px' }}>
-              <Link href='/work'>
+              <Link href='/#work'>
                 <a>Work{'  '}</a>
               </Link>
             </li>
@@ -161,12 +161,12 @@ const Nav = () => {
               </Link>
             </li>
             <li className={`${navmobile.link} rainbow-gradient`}>
-              <Link href='/about'>
+              <Link href='/#aboutme'>
                 <a>About</a>
               </Link>
             </li>
             <li className={`${navmobile.link} rainbow-gradient`}>
-              <Link href='/work'>
+              <Link href='/#work'>
                 <a>Work</a>
               </Link>
             </li>

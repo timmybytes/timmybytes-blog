@@ -3,7 +3,7 @@ import Card from '@/components/Cards/Card';
 export default function WorkPreview({ allPostsData }) {
   return (
     <>
-      <section className='grid'>
+      <section className='grid' id='work'>
         <Card
           title='Rational Design'
           body='A tool for creating ratio-based style systems built in React.'
