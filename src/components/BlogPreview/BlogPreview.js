@@ -1,9 +1,11 @@
 import Card from '@/components/Cards/Card';
-import Head from 'next/head';
 
 export default function Blog({ allPostsData }) {
   return (
     <>
+      <div className='home-section-heading'>
+        <h2>Latest posts</h2>
+      </div>
       <section className='grid'>
         <Card
           title='Keeping Git Commit Messages Consistent with a Custom Template'

@@ -43,6 +43,25 @@ const Nav = () => {
     return screenWidth;
   }
 
+  const PAGE_LINKS = [
+    {
+      path: '/',
+      text: 'Home',
+    },
+    {
+      path: '/#aboutme',
+      text: 'About',
+    },
+    {
+      path: '/#work',
+      text: 'Work',
+    },
+    {
+      path: '/blog',
+      text: 'Blog',
+    },
+  ];
+
   return (
     <>
       {getScreenWidthOnResize() > 800 ? (
@@ -96,29 +115,23 @@ const Nav = () => {
               padding: '0',
               marginRight: '4rem',
             }}>
-            <li className={navdesktop.link} style={{ padding: '0 10px' }}>
-              <Link href='/'>
-                <a>Home{'  '}</a>
-              </Link>
-            </li>
-
-            <li className={navdesktop.link} style={{ padding: '0 10px' }}>
-              <Link href='/#aboutme'>
-                <a>About </a>
-              </Link>
-            </li>
-
-            <li className={navdesktop.link} style={{ padding: '0 10px' }}>
-              <Link href='/#work'>
-                <a>Work{'  '}</a>
-              </Link>
-            </li>
-
-            <li className={navdesktop.link} style={{ padding: '0 10px' }}>
-              <Link href='/blog'>
-                <a>Blog</a>
-              </Link>
-            </li>
+            {PAGE_LINKS.map(({ path, text }, i) => {
+              return (
+                <li
+                  key={i}
+                  className={navdesktop.link}
+                  style={{ padding: '0 10px' }}>
+                  <Link
+                    href={path}
+                    style={{
+                      padding: '0 10px',
+                      transition: '0.3s',
+                    }}>
+                    <a>{text}</a>
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
         </nav>
       ) : (
@@ -155,26 +168,13 @@ const Nav = () => {
             onClick={() => {
               setShowMobileNav(!showMobileNav);
             }}>
-            <li className={`${navmobile.link} rainbow-gradient`}>
-              <Link href='/'>
-                <a>Home</a>
-              </Link>
-            </li>
-            <li className={`${navmobile.link} rainbow-gradient`}>
-              <Link href='/#aboutme'>
-                <a>About</a>
-              </Link>
-            </li>
-            <li className={`${navmobile.link} rainbow-gradient`}>
-              <Link href='/#work'>
-                <a>Work</a>
-              </Link>
-            </li>
-            <li className={`${navmobile.link} rainbow-gradient`}>
-              <Link href='/blog'>
-                <a>Blog</a>
-              </Link>
-            </li>
+            {PAGE_LINKS.map(({ path, text }, i) => (
+              <li key={i} className={`${navmobile.link} rainbow-gradient`}>
+                <Link href={path}>
+                  <a>{text}</a>
+                </Link>
+              </li>
+            ))}
           </ul>
         </nav>
       )}

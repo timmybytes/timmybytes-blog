@@ -162,7 +162,7 @@ const IntroSection = () => {
   ];
 
   return (
-    <section className={styles.intro_section} id='aboutme'>
+    <section className={styles.intro_section}>
       <div className={styles.intro__tags_grid}>
         <h1 className={styles.intro__header}>Timothy Merritt</h1>
         <div className={styles.intro__tags}>
@@ -189,7 +189,7 @@ const IntroSection = () => {
           ))}
         </ul>
       </div>
-      <div className={styles.intro_section__heading_wrapper}>
+      <div id='aboutme' className={styles.intro_section__heading_wrapper}>
         <h2 className={styles.intro_section__heading}>
           Hi! I'm Tim, a developer.
         </h2>
