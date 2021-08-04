@@ -116,10 +116,6 @@ const stack = [
     icon: <SiJest />,
   },
   {
-    name: 'React Native',
-    icon: <SiReact />,
-  },
-  {
     name: 'SASS/SCSS',
     icon: <SiSass />,
   },
