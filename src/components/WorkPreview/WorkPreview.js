@@ -3,6 +3,9 @@ import Card from '@/components/Cards/Card';
 export default function WorkPreview({ allPostsData }) {
   return (
     <>
+      <div id='work' className='home-section-heading'>
+        <h2>Work</h2>
+      </div>
       <section className='grid'>
         <Card
           title='Rational Design'

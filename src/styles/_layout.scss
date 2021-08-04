@@ -136,11 +136,17 @@
 }
 
 .home-section-heading {
-  @extend .heading;
-
-  margin: 6rem auto 1rem auto;
-  @media screen and (max-width: 500px) {
-    margin: 4rem auto 1rem auto;
+  height: 15rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 6rem auto 0;
+  h2 {
+    @extend .heading;
+    margin: 6rem auto 1rem auto;
+    @media screen and (max-width: 500px) {
+      margin: 4rem auto 1rem auto;
+    }
   }
 }
 

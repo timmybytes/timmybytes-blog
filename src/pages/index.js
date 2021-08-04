@@ -1,10 +1,10 @@
-import React from 'react';
-import Head from 'next/head';
-import Header from '@/components/Header/Header';
-import Footer from '@/components/Footer/Footer';
-import WorkPreview from '@/components/WorkPreview/WorkPreview';
 import BlogPreview from '@/components/BlogPreview/BlogPreview';
+import Footer from '@/components/Footer/Footer';
+import Header from '@/components/Header/Header';
 import IntroSection from '@/components/Intro/IntroSection';
+import WorkPreview from '@/components/WorkPreview/WorkPreview';
+import Head from 'next/head';
+import React from 'react';
 
 export default function Home({ allPostsData }) {
   return (
@@ -19,9 +19,7 @@ export default function Home({ allPostsData }) {
         // style={{ background: primary }}
         className='container'>
         <IntroSection />
-        <h2 className='home-section-heading'>Work</h2>
         <WorkPreview />
-        <h2 className='home-section-heading'>Latest</h2>
         <BlogPreview />
       </main>
       <Footer />

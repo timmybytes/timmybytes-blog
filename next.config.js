@@ -18,7 +18,7 @@ module.exports = {
   //   webpack5: true,
   // },
   sassOptions: {
-    prependData: `@use '/styles/variables' as *;`,
+    prependData: `@use 'src/styles/variables' as *;`,
     outoutStyle: 'compressed',
   },
 };
