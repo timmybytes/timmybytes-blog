@@ -255,7 +255,7 @@ const IntroSection = () => {
             backgroundColor: palette[1],
           }}>
           <a
-            href='https://mantine.dev'
+            href='https://chakra-ui.com'
             target='_blank'
             rel='noopener noreferrer'
             style={{
@@ -265,11 +265,11 @@ const IntroSection = () => {
               gap: '5px',
             }}>
             <img
-              src='https://raw.githubusercontent.com/mantinedev/mantine/e630956424828b4103372d781cc64f0a54eebb33/docs/src/images/favicon.svg'
+              src='https://raw.githubusercontent.com/chakra-ui/chakra-ui/main/logo/logomark-colored.svg'
               width='18px'
-              alt='Vite.js icon'
+              alt='Chakra UI icon'
             />
-            <span>Maintine UI</span>
+            <span>Chakra UI</span>
           </a>
         </li>
       </ul>
@@ -277,8 +277,7 @@ const IntroSection = () => {
         If you’re looking for a developer for a website, single page
         application, etc.,{' '}
         <a href='mailto:info@timmybytes.com'>please contact me here</a>. I’m
-        currently pretty busy with other clients, but I’m open to new
-        roles/projects if it’s a good fit!
+        open to new roles/projects if it’s a good fit!
       </p>
     </section>
   );
