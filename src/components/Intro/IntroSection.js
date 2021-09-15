@@ -191,20 +191,22 @@ const IntroSection = () => {
         </h2>
       </div>
       <p>
-        I work primarily in frontend development building websites, apps, and
-        online services. My background is in design, writing, and music, along
-        with long stints in{' '}
-        <a
-          href='https://www.youtube.com/watch?v=Fy3rjQGc6lA'
-          target='_blank'
-          rel='noopener noreferrer'>
-          operational leadership roles
-        </a>
-        . I like building things and solving weird problems! You can{' '}
-        <a href='/work'>see some of my work</a> below, or check out more of my
-        projects on <a href='https://github.com/timmybytes'>GitHub</a>.
+        I’m a frontend developer who builds websites, apps, and online services.
+        My background is in design, writing, and music, along with long stints
+        in operational leadership roles. I like building things and solving
+        weird problems! I love open-source, technology as a tool for
+        progressiveness, and helping to build things that will have positive
+        impacts in the community.
+      </p>
+      <p>✨I’m currently open to new roles and clients.✨</p>
+      <p>
+        You can <a href='#work'>see some of my work</a> below, or check out more
+        of my projects on <a href='https://github.com/timmybytes'>GitHub</a>.
       </p>{' '}
-      <p>Some of the other tech I use is listed below:</p>
+      <p>
+        I work primarily with React/Next.js, and some of the other tech I use
+        is:
+      </p>
       <ul className={styles.techStack}>
         {stack.map((tech, idx) => {
           return (
@@ -274,10 +276,10 @@ const IntroSection = () => {
         </li>
       </ul>
       <p>
-        If you’re looking for a developer for a website, single page
-        application, etc.,{' '}
-        <a href='mailto:info@timmybytes.com'>please contact me here</a>. I’m
-        open to new roles/projects if it’s a good fit!
+        <a href='mailto:info@timmybytes.com'>Feel free to message me</a> for
+        roles you think I might be a good fit for (though please do so only if a
+        role is relevant to my listed experiences), to inquire about
+        collaboration, or just to say hi!.
       </p>
     </section>
   );
