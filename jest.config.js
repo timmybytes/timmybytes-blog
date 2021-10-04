@@ -1,8 +1,17 @@
 module.exports = {
-  setupFilesAfterEnv: ['./jest.setup.js'],
-  // Tell Jest how to interpret different extensions
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
+  testPathIgnorePatterns: ['<rootDir>/.next/', '<rootDir>/node_modules/'],
+  moduleDirectories: ['node_modules', 'src'],
   moduleNameMapper: {
-    '\\.(scss|css|less|jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
-      '<rootDir>/test/styleMock.js',
+    '\\.(scss|sass|css)$': 'identity-obj-proxy',
+    '@test/(.*)$': '<rootDir>/test/$1',
+    '@components/(.*)$': '<rootDir>/src/components/$1',
+    '@context/(.*)$': '<rootDir>/src/context/$1',
+    '@hooks/(.*)$': '<rootDir>/src/hooks/$1',
+    '@pages/(.*)$': '<rootDir>/src/pages/$1',
+    '@utils/(.*)$': '<rootDir>/src/utils/$1',
+    '@/(.*)$': '<rootDir>/src/$1',
   },
-};
+  testEnvironment: 'jsdom',
+  transformIgnorePatterns: ['<rootDir>/node_modules/'],
+}

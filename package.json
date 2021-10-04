@@ -6,26 +6,64 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "test": "jest"
+    "test": "jest --config jest.config.js",
+    "test:changed": "jest --config jest.config.js -o",
+    "test:watch": "yarn test --watch",
+    "generate": "plop",
+    "generate-component": "plop Component _",
+    "generate-page": "plop Page _",
+    "format": "prettier --write './{src,templates}/**/*'",
+    "lint": "eslint '{src,templates}/**/*.{js,jsx,ts,tsx}'",
+    "lint-fix": "yarn lint --fix",
+    "type-check": "tsc --noEmit",
+    "prepare": "husky install"
   },
   "dependencies": {
-    "gray-matter": "^4.0.2",
-    "next": "^11.1.0",
-    "prop-types": "^15.7.2",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-icons": "^4.3.0",
-    "react-is": "^16.13.1",
-    "sass": "^1.42.1",
-    "styled-components": "^5.3.1"
+    "@chakra-ui/react": "^1.6.8",
+    "@emotion/react": "^11",
+    "@emotion/styled": "^11",
+    "@fontsource/kanit": "^4.5.0",
+    "axios": "^0.22.0",
+    "framer-motion": "^4",
+    "mrm": "^3.0.9",
+    "next": "11.1.2",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-icons": "^4.2.0",
+    "sass": "^1.41.1"
   },
   "devDependencies": {
-    "@testing-library/jest-dom": "^5.11.10",
-    "@testing-library/react": "^11.2.5",
-    "babel-jest": "^26.6.3",
-    "babel-plugin-styled-components": "^1.12.0",
-    "jest": "^26.6.3",
-    "jest-axe": "^4.1.0",
-    "set-value": ">=4.0.1"
+    "@babel/core": "^7.15.5",
+    "@testing-library/dom": "^8.7.0",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^12.1.1",
+    "@testing-library/user-event": "^13.2.1",
+    "@types/jest": "^27.0.2",
+    "@types/node": "^16.10.2",
+    "@types/react": "^17.0.24",
+    "@types/react-dom": "^17.0.9",
+    "@typescript-eslint/eslint-plugin": "^4.32.0",
+    "@typescript-eslint/parser": "^4.32.0",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^27.2.4",
+    "eslint": "7.32.0",
+    "eslint-config-next": "11.1.2",
+    "husky": "^7.0.2",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^27.2.4",
+    "lint-staged": "^11.1.2",
+    "plop": "^2.7.4",
+    "prettier": "^2.4.1",
+    "typescript": "4.4.3"
+  },
+  "lint-staged": {
+    "**/*.(js|ts|tsx)": [
+      "eslint --fix"
+    ],
+    "**/*.(js|json|ts|tsx)": [
+      "prettier --write"
+    ],
+    "*.js": "eslint --cache --fix",
+    "*.{/{src,templates}/**/*}": "prettier --write"
   }
 }
