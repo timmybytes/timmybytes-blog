@@ -180,9 +180,10 @@ const Home: NextPage = () => {
               gridRow={2}
               fontWeight={800}
               py={4}
-              // position='absolute'
+              position='absolute'
               transform='rotate(-90deg)'
               left={0}
+              w='100%'
             >
               Header
             </Text>
