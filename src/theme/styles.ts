@@ -7,16 +7,9 @@ export const styles = {
     margin: 0,
     scrollBehavior: 'smooth',
     body: {
-      color: mode('#000', 'whiteAlpha.900')(props),
-      bg: mode('#fff', '#222')(props),
+      color: mode('#191716', '#F9F4F5')(props),
+      bg: mode('#F9F4F5', '#191716')(props),
       fontSize: '14px',
-    },
-    a: {
-      color: 'cyan.600',
-      transition: '.3s',
-      _hover: {
-        color: 'cyan.800',
-      },
     },
   }),
 }
