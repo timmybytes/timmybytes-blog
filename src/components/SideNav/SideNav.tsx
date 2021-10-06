@@ -17,8 +17,7 @@ export const SideNav = (): React.ReactElement => {
       willChange='opacity, visibility'
       transition='opacity 0.3s ease-out, transform 1.2s ease-out'
       opacity={scroll && scroll > 200 ? '1' : '0'}
-      h='100vh'
-    >
+      h='100vh'>
       <Box d='flex' justifyContent='center' gridGap='1rem' alignItems='center'>
         <Text textTransform='uppercase' pr={8}>
           <a href='#'>

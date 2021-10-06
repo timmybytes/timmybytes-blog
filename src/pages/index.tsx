@@ -20,8 +20,7 @@ const FullContainer = ({ children, ...rest }: FullContainerType) => (
     alignItems='stretch'
     w='100%'
     mb={60}
-    {...rest}
-  >
+    {...rest}>
     {children}
   </Box>
 )
@@ -34,8 +33,7 @@ const Header = () => (
       justifyContent='space-between'
       alignItems='center'
       position='fixed'
-      p={4}
-    >
+      p={4}>
       <Logo />
     </Box>
     <Box
@@ -49,8 +47,7 @@ const Header = () => (
       zIndex={8888}
       right='35px'
       textAlign='center'
-      transformOrigin='top right'
-    >
+      transformOrigin='top right'>
       <Box d='flex'>
         <Text textTransform='uppercase' pr={8}>
           Contact
@@ -89,15 +86,13 @@ const Home: NextPage = () => {
           d='flex'
           alignItems='center'
           justifyContent='center'
-          flexDir='column'
-        >
+          flexDir='column'>
           <Heading
             as='h1'
             fontSize='clamp(2.5rem, -0.875rem + 8.333vw, 6.5rem)'
             textAlign='center'
             mt='4rem'
-            fontWeight={600}
-          >
+            fontWeight={600}>
             timothy merritt
           </Heading>
           <Text textTransform='uppercase'>frontend developer</Text>
@@ -110,8 +105,7 @@ const Home: NextPage = () => {
         p='1rem'
         transform='translateX(-50px)'
         position='sticky'
-        top={0}
-      >
+        top={0}>
         <Example />
       </Box>
       <FullContainer>
@@ -121,15 +115,13 @@ const Home: NextPage = () => {
           flexDir={{ base: 'column', sm: 'row' }}
           w='100%'
           justifyContent='center'
-          alignItems='center'
-        >
+          alignItems='center'>
           <Box
             d='grid'
             gridAutoRows='auto'
             justifyContent='center'
             alignItems='flex-start'
-            position='relative'
-          >
+            position='relative'>
             <Image
               width='100%'
               height='auto'
@@ -145,8 +137,7 @@ const Home: NextPage = () => {
               position='absolute'
               transform='rotate(-90deg)'
               left={0}
-              w='100%'
-            >
+              w='100%'>
               Header
             </Text>
             <Text maxW='25ch' p={4} pl={8}>
@@ -160,8 +151,7 @@ const Home: NextPage = () => {
             d='flex'
             flexDir='column'
             justifyContent='center'
-            alignItems='flex-start'
-          >
+            alignItems='flex-start'>
             <Image
               width='100%'
               height='auto'
@@ -184,8 +174,7 @@ const Home: NextPage = () => {
             d='flex'
             flexDir='column'
             justifyContent='center'
-            alignItems='flex-start'
-          >
+            alignItems='flex-start'>
             <Image
               width='100%'
               height='auto'
@@ -213,8 +202,7 @@ const Home: NextPage = () => {
         p='1rem'
         // transform='translateX(-50px)'
         position='sticky'
-        top={0}
-      >
+        top={0}>
         <Example />
       </Box>
       <Box
@@ -224,8 +212,7 @@ const Home: NextPage = () => {
         p='1rem'
         transform='translateX(50px)'
         position='sticky'
-        top={0}
-      >
+        top={0}>
         <Example />
       </Box>
     </div>

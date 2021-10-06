@@ -34,8 +34,7 @@ export const ContentLinks = ({
       gridRow={{ base: '3', sm: '4 / span 2' }}
       lineHeight='1.2'
       alignSelf='end'
-      justifySelf='start'
-    >
+      justifySelf='start'>
       <Text
         d='flex'
         alignItems='center'
@@ -49,8 +48,7 @@ export const ContentLinks = ({
         fontWeight={900}
         lineHeight='1.2'
         textTransform='lowercase'
-        textAlign={{ base: 'left', sm: 'right' }}
-      >
+        textAlign={{ base: 'left', sm: 'right' }}>
         <Box
           as='span'
           d='inline-block'
@@ -58,8 +56,7 @@ export const ContentLinks = ({
           w='25px'
           bg='#D44D5C'
           rounded='full'
-          mr={4}
-        ></Box>
+          mr={4}></Box>
         Contents
       </Text>
       <Box
@@ -68,16 +65,14 @@ export const ContentLinks = ({
         p='.5rem 0'
         fontWeight={700}
         textAlign={{ base: 'left', sm: 'right' }}
-        textTransform='uppercase'
-      >
+        textTransform='uppercase'>
         {links &&
           links.map(({ url, name }, idx) => (
             <Box as='li' key={idx}>
               <Text
                 as='a'
                 color={colorMode === 'dark' ? 'white' : 'rgba(12,12,10,.8)'}
-                href={url}
-              >
+                href={url}>
                 {name}
               </Text>
             </Box>

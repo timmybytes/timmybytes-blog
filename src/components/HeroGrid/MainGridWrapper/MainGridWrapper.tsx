@@ -12,8 +12,7 @@ export const MainGridWrapper = ({
     m='auto'
     p='5rem 0'
     minH='90vh'
-    mb={{ base: '4rem', sm: '10rem' }}
-  >
+    mb={{ base: '4rem', sm: '10rem' }}>
     {children}
   </Box>
 )

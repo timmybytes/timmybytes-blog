@@ -21,8 +21,7 @@ export const HeadingText = ({
       m={0}
       lineHeight='1.2em'
       textTransform='lowercase'
-      fontWeight={900}
-    >
+      fontWeight={900}>
       <Text as='h1'>{text[0]}</Text>
       <Text as='h1'>{text[1]}</Text>
     </Box>
@@ -37,8 +36,7 @@ export const HeadingText = ({
       lineHeight='1em'
       textTransform='lowercase'
       fontWeight={900}
-      color='#494cf8'
-    >
+      color='#494cf8'>
       <Text as='h1' pt={{ base: 0, sm: 4 }}>
         {text[2]}
       </Text>

@@ -27,8 +27,7 @@ export const ExternalLinks = ({
       gridRow={{ base: '4', sm: '2' }}
       justifySelf='start'
       alignSelf={{ base: 'flex-start', sm: 'start' }}
-      textAlign={{ base: 'left', sm: 'left' }}
-    >
+      textAlign={{ base: 'left', sm: 'left' }}>
       <Box as='ul' p={0} sx={{ listStyle: 'none' }}>
         {links &&
           links.map(({ url, name }, idx) => (
@@ -43,8 +42,7 @@ export const ExternalLinks = ({
                 alignItems='center'
                 gridGap='.25rem'
                 textTransform='uppercase'
-                fontWeight={700}
-              >
+                fontWeight={700}>
                 <Text as='span'>{name} </Text>
                 <HiOutlineArrowNarrowRight />
               </Text>

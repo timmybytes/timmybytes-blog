@@ -12,6 +12,5 @@ export const RedDot = (): React.ReactElement => (
     alignSelf='end'
     justifyContent='end'
     lineHeight='1.3'
-    pb={{ base: 0, sm: '5px' }}
-  ></Box>
+    pb={{ base: 0, sm: '5px' }}></Box>
 )

@@ -15,8 +15,7 @@ export const Section = ({
         p='5rem 10vw'
         maxW={{ base: '90vw', lg: '77vw' }}
         id={header}
-        m='0 auto'
-      >
+        m='0 auto'>
         <Box
           d='flex'
           justifyContent='start'
@@ -29,8 +28,7 @@ export const Section = ({
           fontWeight={900}
           lineHeight='1.2'
           textTransform='lowercase'
-          py={2}
-        >
+          py={{ base: 2, sm: 4 }}>
           <Box
             as='span'
             d='inline-block'
@@ -38,8 +36,7 @@ export const Section = ({
             w='25px'
             bg='#D44D5C'
             rounded='full'
-            mr={4}
-          ></Box>
+            mr={4}></Box>
           {header}{' '}
         </Box>
         <Text borderBottom='5px solid #494cf8' width='100%'></Text>

@@ -40,8 +40,7 @@ export const SocialLinkBar = ({
     lineHeight='1.3'
     pb={{ base: 0, sm: '5px' }}
     d='flex'
-    gridGap='.5rem'
-  >
+    gridGap='.5rem'>
     {links &&
       links.map(({ name, url, icon }, idx) => (
         <Text
@@ -50,8 +49,7 @@ export const SocialLinkBar = ({
           href={url}
           target='_blank'
           rel='noreferrer noopener'
-          aria-label={name}
-        >
+          aria-label={name}>
           {icon}
         </Text>
       ))}

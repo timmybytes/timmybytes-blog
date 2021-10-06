@@ -16,8 +16,7 @@ const Grid: NextPage = () => {
           <Box
             d='flex'
             flexDir={{ base: 'column', lg: 'row' }}
-            gridGap={{ base: '1rem', lg: '2rem' }}
-          >
+            gridGap={{ base: '1rem', lg: '2rem' }}>
             <Text w='25ch' py={{ base: 0, lg: '4' }}>
               I’m a developer and creative collaborator living in Portland, OR.
               My tech area of focus is primarily React-based frontend

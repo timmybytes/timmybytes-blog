@@ -17,8 +17,7 @@ export const MainGrid = ({ children }: GridType): React.ReactElement => (
     }}
     gridGap='1rem'
     textAlign='right'
-    transform={{ base: 'none', md: 'rotate(-45deg)' }}
-  >
+    transform={{ base: 'none', md: 'rotate(-45deg)' }}>
     {children}
   </Box>
 )

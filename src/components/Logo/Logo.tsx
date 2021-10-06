@@ -9,16 +9,14 @@ export const Logo = (): React.ReactElement => {
       justifyContent='space-between'
       alignItems='center'
       position='fixed'
-      p={{ base: 2, sm: 4 }}
-    >
+      p={{ base: 2, sm: 4 }}>
       <svg
         onClick={toggleColorMode}
         width='28'
         height='28'
         viewBox='0 0 800 612'
         fill={colorMode === 'dark' ? '#fff' : '#000'}
-        xmlns='http://www.w3.org/2000/svg'
-      >
+        xmlns='http://www.w3.org/2000/svg'>
         <path
           d='M528.727 589.522H615.434L617.772 184.292C617.959 151.975 591.911 125.777 559.594 125.777H472.886L470.548 531.007C470.362 563.324 496.409 589.522 528.727 589.522Z'
           fill={colorMode === 'dark' ? '#fff' : '#000'}
