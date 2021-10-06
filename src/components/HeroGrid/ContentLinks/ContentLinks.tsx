@@ -42,7 +42,7 @@ export const ContentLinks = ({
         as='h2'
         borderBottom='5px solid #494cf8'
         color={colorMode === 'dark' ? 'white' : 'rgba(12,12,10,.8)'}
-        fontSize='1.5rem'
+        fontSize={{ base: '1.5rem', sm: '1.95rem' }}
         m={0}
         py={2}
         fontWeight={900}

@@ -1,11 +1,21 @@
-import { Box, Heading, Text } from '@chakra-ui/react' export default function
-{{pascalCase name}}() { return (
-<Box>
-  <Heading>{{pascalCase name}}</Heading>
-  <Text maxW='65ch'>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus nemo veniam
-    sequi nostrum, in repellat sit doloremque dolorum eligendi aperiam. Est
-    officiis, odio explicabo nihil animi illo dolores voluptatem fugit?
-  </Text>
-</Box>
-) }
+import { Box, Text } from '@chakra-ui/react'
+import {SideNav} from '@components/SideNav'
+import {Section} from '@components/Section'
+
+const {{pascalCase name}}: NextPage = () => {
+  return (
+    <>
+      <Logo />
+      <Box as='main' p='0 5vw'>
+        <SideNav links={['section']} />
+        <Section header='section'>
+          <Box d='grid' gridTemplateColumns='repeat(auto-fit, 25ch)' gridGap='1rem'>
+            <Text w='25ch' pb={4}>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat, et. Ea necessitatibus est ex sed, rem expedita ipsam itaque sunt deserunt. A commodi, hic necessitatibus quos delectus temporibus voluptatibus? Harum!</Text>
+          </Box>
+        </Section>
+      </Box>
+    </>
+  )
+}
+
+export default Page

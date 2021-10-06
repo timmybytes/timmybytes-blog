@@ -7,7 +7,7 @@ export const RedDot = (): React.ReactElement => (
     fontSize={{ base: '12px', sm: '.9rem' }}
     h={{ base: '0', sm: '25px' }}
     w={{ base: '0', sm: '25px' }}
-    bg='#D44D5C'
+    bg='rgb(212, 77, 92)'
     rounded='full'
     alignSelf='end'
     justifyContent='end'

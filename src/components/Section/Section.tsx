@@ -1,47 +1,50 @@
-import { Box, Text } from '@chakra-ui/react'
+import { Box } from '@chakra-ui/react'
 
 type SectionProps = {
   header: string
+  noLine?: boolean
   children?: React.ReactNode
 }
 
 export const Section = ({
   header,
+  noLine,
   children,
 }: SectionProps): React.ReactElement => {
+  const headerDashed = header.toLowerCase().split(' ').join('-')
   return (
-    <>
+    <Box
+      as='section'
+      p='5rem 10vw'
+      maxW={{ base: '90vw', lg: '75vw' }}
+      id={headerDashed}
+      m='0 auto'>
       <Box
-        p='5rem 10vw'
-        maxW={{ base: '90vw', lg: '77vw' }}
-        id={header}
-        m='0 auto'>
+        as='h2'
+        d='flex'
+        justifyContent='start'
+        alignItems='center'
+        position='sticky'
+        top={0}
+        fontSize='1.5rem'
+        m={0}
+        fontWeight={900}
+        lineHeight='1.2'
+        textTransform='lowercase'
+        py={{ base: 2, sm: 4 }}>
         <Box
-          d='flex'
-          justifyContent='start'
-          alignItems='center'
-          position='sticky'
-          top={0}
-          as='h2'
-          fontSize='1.5rem'
-          m={0}
-          fontWeight={900}
-          lineHeight='1.2'
-          textTransform='lowercase'
-          py={{ base: 2, sm: 4 }}>
-          <Box
-            as='span'
-            d='inline-block'
-            h='25px'
-            w='25px'
-            bg='#D44D5C'
-            rounded='full'
-            mr={4}></Box>
-          {header}{' '}
-        </Box>
-        <Text borderBottom='5px solid #494cf8' width='100%'></Text>
-        {children}
+          d='inline-block'
+          h='25px'
+          w='25px'
+          bg='#D44D5C'
+          rounded='full'
+          mr={4}></Box>
+        {header}{' '}
       </Box>
-    </>
+      {!noLine && (
+        <Box borderBottom='5px solid #494cf8' width='100%' mb={4}></Box>
+      )}
+      {children}
+    </Box>
   )
 }

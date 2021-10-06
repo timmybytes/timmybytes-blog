@@ -1,8 +1,20 @@
 import { Box, Text } from '@chakra-ui/react'
 import { useScrollPosition } from '@hooks/useScrollPosition'
-import { HiOutlineArrowNarrowUp } from 'react-icons/hi'
+import Link from 'next/link'
+import { useRouter } from 'next/router'
+import { HiOutlineArrowNarrowUp, HiOutlineHome } from 'react-icons/hi'
 
-export const SideNav = (): React.ReactElement => {
+type LinkType = {
+  url: string
+  name: string
+}
+
+type SideNavProps = {
+  links: LinkType[]
+}
+
+export const SideNav = ({ links }: SideNavProps): React.ReactElement => {
+  const router = useRouter()
   const scroll = useScrollPosition()
   return (
     <Box
@@ -24,15 +36,21 @@ export const SideNav = (): React.ReactElement => {
             <HiOutlineArrowNarrowUp />
           </a>
         </Text>
-        <Text textTransform='uppercase' pr={8}>
-          <a href='#about'>About</a>
-        </Text>
-        <Text textTransform='uppercase' pr={8}>
-          <a href='#projects'>Projects</a>
-        </Text>
-        <Text textTransform='uppercase' pr={8}>
-          <a href='#contact'>Contact</a>
-        </Text>
+        {links &&
+          links.map(({ url, name }, idx) => (
+            <Text key={idx} textTransform='uppercase' pr={8}>
+              <a href={url}>{name}</a>
+            </Text>
+          ))}
+        {router?.pathname &&
+          // Only show 'home' link if not on homepage
+          router.pathname !== '/' && (
+            <Text textTransform='uppercase' pr={8} cursor='pointer'>
+              <Link href='/' passHref>
+                <HiOutlineHome />
+              </Link>
+            </Text>
+          )}
       </Box>
     </Box>
   )

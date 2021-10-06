@@ -1,222 +1,177 @@
-import { Box, Heading, Image, Text } from '@chakra-ui/react'
+import {
+  Box,
+  Button,
+  FormControl,
+  FormLabel,
+  Image,
+  Input,
+  Text,
+  Textarea,
+} from '@chakra-ui/react'
+import { HeroGrid } from '@components/HeroGrid'
 import { Logo } from '@components/Logo'
-import { motion } from 'framer-motion'
+import { Section } from '@components/Section'
+import { SideNav } from '@components/SideNav'
 import type { NextPage } from 'next'
+import Link from 'next/link'
+import { HiOutlineArrowNarrowRight } from 'react-icons/hi'
 
-type FullContainerType = {
-  children?: React.ReactNode
-}
+const PROJECTS = [
+  {
+    url: '/banquet',
+    title: 'banquet',
+    image: '/images/banquet-card.svg',
+    description: 'A Next.js developer starter + boilerplate',
+  },
+  {
+    url: '/findafilm',
+    title: 'findafilm',
+    image: '/images/findafilm-card.svg',
+    description: 'A movie search webapp',
+  },
+  {
+    url: '/rational-design',
+    title: 'rational design',
+    image: '/images/rational-design-logo.svg',
+    description: 'A type-scale generator',
+  },
+  {
+    url: '/dotfiles',
+    title: 'dotfiles',
+    image: '/images/dotfiles-logo.svg',
+    description: 'Personal configurations and custom scripts',
+  },
+]
 
-const FullContainer = ({ children, ...rest }: FullContainerType) => (
-  <Box
-    p={0}
-    m={0}
-    boxSizing='border-box'
-    // minH={{ base: '90vh', md: '98vh' }}
-    d='flex'
-    flexDir='column'
-    fontSize='14px'
-    justifyContent='space-between'
-    alignItems='stretch'
-    w='100%'
-    mb={60}
-    {...rest}>
-    {children}
-  </Box>
-)
-
-const Header = () => (
-  <Box as='header'>
-    <Box
-      d='flex'
-      w='100%'
-      justifyContent='space-between'
-      alignItems='center'
-      position='fixed'
-      p={4}>
-      <Logo />
-    </Box>
-    <Box
-      as='nav'
-      fontWeight={400}
-      width={{ base: '100%', sm: '75%', md: '50%', xl: '25%' }}
-      d='block'
-      transform='rotate(-90deg)'
-      position='fixed'
-      top={0}
-      zIndex={8888}
-      right='35px'
-      textAlign='center'
-      transformOrigin='top right'>
-      <Box d='flex'>
-        <Text textTransform='uppercase' pr={8}>
-          Contact
+const Project = ({
+  url,
+  title,
+  image,
+  description,
+}: {
+  url: string
+  title: string
+  image: string
+  description: string
+}): React.ReactElement => {
+  return (
+    <Box pb={4}>
+      <Link href={url} passHref>
+        <Image
+          src={image}
+          shadow='md'
+          cursor='pointer'
+          alt={`${title} project image`}
+        />
+      </Link>
+      <Box>
+        <Text as='h3' fontSize='1.2rem' fontWeight={900}>
+          {title}
         </Text>
-        <Text textTransform='uppercase' pr={8}>
-          What
-        </Text>
-        <Text textTransform='uppercase'>Who</Text>
+        <Text>{description}</Text>
+        <Link href={url} passHref>
+          <Text
+            d='flex'
+            alignItems='center'
+            gridGap='.25rem'
+            textTransform='uppercase'
+            cursor='pointer'>
+            View project <HiOutlineArrowNarrowRight />
+          </Text>
+        </Link>
       </Box>
     </Box>
-  </Box>
-)
-
-const MotionBox = motion(Box)
-function Example() {
-  return (
-    <MotionBox
-      height='20px'
-      width='20px'
-      rounded='full'
-      bg='red.300'
-      drag
-      dragConstraints={{ top: -50, left: 0, right: 0, bottom: 50 }}
-      whileHover={{ scale: 1.1 }}
-      whileTap={{ scale: 0.9 }}
-    />
   )
 }
 
-const Home: NextPage = () => {
+const HOMEPAGE_LINKS = [
+  { url: '#about', name: 'About' },
+  { url: '#projects', name: 'Projects' },
+  { url: '#contact', name: 'contact' },
+]
+
+const Page: NextPage = () => {
+  const handleSubmit = e => {
+    e.preventDefault()
+    console.log(e)
+  }
   return (
-    <div style={{ height: '5000px' }}>
-      <FullContainer>
-        <Header />
-        <Box
-          d='flex'
-          alignItems='center'
-          justifyContent='center'
-          flexDir='column'>
-          <Heading
-            as='h1'
-            fontSize='clamp(2.5rem, -0.875rem + 8.333vw, 6.5rem)'
-            textAlign='center'
-            mt='4rem'
-            fontWeight={600}>
-            timothy merritt
-          </Heading>
-          <Text textTransform='uppercase'>frontend developer</Text>
-        </Box>
-      </FullContainer>
-      <Box
-        d='flex'
-        justifyContent='center'
-        alignItems='center'
-        p='1rem'
-        transform='translateX(-50px)'
-        position='sticky'
-        top={0}>
-        <Example />
-      </Box>
-      <FullContainer>
-        <Box
-          p={4}
-          d='flex'
-          flexDir={{ base: 'column', sm: 'row' }}
-          w='100%'
-          justifyContent='center'
-          alignItems='center'>
+    <>
+      <Logo />
+      <Box as='main' p='0 5vw'>
+        <SideNav links={HOMEPAGE_LINKS} />
+        <HeroGrid />
+        <Section header='about' noLine>
           <Box
             d='grid'
-            gridAutoRows='auto'
-            justifyContent='center'
-            alignItems='flex-start'
-            position='relative'>
-            <Image
-              width='100%'
-              height='auto'
-              maxW='400px'
-              p={4}
-              src='images/gradients/gradienta-unsplash-0.png'
-              alt='gradient'
-            />
-            <Text
-              gridRow={2}
-              fontWeight={800}
-              py={4}
-              position='absolute'
-              transform='rotate(-90deg)'
-              left={0}
-              w='100%'>
-              Header
+            gridTemplateColumns='repeat(auto-fit, 25ch)'
+            gridGap='1rem'>
+            <Text w='25ch' pb={4}>
+              I’m a developer and creative collaborator living in Portland, OR.
+              My tech area of focus is primarily React-based frontend
+              development, though I also have experience working in design and
+              writing roles, as well as having had the privilege of overseeing
+              many large, diverse teams over the years.{' '}
             </Text>
-            <Text maxW='25ch' p={4} pl={8}>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima
-              dignissimos mollitia molestiae quia at exercitationem, unde esse
-              aliquid, in vero qui maiores possimus quos culpa ut cupiditate
-              nihil facilis quibusdam.
+            <Text w='25ch' pb={4}>
+              I’m driven by curiosity and the desire to continually improve in
+              all the things I do. I really value the process of “tinkering” to
+              explore and familiarize yourself with new concepts, so I’m usually
+              working on at least a few small projects to keep myself engaged
+              and learning.
+            </Text>
+            <Text w='25ch' pb={4}>
+              I’ve also been fortunate to work with some great Lead Engineers,
+              Project Managers, and other professionals that have challenged me
+              and helped me continue to grow as a developer.
+            </Text>
+            <Text w='25ch' pb={4}>
+              I’m currently open to new developer roles, and I’m especially
+              interested in working with teams and products that focus on using
+              technology to create greater equity in the world.{' '}
+              <Text as='a' href='#contact' fontWeight={600}>
+                You can use the form below to get in touch.
+              </Text>
             </Text>
           </Box>
+        </Section>
+        <Section header='projects' noLine>
           <Box
-            d='flex'
-            flexDir='column'
-            justifyContent='center'
-            alignItems='flex-start'>
-            <Image
-              width='100%'
-              height='auto'
-              maxW='400px'
-              p={4}
-              src='images/gradients/gradienta-unsplash-1.png'
-              alt='gradient'
-            />
-            <Text fontWeight={800} p={4}>
-              Header
-            </Text>
-            <Text maxW='25ch' p={4}>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima
-              dignissimos mollitia molestiae quia at exercitationem, unde esse
-              aliquid, in vero qui maiores possimus quos culpa ut cupiditate
-              nihil facilis quibusdam.
-            </Text>
+            d='grid'
+            gridTemplateColumns='repeat(auto-fit, minmax(auto, 75ch))'
+            gridGap='1rem'>
+            {PROJECTS &&
+              PROJECTS.map(({ title, url, description, image }, idx) => (
+                <Project
+                  key={idx}
+                  title={title}
+                  url={url}
+                  image={image}
+                  description={description}
+                />
+              ))}
           </Box>
-          <Box
-            d='flex'
-            flexDir='column'
-            justifyContent='center'
-            alignItems='flex-start'>
-            <Image
-              width='100%'
-              height='auto'
-              maxW='400px'
-              p={4}
-              src='images/gradients/gradienta-unsplash-2.png'
-              alt='gradient'
-            />
-            <Text fontWeight={800} p={4}>
-              Header
-            </Text>
-            <Text maxW='25ch' p={4}>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima
-              dignissimos mollitia molestiae quia at exercitationem, unde esse
-              aliquid, in vero qui maiores possimus quos culpa ut cupiditate
-              nihil facilis quibusdam.
-            </Text>
+        </Section>
+        <Section header='contact' noLine>
+          <Box as='form' onSubmit={handleSubmit}>
+            <FormControl id='name'>
+              <FormLabel>Name</FormLabel>
+              <Input type='name' />
+            </FormControl>
+            <FormControl id='email'>
+              <FormLabel>Email address</FormLabel>
+              <Input type='email' />
+            </FormControl>
+            <FormControl id='message'>
+              <FormLabel>Message</FormLabel>
+              <Textarea placeholder='Your message'></Textarea>
+            </FormControl>
+            <Button type='submit'>Submit</Button>
           </Box>
-        </Box>
-      </FullContainer>
-      <Box
-        d='flex'
-        justifyContent='center'
-        alignItems='center'
-        p='1rem'
-        // transform='translateX(-50px)'
-        position='sticky'
-        top={0}>
-        <Example />
+        </Section>
       </Box>
-      <Box
-        d='flex'
-        justifyContent='center'
-        alignItems='center'
-        p='1rem'
-        transform='translateX(50px)'
-        position='sticky'
-        top={0}>
-        <Example />
-      </Box>
-    </div>
+    </>
   )
 }
 
-export default Home
+export default Page
