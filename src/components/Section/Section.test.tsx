@@ -3,6 +3,6 @@ import { Section } from './Section'
 
 describe('Section', () => {
   it('should render', () => {
-    render(<Section />)
+    render(<Section header='Test Header' />)
   })
 })
