@@ -61,9 +61,9 @@
       "eslint --fix"
     ],
     "**/*.(js|json|ts|tsx)": [
-      "prettier --write"
+      "prettier --config .prettierrc --write"
     ],
     "*.js": "eslint --cache --fix",
-    "*.{/{src,templates}/**/*}": "prettier --write"
+    "*.{/{src,templates}/**/*}": "prettier --config .prettierrc --write"
   }
 }
