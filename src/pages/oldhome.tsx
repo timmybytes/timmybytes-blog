@@ -68,7 +68,7 @@ function Example() {
       height='20px'
       width='20px'
       rounded='full'
-      bg='red.300'
+      bg='brand.red'
       drag
       dragConstraints={{ top: -50, left: 0, right: 0, bottom: 50 }}
       whileHover={{ scale: 1.1 }}

@@ -13,15 +13,18 @@ type Link = {
 
 type ExternalLinksProps = {
   links?: Link[]
+  accentColor: string
 }
 
 export const ExternalLinks = ({
   links = EXTERNAL_LINKS,
+  accentColor = 'brand.blue',
 }: ExternalLinksProps): React.ReactElement => {
   return (
     <Box
-      borderTop='5px solid #494cf8'
-      borderBottom='5px solid #494cf8'
+      borderTop='5px solid'
+      borderBottom='5px solid'
+      borderColor={accentColor}
       fontWeight={700}
       gridColumn={{ base: '1 / -1', sm: '5 / 6' }}
       gridRow={{ base: '4', sm: '2' }}

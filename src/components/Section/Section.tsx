@@ -39,14 +39,18 @@ export const Section = ({
             d='inline-block'
             h='25px'
             w='25px'
-            bg='#D44D5C'
+            bg='brand.red'
             rounded='full'
             mr={4}></Box>
         )}
         {header}{' '}
       </Box>
       {!noLine && (
-        <Box borderBottom='5px solid #494cf8' width='100%' mb={4}></Box>
+        <Box
+          borderBottom='5px solid'
+          borderColor='brand.yellow'
+          width='100%'
+          mb={4}></Box>
       )}
       {children}
     </Box>

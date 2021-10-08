@@ -1,4 +1,5 @@
 import { mode } from '@chakra-ui/theme-tools'
+import { colors } from './colors'
 
 export const styles = {
   global: props => ({
@@ -7,8 +8,8 @@ export const styles = {
     margin: 0,
     scrollBehavior: 'smooth',
     body: {
-      color: mode('#191716', '#F9F4F5')(props),
-      bg: mode('#F9F4F5', '#191716')(props),
+      color: mode(colors.brand.black, colors.brand.white)(props),
+      bg: mode(colors.brand.white, colors.brand.black)(props),
       fontSize: '14px',
     },
   }),

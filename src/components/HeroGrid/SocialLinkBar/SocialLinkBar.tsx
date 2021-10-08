@@ -21,20 +21,23 @@ type SocialLink = {
 }
 
 type SocialLinkBarProps = {
+  accentColor: string
   links?: SocialLink[]
 }
 
 export const SocialLinkBar = ({
   links = SOCIAL_LINKS,
+  accentColor = 'brand.blue',
 }: SocialLinkBarProps): React.ReactElement => (
   <Text
     gridColumn={{ base: '1 / -1', sm: '1 / 5' }}
     gridRow={{ base: '6', sm: '6' }}
     fontSize='1.5rem'
     borderBottom={{
-      base: '10px solid #494cf8',
-      sm: '25px solid #494cf8',
+      base: '10px solid',
+      sm: '25px solid',
     }}
+    borderColor={{ base: accentColor, sm: accentColor }}
     alignSelf='start'
     justifyContent='end'
     lineHeight='1.3'

@@ -3,7 +3,6 @@ import {
   Button,
   FormControl,
   FormLabel,
-  Image,
   Input,
   Text,
   Textarea,
@@ -46,27 +45,27 @@ const PROJECTS = [
 const Project = ({
   url,
   title,
-  image,
   description,
 }: {
   url: string
   title: string
-  image: string
   description: string
 }): React.ReactElement => {
   return (
     <Box pb={4}>
-      <Link href={url} passHref>
-        <Image
-          src={image}
-          shadow='md'
-          cursor='pointer'
-          alt={`${title} project image`}
-        />
-      </Link>
       <Box>
-        <Text as='h3' fontSize='1.2rem' fontWeight={900}>
-          {title}
+        <Text
+          as='h3'
+          fontSize='calc(2.4rem + 1.8vw)'
+          lineHeight='1.1'
+          fontWeight={900}
+          transition='.1s'
+          _hover={{
+            color: 'brand.red',
+          }}>
+          <Link href={url} passHref>
+            {title}
+          </Link>
         </Text>
         <Text>{description}</Text>
         <Link href={url} passHref>
@@ -141,12 +140,11 @@ const Page: NextPage = () => {
             gridTemplateColumns='repeat(auto-fit, minmax(auto, 75ch))'
             gridGap='1rem'>
             {PROJECTS &&
-              PROJECTS.map(({ title, url, description, image }, idx) => (
+              PROJECTS.map(({ title, url, description }, idx) => (
                 <Project
                   key={idx}
                   title={title}
                   url={url}
-                  image={image}
                   description={description}
                 />
               ))}

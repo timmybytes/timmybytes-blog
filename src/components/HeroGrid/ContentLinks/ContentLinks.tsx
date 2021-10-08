@@ -21,11 +21,13 @@ type Link = {
 }
 
 type ContentLinksProps = {
+  accentColor?: string
   links?: Link[]
 }
 
 export const ContentLinks = ({
   links = CONTENT_LINKS,
+  accentColor = 'brand.blue',
 }: ContentLinksProps): React.ReactElement => {
   const { colorMode } = useColorMode()
   return (
@@ -40,8 +42,8 @@ export const ContentLinks = ({
         alignItems='center'
         justifyContent='end'
         as='h2'
-        borderBottom='5px solid #494cf8'
-        color={colorMode === 'dark' ? 'white' : 'rgba(12,12,10,.8)'}
+        borderBottom='5px solid'
+        borderColor={accentColor}
         fontSize={{ base: '1.5rem', sm: '1.95rem' }}
         m={0}
         py={2}
@@ -54,7 +56,7 @@ export const ContentLinks = ({
           d='inline-block'
           h='25px'
           w='25px'
-          bg='#D44D5C'
+          bg='brand.red'
           rounded='full'
           mr={4}></Box>
         Contents
@@ -71,7 +73,7 @@ export const ContentLinks = ({
             <Box as='li' key={idx}>
               <Text
                 as='a'
-                color={colorMode === 'dark' ? 'white' : 'rgba(12,12,10,.8)'}
+                color={colorMode === 'dark' ? 'brand.white' : 'brand.black'}
                 href={url}>
                 {name}
               </Text>

@@ -8,10 +8,12 @@ const HEADING_TEXT: [string, string, string] = [
 
 type HeadingTextProps = {
   text?: [string, string, string]
+  accentColor: string
 }
 
 export const HeadingText = ({
   text = HEADING_TEXT,
+  accentColor = 'brand.blue',
 }: HeadingTextProps): React.ReactElement => (
   <>
     <Box
@@ -36,7 +38,7 @@ export const HeadingText = ({
       lineHeight='1em'
       textTransform='lowercase'
       fontWeight={900}
-      color='#494cf8'>
+      color={accentColor}>
       <Text as='h1' pt={{ base: 0, sm: 4 }}>
         {text[2]}
       </Text>

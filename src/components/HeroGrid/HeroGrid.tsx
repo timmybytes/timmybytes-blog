@@ -8,24 +8,24 @@ import { RedDot } from './RedDot/RedDot'
 import { SocialLinkBar } from './SocialLinkBar/SocialLinkBar'
 
 export const HeroGrid = (): React.ReactElement => {
+  const accentColor = 'brand.red'
   return (
     <MainGridWrapper>
       <MainGrid>
-        <HeadingText />
-        <ContentLinks />
-        <SocialLinkBar />
-        <ExternalLinks />
+        <HeadingText accentColor={accentColor} />
+        <ContentLinks accentColor={accentColor} />
+        <SocialLinkBar accentColor={accentColor} />
+        <ExternalLinks accentColor={accentColor} />
         <RedDot />
         <Text
           fontSize='.6rem'
           gridRow={{ base: '7', sm: '7' }}
           gridColumn={{ base: '1 / -1', sm: '4' }}>
-          after{' '}
           <a
             href='https://labs.jensimmons.com'
             target='_blank'
             rel='noreferrer noopener'>
-            Simmons & Tischold
+            {'{ after Simmons & Tischold }'}
           </a>
         </Text>
       </MainGrid>

@@ -10,6 +10,7 @@ module.exports = {
     '@hooks/(.*)$': '<rootDir>/src/hooks/$1',
     '@pages/(.*)$': '<rootDir>/src/pages/$1',
     '@utils/(.*)$': '<rootDir>/src/utils/$1',
+    '@theme/(.*)$': '<rootDir>/src/theme/$1',
     '@/(.*)$': '<rootDir>/src/$1',
   },
   testEnvironment: 'jsdom',

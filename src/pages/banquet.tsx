@@ -25,7 +25,7 @@ const PROJECTPAGE_LINKS = [
 ]
 
 const Page: NextPage = () => {
-  const { onClose, isOpen, onOpen } = useDisclosure()
+  const { onOpen } = useDisclosure()
   return (
     <>
       <Logo />
