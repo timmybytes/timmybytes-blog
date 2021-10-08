@@ -22,6 +22,7 @@
     "@chakra-ui/react": "^1.6.8",
     "@emotion/react": "^11",
     "@emotion/styled": "^11",
+    "@fontsource/ibm-plex-mono": "^4.5.1",
     "@fontsource/kanit": "^4.5.0",
     "axios": "^0.22.0",
     "framer-motion": "^4",
@@ -30,6 +31,7 @@
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-icons": "^4.2.0",
+    "react-medium-image-zoom": "^4.3.5",
     "sass": "^1.41.1"
   },
   "devDependencies": {

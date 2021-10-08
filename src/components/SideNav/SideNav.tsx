@@ -22,7 +22,7 @@ export const SideNav = ({ links }: SideNavProps): React.ReactElement => {
       fontWeight={400}
       sx={{ writingMode: 'vertical-lr' }}
       position='fixed'
-      top={0}
+      top='-10'
       right='-20px'
       transform={scroll && scroll > 100 ? 'translateY(5vh)' : 'translateY(5vh)'}
       visibility={scroll && scroll > 100 ? 'visible' : 'hidden'}

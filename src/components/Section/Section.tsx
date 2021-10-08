@@ -1,14 +1,16 @@
 import { Box } from '@chakra-ui/react'
 
 type SectionProps = {
-  header: string
+  header?: string
   noLine?: boolean
+  noDot?: boolean
   children?: React.ReactNode
 }
 
 export const Section = ({
-  header,
+  header = '',
   noLine,
+  noDot,
   children,
 }: SectionProps): React.ReactElement => {
   const headerDashed = header.toLowerCase().split(' ').join('-')
@@ -32,13 +34,15 @@ export const Section = ({
         lineHeight='1.2'
         textTransform='lowercase'
         py={{ base: 2, sm: 4 }}>
-        <Box
-          d='inline-block'
-          h='25px'
-          w='25px'
-          bg='#D44D5C'
-          rounded='full'
-          mr={4}></Box>
+        {!noDot && (
+          <Box
+            d='inline-block'
+            h='25px'
+            w='25px'
+            bg='#D44D5C'
+            rounded='full'
+            mr={4}></Box>
+        )}
         {header}{' '}
       </Box>
       {!noLine && (
