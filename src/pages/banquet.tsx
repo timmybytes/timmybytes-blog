@@ -1,18 +1,18 @@
 import {
   Box,
-  Code,
   Image,
   ListItem,
   Text,
   UnorderedList,
   useDisclosure,
 } from '@chakra-ui/react'
+import { BlockCode, InlineCode } from '@components/Code'
 import { Logo } from '@components/Logo'
 import { Section } from '@components/Section'
 import { SideNav } from '@components/SideNav'
 import type { NextPage } from 'next'
 import Link from 'next/link'
-import { useState } from 'react'
+import React from 'react'
 import { HiOutlineArrowNarrowLeft } from 'react-icons/hi'
 import Zoom from 'react-medium-image-zoom'
 import 'react-medium-image-zoom/dist/styles.css'
@@ -24,55 +24,13 @@ const PROJECTPAGE_LINKS = [
   { url: '#lessons-learned', name: 'Lessons' },
 ]
 
-type ThickCodeProps = {
-  children?: React.ReactNode
-}
-
-const ThickCode = ({
-  children,
-  ...rest
-}: ThickCodeProps): React.ReactElement => (
-  <Code
-    fontFamily='IBM Plex Mono'
-    bg='none'
-    fontSize='12px'
-    fontWeight={500}
-    px='3px'
-    lineHeight='inherit'
-    d='inline'
-    {...rest}>
-    {children}
-  </Code>
-)
-
-const ThickCodeBlock = ({ children }: ThickCodeProps) => (
-  <Code
-    fontFamily='IBM Plex Mono'
-    bg='none'
-    fontSize='12px'
-    fontWeight={500}
-    px='3px'
-    lineHeight='inherit'
-    d='inline'
-    sx={{
-      display: 'block',
-      whiteSpace: 'pre',
-      overflowX: 'scroll',
-      maxW: '100%',
-      minW: '100px',
-      padding: '1rem',
-    }}>
-    {children}
-  </Code>
-)
-
 const Page: NextPage = () => {
   const { onClose, isOpen, onOpen } = useDisclosure()
-  const [toggle, setToggle] = useState(false)
   return (
     <>
       <Logo />
       <Box as='main' p='0 5vw'>
+        {/* MAIN HEADING */}
         <Box p='5rem 10vw' maxW={{ base: '90vw', lg: '75vw' }} m='0 auto'>
           <Box
             d='flex'
@@ -90,8 +48,9 @@ const Page: NextPage = () => {
             banquet
           </Box>
         </Box>
+        {/* VERTICAL SECTION LINKS */}
         <SideNav links={PROJECTPAGE_LINKS} />
-        {/* INTRO */}
+        {/* HERO IMAGES OVERLAPPED */}
         <Box
           d='grid'
           maxW={{ base: '80vw', lg: '75vw' }}
@@ -124,6 +83,7 @@ const Page: NextPage = () => {
             gridRow='2 / 3'
           />
         </Box>
+        {/* INTRO */}
         <Section header='introduction' noLine>
           <Box d='flex' flexDir='column' maxW='65ch' gridGap='1rem'>
             <Text pb={4}>
@@ -136,112 +96,116 @@ const Page: NextPage = () => {
               such, Banquet offers a “feast” of tooling and structure to get you
               started building any kind of modern site you need.
             </Text>
-            <Text fontSize='xs' m='0 auto'>
-              Click to enlarge
-            </Text>
-            <Box
-              maxW={{ base: '80vw', lg: '100%' }}
-              m='0 auto'
-              justifyContent='center'
-              d='grid'
-              gridTemplateColumns='1fr 1fr 1fr'
-              gridTemplateRows='1fr 1fr 1fr'
-              gridGap='1rem'>
-              <Zoom
-                wrapStyle={{
-                  width: '100%',
-                  gridRow: '1',
-                }}>
-                <Image
-                  src='/images/banquet-4.png'
-                  rounded='sm'
-                  shadow='xl'
-                  w='100%'
-                  alt='Banquet screenshot'
-                />
-              </Zoom>
-              <Zoom
-                wrapStyle={{
-                  width: '100%',
-                  gridRow: '1',
-                }}>
-                <Image
-                  src='/images/banquet-3.png'
-                  rounded='sm'
-                  shadow='xl'
-                  w='100%'
-                  alt='Banquet screenshot'
-                />
-              </Zoom>
-              <Zoom
-                wrapStyle={{
-                  width: '100%',
-                  gridRow: '1',
-                }}>
-                <Image
-                  src='/images/banquet-3.png'
-                  rounded='sm'
-                  shadow='xl'
-                  w='100%'
-                  alt='Banquet screenshot'
-                />
-              </Zoom>
-              <Zoom
-                wrapStyle={{
-                  width: '100%',
-                  gridRow: '2',
-                }}>
-                <Image
-                  src='/images/banquet-3.png'
-                  rounded='sm'
-                  shadow='xl'
-                  w='100%'
-                  alt='Banquet screenshot'
-                />
-              </Zoom>
-              <Zoom
-                wrapStyle={{
-                  width: '100%',
-                  gridRow: '2',
-                }}>
-                <Image
-                  src='/images/banquet-3.png'
-                  rounded='sm'
-                  shadow='xl'
-                  w='100%'
-                  alt='Banquet screenshot'
-                />
-              </Zoom>
-              <Zoom
-                wrapStyle={{
-                  width: '100%',
-                  gridRow: '2',
-                }}>
-                <Image
-                  src='/images/banquet-3.png'
-                  rounded='sm'
-                  shadow='xl'
-                  w='100%'
-                  alt='Banquet screenshot'
-                />
-              </Zoom>
+            {/* GALLERY */}
+            <Box d='flex' flexDir='column' justifyContent='center'>
+              <Text fontSize='xs' m='1rem auto'>
+                Click to enlarge
+              </Text>
+              <Box
+                maxW={{ base: '80vw', lg: '100%' }}
+                m='0 auto'
+                justifyContent='center'
+                d='grid'
+                gridTemplateColumns='1fr 1fr 1fr'
+                gridTemplateRows='1fr 1fr 1fr'
+                gridGap='1rem'>
+                <Zoom
+                  wrapStyle={{
+                    width: '100%',
+                    gridRow: '1',
+                  }}>
+                  <Image
+                    src='/images/banquet-4.png'
+                    rounded='sm'
+                    shadow='xl'
+                    w='100%'
+                    alt='Banquet screenshot'
+                  />
+                </Zoom>
+                <Zoom
+                  wrapStyle={{
+                    width: '100%',
+                    gridRow: '1',
+                  }}>
+                  <Image
+                    src='/images/banquet-3.png'
+                    rounded='sm'
+                    shadow='xl'
+                    w='100%'
+                    alt='Banquet screenshot'
+                  />
+                </Zoom>
+                <Zoom
+                  wrapStyle={{
+                    width: '100%',
+                    gridRow: '1',
+                  }}>
+                  <Image
+                    src='/images/banquet-3.png'
+                    rounded='sm'
+                    shadow='xl'
+                    w='100%'
+                    alt='Banquet screenshot'
+                  />
+                </Zoom>
+                <Zoom
+                  wrapStyle={{
+                    width: '100%',
+                    gridRow: '2',
+                  }}>
+                  <Image
+                    src='/images/banquet-3.png'
+                    rounded='sm'
+                    shadow='xl'
+                    w='100%'
+                    alt='Banquet screenshot'
+                  />
+                </Zoom>
+                <Zoom
+                  wrapStyle={{
+                    width: '100%',
+                    gridRow: '2',
+                  }}>
+                  <Image
+                    src='/images/banquet-3.png'
+                    rounded='sm'
+                    shadow='xl'
+                    w='100%'
+                    alt='Banquet screenshot'
+                  />
+                </Zoom>
+                <Zoom
+                  wrapStyle={{
+                    width: '100%',
+                    gridRow: '2',
+                  }}>
+                  <Image
+                    src='/images/banquet-3.png'
+                    rounded='sm'
+                    shadow='xl'
+                    w='100%'
+                    alt='Banquet screenshot'
+                  />
+                </Zoom>
+              </Box>
             </Box>
           </Box>
         </Section>
+        {/* PURPOSE & GOAL */}
         <Section header='purpose & goal' noLine>
           <Box d='flex' flexDir='column' maxW='65ch' gridGap='1rem'>
             <Text pb={4}>
               The idea for Banquet came from the repetition of using tools like
-              <ThickCode>create-react-app</ThickCode> and{' '}
-              <ThickCode>create-next-app</ThickCode>. While each is a powerful,
-              highly usable tool in its own right, I found that whenever
-              creating a new project with them I still ended up having to spend
-              a large amount of time removing unneeded boilerplate and having to
-              configure a suite of dependencies before I could get started. The
-              goal with Banquet was to incorporate a system of boilerplate
-              easier to substitute with custom content, as well as remove the
-              barrier to entry for development by adding crucial tools not
-              usually present in most other templates.
+              <InlineCode>create-react-app</InlineCode> and{' '}
+              <InlineCode>create-next-app</InlineCode>. While each is a
+              powerful, highly usable tool in its own right, I found that
+              whenever creating a new project with them I still ended up having
+              to spend a large amount of time removing unneeded boilerplate and
+              having to configure a suite of dependencies before I could get
+              started. The goal with Banquet was to incorporate a system of
+              boilerplate easier to substitute with custom content, as well as
+              remove the barrier to entry for development by adding crucial
+              tools not usually present in most other templates.
             </Text>
           </Box>
         </Section>
@@ -254,15 +218,16 @@ const Page: NextPage = () => {
             <Text pb={4}>
               Banquet uses Plop.js in combination with Handlebars-styled
               templates for creating new components and pages from the command
-              line, affectionately named the <ThickCode>bake</ThickCode>{' '}
+              line, affectionately named the <InlineCode>bake</InlineCode>{' '}
               command. It comes preconfigured with templates for a standard
               TypeScript TSX component, SCSS file, Jest/Testing Library tests,
               and a generic new Next.js Page. By running{' '}
-              <ThickCode>yarn bake</ThickCode> from the CLI, the user is
+              <InlineCode>yarn bake</InlineCode> from the CLI, the user is
               presented with a menu of options to choose from. In the most
               straightforward use case, typing{' '}
-              <ThickCode>yarn bake Component NewComponentName</ThickCode>{' '}
-              creates a directory in <ThickCode>src/components</ThickCode> with:
+              <InlineCode>yarn bake Component NewComponentName</InlineCode>{' '}
+              creates a directory in <InlineCode>src/components</InlineCode>{' '}
+              with:
             </Text>
             <UnorderedList>
               <ListItem>
@@ -284,7 +249,7 @@ const Page: NextPage = () => {
             </Text>
             <Box as='pre'>
               {/* prettier-ignore */}
-              <ThickCodeBlock>
+              <BlockCode>
 {`src/
   components/
     NewComponentName/
@@ -293,12 +258,12 @@ const Page: NextPage = () => {
       NewComponentName.module.scss
       index.ts
 `}
-            </ThickCodeBlock>
+            </BlockCode>
             </Box>
             <Text pb={4}>
-              The <ThickCode>bake</ThickCode> command also includes fallbacks in
-              case the user simply enters through the generator menu, as well as
-              functions to randomize names for untitled components to avoid
+              The <InlineCode>bake</InlineCode> command also includes fallbacks
+              in case the user simply enters through the generator menu, as well
+              as functions to randomize names for untitled components to avoid
               duplicates.
             </Text>
             <Text pb={4}>
@@ -319,7 +284,7 @@ const Page: NextPage = () => {
               If any of these processes fail, the commit fails with warning
               messages and gives the user a chance to fix any issues before they
               leave the local repo. As a final check, there is also a{' '}
-              <ThickCode>pre-push</ThickCode>
+              <InlineCode>pre-push</InlineCode>
               hook that does a type-check on all TypeScript code as well. If all
               these stages pass, the commit is allowed to be pushed remotely,
               and through the process the stability and strictness of the commit
@@ -328,6 +293,7 @@ const Page: NextPage = () => {
             </Text>
           </Box>
         </Section>
+        {/* STATUS */}
         <Section header='Status' noLine>
           <Box d='flex' flexDir='column' maxW='65ch' gridGap='1rem'>
             <Text pb={4}>
@@ -355,8 +321,8 @@ const Page: NextPage = () => {
               enough in their configuration to be used in a variety of ways, but
               I did create a couple more narrowly-focused components based on
               the standard Chakra modal: a{' '}
-              <ThickCode>{`<ImageModal />`}</ThickCode> and
-              <ThickCode>{`<Carousal />`}</ThickCode>.
+              <InlineCode>{`<ImageModal />`}</InlineCode> and
+              <InlineCode>{`<Carousal />`}</InlineCode>.
             </Text>
             <Text pb={4}>
               These were intended to be the first in a series of similarly
@@ -379,6 +345,7 @@ const Page: NextPage = () => {
             <Text pb={4}></Text>
           </Box>
         </Section>
+        {/* BACK TO HOME LINK */}
         <Box p='5rem 10vw' maxW={{ base: '90vw', lg: '75vw' }} m='0 auto'>
           <Link href='/' passHref>
             <Box
