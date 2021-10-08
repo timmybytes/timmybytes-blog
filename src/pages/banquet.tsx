@@ -45,6 +45,27 @@ const ThickCode = ({
   </Code>
 )
 
+const ThickCodeBlock = ({ children }: ThickCodeProps) => (
+  <Code
+    fontFamily='IBM Plex Mono'
+    bg='none'
+    fontSize='12px'
+    fontWeight={500}
+    px='3px'
+    lineHeight='inherit'
+    d='inline'
+    sx={{
+      display: 'block',
+      whiteSpace: 'pre',
+      overflowX: 'scroll',
+      maxW: '100%',
+      minW: '100px',
+      padding: '1rem',
+    }}>
+    {children}
+  </Code>
+)
+
 const Page: NextPage = () => {
   const { onClose, isOpen, onOpen } = useDisclosure()
   const [toggle, setToggle] = useState(false)
@@ -263,7 +284,7 @@ const Page: NextPage = () => {
             </Text>
             <Box as='pre'>
               {/* prettier-ignore */}
-              <ThickCode sx={{display: 'block', whiteSpace: 'pre', overflowX: 'scroll', maxW: '100%', minW: '100px', padding: '1rem', }}>
+              <ThickCodeBlock>
 {`src/
   components/
     NewComponentName/
@@ -272,7 +293,7 @@ const Page: NextPage = () => {
       NewComponentName.module.scss
       index.ts
 `}
-            </ThickCode>
+            </ThickCodeBlock>
             </Box>
             <Text pb={4}>
               The <ThickCode>bake</ThickCode> command also includes fallbacks in
