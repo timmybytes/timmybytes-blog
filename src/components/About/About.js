@@ -34,12 +34,12 @@ const About = ({ children }) => {
         <h2>developer + designer</h2>
         <p>
           As a developer,{' '}
-          <a href='https://github.com/timmybytes' target='_blank'>
+          <a href='https://github.com/timmybytes' target='_blank' rel="noreferrer">
             I create frontend applications using a variety of tools and
             frameworks
           </a>
           , primarily with React. I’m also partial to{' '}
-          <a href='https://github.com/timmybytes/dotfiles' target='_blank'>
+          <a href='https://github.com/timmybytes/dotfiles' target='_blank' rel="noreferrer">
             working with the command line and automating tasks with shell
             scripts.
           </a>
@@ -72,14 +72,14 @@ const About = ({ children }) => {
         <p>
           For nearly twenty years I’ve been a songwriter, collaborator,
           performer, and recording musician. I’m currently part of{' '}
-          <a href='https://animalpolitik.org' target='_blank'>
+          <a href='https://animalpolitik.org' target='_blank' rel="noreferrer">
             Animal Politik
           </a>{' '}
           as a lead songwriter, singer, and guitarist, though I tinker with
           other instrumentation too. Our music is available for free from our
           website, as well as streaming on most music subscription services.
         </p>
-        <a href='https://animalpolitik.org' target='_blank'>
+        <a href='https://animalpolitik.org' target='_blank' rel="noreferrer">
           <img
             className='ap_logo'
             src='/images/LogoBlackItalic.png'

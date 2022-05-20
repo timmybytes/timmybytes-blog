@@ -12,19 +12,19 @@ const PostFooter = ({ postTitle, postUrl }) => {
       <div className='post__footer-social'>
         <a
           href={`https://dev.to/new?prefill=---%0Atitle%3A${shareTitle}%0Apublished%3A%20true%0Atags%3Awebdev%0A---via%20%7B%25%20user%20timmybytes%20%25%7D%20%5Bsource%20on%20timmybytes%20blog%5D%28${postUrl}%29`}
-          target='_blank'>
+          target='_blank' rel="noreferrer">
           <SiDevDotTo className='post__footer-social-icon' />
         </a>
         <a
           className='twitter-share-button'
           aria-label='share to twitter'
           href={`https://twitter.com/intent/tweet?url=${postUrl}&text=${shareTitle}&via=timmybytes`}
-          target='_blank'>
+          target='_blank' rel="noreferrer">
           <SiTwitter className='post__footer-social-icon' />
         </a>
         <a
           href={`http://www.linkedin.com/shareArticle?mini=true&url=${postUrl}`}
-          target='_blank'>
+          target='_blank' rel="noreferrer">
           <SiLinkedin className='post__footer-social-icon' />
         </a>
       </div>
