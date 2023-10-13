@@ -17,6 +17,8 @@
   <sub>Built with ❤︎ by (and for) Timothy Merritt
 </div>
 
+**_DOMAIN NO LONGER PUBLIC — This repo is left here for example purposes only_**
+
 This is my personal portfolio and blog site, built with React/Next.js, SCSS/styled-components, React-Icons, and deployed through Vercel. This project (will soon) replace my original portfolio website built primarily with vanilla HTML/SCSS/JS. This new site will allow for more scalable logic, a component-based frontend, and a more pleasing UI (dark mode coming soon!).
 
 ## For local development
